@@ -16,6 +16,7 @@
 		390E82F4210FB75700E03C10 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E82F3210FB75700E03C10 /* QuestionTableViewController.swift */; };
 		390E82F7210FB93D00E03C10 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E82F6210FB93D00E03C10 /* QuestionTableViewCell.swift */; };
 		390E82FA210FC5A200E03C10 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E82F9210FC5A200E03C10 /* AskQuestionViewController.swift */; };
+		390E82FC210FD6E500E03C10 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E82FB210FD6E500E03C10 /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		390E82F3210FB75700E03C10 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		390E82F6210FB93D00E03C10 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		390E82F9210FC5A200E03C10 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
+		390E82FB210FD6E500E03C10 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				390E82F3210FB75700E03C10 /* QuestionTableViewController.swift */,
 				390E82F9210FC5A200E03C10 /* AskQuestionViewController.swift */,
+				390E82FB210FD6E500E03C10 /* AnswerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				390E82EC210FA21A00E03C10 /* Question.swift in Sources */,
+				390E82FC210FD6E500E03C10 /* AnswerViewController.swift in Sources */,
 				390E82F7210FB93D00E03C10 /* QuestionTableViewCell.swift in Sources */,
 				390E82FA210FC5A200E03C10 /* AskQuestionViewController.swift in Sources */,
 				390E82F4210FB75700E03C10 /* QuestionTableViewController.swift in Sources */,

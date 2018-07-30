@@ -1,5 +1,5 @@
 //
-//  AskQuestionViewController.swift
+//  AnswerViewController.swift
 //  Q&A
 //
 //  Created by Linh Bouniol on 7/30/18.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class AskQuestionViewController: UIViewController {
+class AnswerViewController: UIViewController {
 
-    let questionController: QuestionController? = nil
+    @IBOutlet var questionLabel: UILabel!
+    @IBOutlet var askerLabel: UILabel!
+    @IBOutlet var answererTextField: UITextField!
+    @IBOutlet var answerTextView: UITextView!
     
-    @IBOutlet var askerNameTextField: UITextField!
-    @IBOutlet var questionTextView: UITextView!
-    
-    @IBAction func submitQuestion(_ sender: Any) {
+    @IBAction func submitAnswer(_ sender: Any) {
     }
     
     override func viewDidLoad() {
@@ -24,11 +24,6 @@ class AskQuestionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
