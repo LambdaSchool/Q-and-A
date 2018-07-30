@@ -10,15 +10,12 @@ import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
+    // MARK: - Properties
+    
+    
+    @IBOutlet weak var questionTextLabel: UILabel!
+    @IBOutlet weak var askedByTextLabel: UILabel!
+    @IBOutlet weak var nextActionTextLabel: UILabel!
+    
 }

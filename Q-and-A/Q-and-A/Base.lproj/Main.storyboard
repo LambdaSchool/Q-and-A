@@ -93,6 +93,11 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="Xwf-lb-DuR" secondAttribute="trailing" constant="8" id="tGp-5P-Bvf"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="askedByTextLabel" destination="9hg-Y9-g4h" id="EFd-CZ-JlD"/>
+                                    <outlet property="nextActionTextLabel" destination="nUy-qt-8pj" id="AsG-T7-xfA"/>
+                                    <outlet property="questionTextLabel" destination="U8s-Iz-Hsv" id="paW-tB-a65"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -103,11 +108,6 @@
                     <navigationItem key="navigationItem" title="Q&amp;A" id="kbU-Nz-9aY">
                         <barButtonItem key="rightBarButtonItem" title="Ask Question" id="isT-aL-kuc"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="askedByTextLabel" destination="9hg-Y9-g4h" id="4LT-ib-jbM"/>
-                        <outlet property="nextActionTextLabel" destination="nUy-qt-8pj" id="qwi-E6-vcE"/>
-                        <outlet property="questionTextLabel" destination="U8s-Iz-Hsv" id="LGF-Z9-ynN"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ykf-MA-ZXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
