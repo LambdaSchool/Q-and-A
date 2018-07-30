@@ -47,8 +47,17 @@ class QuestionsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowSubmitQuestionView" {
+            guard let vc = segue.destination as? AskQuestionViewController else { return }
+            vc.questionController = questionController
+        } else if segue.identifier == "ShowSubmitAnswerView" {
+            guard let vc = segue.destination as? AnswerViewController,
+                let indexPath = tableView.indexPathForSelectedRow else { return }
+            let question = questionController.questions[indexPath.row]
+            
+            vc.questionController = questionController
+            vc.question = question
+        }
     }
 
     // MARK: - Properties

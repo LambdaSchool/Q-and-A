@@ -19,7 +19,9 @@ class QuestionController {
         guard let index = questions.index(of: question) else { return }
         var question = questions[index]
         question.answer = answer
-        question.answer = answerer
+        question.answerer = answerer
+        print("updating question...")
+        print(question)
         questions.remove(at: index)
         questions.insert(question, at: index)
     }

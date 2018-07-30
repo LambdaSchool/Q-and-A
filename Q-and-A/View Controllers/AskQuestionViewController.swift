@@ -23,6 +23,7 @@ class AskQuestionViewController: UIViewController {
             let question = questionTextView.text else { return }
         
         questionController.create(question: question, asker: name)
+        navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Properties
