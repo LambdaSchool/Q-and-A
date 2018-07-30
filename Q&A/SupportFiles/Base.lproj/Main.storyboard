@@ -120,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="1092" y="135.38230884557723"/>
         </scene>
-        <!--Title-->
+        <!--Answer Question-->
         <scene sceneID="r0e-DS-XEu">
             <objects>
                 <viewController id="Ft8-Sp-Fib" customClass="AnswerQuestionViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
@@ -171,7 +171,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ngs-bQ-4H0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="JAf-C8-vEj">
+                    <navigationItem key="navigationItem" title="Answer Question" id="JAf-C8-vEj">
                         <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="B4y-go-ri4">
                             <connections>
                                 <action selector="submitAnswer:" destination="Ft8-Sp-Fib" id="n3Z-QT-UJQ"/>
@@ -189,7 +189,7 @@
             </objects>
             <point key="canvasLocation" x="1888.8" y="434.93253373313348"/>
         </scene>
-        <!--Title-->
+        <!--Ask Question-->
         <scene sceneID="shT-Sc-xG0">
             <objects>
                 <viewController id="Kty-vv-Pi2" customClass="AskQuestionViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
@@ -223,7 +223,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xa9-8c-IZk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="sbd-hI-sRk">
+                    <navigationItem key="navigationItem" title="Ask Question" id="sbd-hI-sRk">
                         <barButtonItem key="rightBarButtonItem" title="Submit Question" id="QOi-Z8-RcQ">
                             <connections>
                                 <action selector="submitQuestion:" destination="Kty-vv-Pi2" id="xIZ-Ni-H9z"/>

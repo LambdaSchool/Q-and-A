@@ -64,19 +64,59 @@
 		DEEA7CA0210F98B5001C4743 /* Q&A */ = {
 			isa = PBXGroup;
 			children = (
-				DEEA7CA1210F98B5001C4743 /* AppDelegate.swift */,
+				DEEA7CBF210FC20A001C4743 /* Model */,
+				DEEA7CC0210FC21A001C4743 /* ModelController */,
+				DEEA7CC1210FC22E001C4743 /* ViewControllers */,
+				DEEA7CC2210FC243001C4743 /* CustomCell */,
+				DEEA7CC3210FC261001C4743 /* SupportFiles */,
+			);
+			path = "Q&A";
+			sourceTree = "<group>";
+		};
+		DEEA7CBF210FC20A001C4743 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				DEEA7CBB210FBFD9001C4743 /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEEA7CC0210FC21A001C4743 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
 				DEEA7CBD210FBFF9001C4743 /* QuestionController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		DEEA7CC1210FC22E001C4743 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				DEEA7CB3210F9E5B001C4743 /* Q&ATableViewController.swift */,
-				DEEA7CB5210F9E8E001C4743 /* Q&AListCell.swift */,
 				DEEA7CB7210FA3BA001C4743 /* AskQuestionViewController.swift */,
 				DEEA7CB9210FBE2E001C4743 /* AnswerQuestionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DEEA7CC2210FC243001C4743 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				DEEA7CB5210F9E8E001C4743 /* Q&AListCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		DEEA7CC3210FC261001C4743 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DEEA7CA1210F98B5001C4743 /* AppDelegate.swift */,
 				DEEA7CA5210F98B5001C4743 /* Main.storyboard */,
 				DEEA7CA8210F98B7001C4743 /* Assets.xcassets */,
 				DEEA7CAA210F98B7001C4743 /* LaunchScreen.storyboard */,
 				DEEA7CAD210F98B7001C4743 /* Info.plist */,
 			);
-			path = "Q&A";
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6G6Q9E6ZA;
-				INFOPLIST_FILE = "Q&A/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Q&A/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6G6Q9E6ZA;
-				INFOPLIST_FILE = "Q&A/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Q&A/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
