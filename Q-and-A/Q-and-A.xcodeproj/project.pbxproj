@@ -15,6 +15,7 @@
 		3D440986210F9A94001F0616 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D440985210F9A94001F0616 /* QuestionController.swift */; };
 		3D440988210F9E8F001F0616 /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D440987210F9E8F001F0616 /* QuestionsTableViewController.swift */; };
 		3D44098A210F9EA3001F0616 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D440989210F9EA3001F0616 /* QuestionTableViewCell.swift */; };
+		3D44098C210FB832001F0616 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D44098B210FB832001F0616 /* AskQuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3D440985210F9A94001F0616 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		3D440987210F9E8F001F0616 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
 		3D440989210F9EA3001F0616 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		3D44098B210FB832001F0616 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				3D440987210F9E8F001F0616 /* QuestionsTableViewController.swift */,
 				3D440989210F9EA3001F0616 /* QuestionTableViewCell.swift */,
+				3D44098B210FB832001F0616 /* AskQuestionViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				3D44096F210F997B001F0616 /* AppDelegate.swift in Sources */,
 				3D44098A210F9EA3001F0616 /* QuestionTableViewCell.swift in Sources */,
+				3D44098C210FB832001F0616 /* AskQuestionViewController.swift in Sources */,
 				3D440984210F99F0001F0616 /* Question.swift in Sources */,
 				3D440986210F9A94001F0616 /* QuestionController.swift in Sources */,
 				3D440988210F9E8F001F0616 /* QuestionsTableViewController.swift in Sources */,

@@ -9,16 +9,51 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Ask Question View Controller-->
         <scene sceneID="pVx-Gd-le4">
             <objects>
-                <viewController id="Ag2-jB-C3Q" sceneMemberID="viewController">
+                <viewController id="Ag2-jB-C3Q" customClass="AskQuestionViewController" customModule="Q_and_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cde-yI-ViD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O4a-kV-xYq">
+                                <rect key="frame" x="0.0" y="80" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="izc-Lt-p5L">
+                                <rect key="frame" x="0.0" y="124" width="375" height="222.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="izc-Lt-p5L" firstAttribute="trailing" secondItem="DfM-Ht-Bze" secondAttribute="trailing" id="91M-YD-gPL"/>
+                            <constraint firstItem="izc-Lt-p5L" firstAttribute="height" secondItem="cde-yI-ViD" secondAttribute="height" multiplier="1:3" id="JEz-rf-dkH"/>
+                            <constraint firstItem="O4a-kV-xYq" firstAttribute="top" secondItem="DfM-Ht-Bze" secondAttribute="top" constant="16" id="Kdl-06-5DD"/>
+                            <constraint firstItem="O4a-kV-xYq" firstAttribute="leading" secondItem="DfM-Ht-Bze" secondAttribute="leading" id="foN-wX-SLr"/>
+                            <constraint firstItem="izc-Lt-p5L" firstAttribute="top" secondItem="O4a-kV-xYq" secondAttribute="bottom" constant="14" id="gWG-wE-dAH"/>
+                            <constraint firstItem="izc-Lt-p5L" firstAttribute="leading" secondItem="DfM-Ht-Bze" secondAttribute="leading" id="q1k-sq-RhB"/>
+                            <constraint firstItem="DfM-Ht-Bze" firstAttribute="trailing" secondItem="O4a-kV-xYq" secondAttribute="trailing" id="xRd-1B-lNw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DfM-Ht-Bze"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hBS-UN-wFf">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="clP-yI-Yod">
+                            <connections>
+                                <action selector="submitQuestion:" destination="Ag2-jB-C3Q" id="OUG-8o-M7H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="O4a-kV-xYq" id="V8i-mg-8e6"/>
+                        <outlet property="questionTextView" destination="izc-Lt-p5L" id="jwu-DL-dXo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSC-bq-TJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,7 +141,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Q&amp;A" id="kbU-Nz-9aY">
-                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="isT-aL-kuc"/>
+                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="isT-aL-kuc">
+                            <connections>
+                                <segue destination="Ag2-jB-C3Q" kind="show" identifier="ShowSubmitQuestion" id="nxS-C6-HQ6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ykf-MA-ZXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
