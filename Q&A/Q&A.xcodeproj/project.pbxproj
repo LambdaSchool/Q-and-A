@@ -11,8 +11,12 @@
 		BEC3BE07210F905E00A22E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC3BE05210F905E00A22E35 /* Main.storyboard */; };
 		BEC3BE09210F905F00A22E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC3BE08210F905F00A22E35 /* Assets.xcassets */; };
 		BEC3BE0C210F905F00A22E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC3BE0A210F905F00A22E35 /* LaunchScreen.storyboard */; };
-		BEC3BE14210F975300A22E35 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC3BE13210F975300A22E35 /* QuestionModel.swift */; };
-		BEC3BE16210F975F00A22E35 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC3BE15210F975F00A22E35 /* QuestionView.swift */; };
+		BEC3BE1B210FAC0900A22E35 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC3BE17210FAC0900A22E35 /* QuestionCell.swift */; };
+		BEC3BE1C210FAC0900A22E35 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC3BE18210FAC0900A22E35 /* QuestionController.swift */; };
+		BEC3BE1D210FAC0900A22E35 /* AskQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC3BE19210FAC0900A22E35 /* AskQuestionVC.swift */; };
+		BEC3BE1E210FAC0900A22E35 /* QuestionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC3BE1A210FAC0900A22E35 /* QuestionListVC.swift */; };
+		BEC3BE20210FAC1C00A22E35 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC3BE1F210FAC1C00A22E35 /* QuestionModel.swift */; };
+		BEC3BE22210FACF200A22E35 /* AnswerQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC3BE21210FACF200A22E35 /* AnswerQuestionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +26,12 @@
 		BEC3BE08210F905F00A22E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEC3BE0B210F905F00A22E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEC3BE0D210F905F00A22E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEC3BE13210F975300A22E35 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
-		BEC3BE15210F975F00A22E35 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		BEC3BE17210FAC0900A22E35 /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		BEC3BE18210FAC0900A22E35 /* QuestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		BEC3BE19210FAC0900A22E35 /* AskQuestionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskQuestionVC.swift; sourceTree = "<group>"; };
+		BEC3BE1A210FAC0900A22E35 /* QuestionListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionListVC.swift; sourceTree = "<group>"; };
+		BEC3BE1F210FAC1C00A22E35 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		BEC3BE21210FACF200A22E35 /* AnswerQuestionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerQuestionVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +64,17 @@
 		BEC3BE00210F905E00A22E35 /* Q&A */ = {
 			isa = PBXGroup;
 			children = (
+				BEC3BE1F210FAC1C00A22E35 /* QuestionModel.swift */,
+				BEC3BE18210FAC0900A22E35 /* QuestionController.swift */,
+				BEC3BE17210FAC0900A22E35 /* QuestionCell.swift */,
+				BEC3BE1A210FAC0900A22E35 /* QuestionListVC.swift */,
+				BEC3BE21210FACF200A22E35 /* AnswerQuestionVC.swift */,
+				BEC3BE19210FAC0900A22E35 /* AskQuestionVC.swift */,
 				BEC3BE01210F905E00A22E35 /* AppDelegate.swift */,
 				BEC3BE05210F905E00A22E35 /* Main.storyboard */,
 				BEC3BE08210F905F00A22E35 /* Assets.xcassets */,
 				BEC3BE0A210F905F00A22E35 /* LaunchScreen.storyboard */,
 				BEC3BE0D210F905F00A22E35 /* Info.plist */,
-				BEC3BE13210F975300A22E35 /* QuestionModel.swift */,
-				BEC3BE15210F975F00A22E35 /* QuestionView.swift */,
 			);
 			path = "Q&A";
 			sourceTree = "<group>";
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEC3BE22210FACF200A22E35 /* AnswerQuestionVC.swift in Sources */,
 				BEC3BE02210F905E00A22E35 /* AppDelegate.swift in Sources */,
-				BEC3BE16210F975F00A22E35 /* QuestionView.swift in Sources */,
-				BEC3BE14210F975300A22E35 /* QuestionModel.swift in Sources */,
+				BEC3BE1B210FAC0900A22E35 /* QuestionCell.swift in Sources */,
+				BEC3BE1D210FAC0900A22E35 /* AskQuestionVC.swift in Sources */,
+				BEC3BE20210FAC1C00A22E35 /* QuestionModel.swift in Sources */,
+				BEC3BE1C210FAC0900A22E35 /* QuestionController.swift in Sources */,
+				BEC3BE1E210FAC0900A22E35 /* QuestionListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
