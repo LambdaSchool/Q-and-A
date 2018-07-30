@@ -16,6 +16,7 @@
 		3D440988210F9E8F001F0616 /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D440987210F9E8F001F0616 /* QuestionsTableViewController.swift */; };
 		3D44098A210F9EA3001F0616 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D440989210F9EA3001F0616 /* QuestionTableViewCell.swift */; };
 		3D44098C210FB832001F0616 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D44098B210FB832001F0616 /* AskQuestionViewController.swift */; };
+		3D44098E210FC608001F0616 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D44098D210FC608001F0616 /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3D440987210F9E8F001F0616 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
 		3D440989210F9EA3001F0616 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		3D44098B210FB832001F0616 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
+		3D44098D210FC608001F0616 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				3D440987210F9E8F001F0616 /* QuestionsTableViewController.swift */,
 				3D440989210F9EA3001F0616 /* QuestionTableViewCell.swift */,
 				3D44098B210FB832001F0616 /* AskQuestionViewController.swift */,
+				3D44098D210FC608001F0616 /* AnswerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D44096F210F997B001F0616 /* AppDelegate.swift in Sources */,
+				3D44098E210FC608001F0616 /* AnswerViewController.swift in Sources */,
 				3D44098A210F9EA3001F0616 /* QuestionTableViewCell.swift in Sources */,
 				3D44098C210FB832001F0616 /* AskQuestionViewController.swift in Sources */,
 				3D440984210F99F0001F0616 /* Question.swift in Sources */,

@@ -153,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="568.79999999999995" y="44.527736131934034"/>
         </scene>
-        <!--View Controller-->
+        <!--Answer View Controller-->
         <scene sceneID="O8j-PL-4P4">
             <objects>
-                <viewController id="6Xt-Qm-8ha" sceneMemberID="viewController">
+                <viewController id="6Xt-Qm-8ha" customClass="AnswerViewController" customModule="Q_and_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kom-NY-A9B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,8 +207,18 @@
                         <viewLayoutGuide key="safeArea" id="xQE-Qt-L5x"/>
                     </view>
                     <navigationItem key="navigationItem" id="Nts-cV-9Qn">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="6so-nj-F9w"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="6so-nj-F9w">
+                            <connections>
+                                <action selector="submitAnswer:" destination="6Xt-Qm-8ha" id="uYU-Xf-deY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextLabel" destination="pyM-iO-dGR" id="TIf-MC-AAQ"/>
+                        <outlet property="answererTextLabel" destination="AXW-eV-c3w" id="hjH-pw-Xyh"/>
+                        <outlet property="nameTextLabel" destination="AXW-eV-c3w" id="iKM-dF-ebC"/>
+                        <outlet property="questionTextLabel" destination="Bjd-m5-bxk" id="mET-Kd-yhk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tG-Rt-pRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

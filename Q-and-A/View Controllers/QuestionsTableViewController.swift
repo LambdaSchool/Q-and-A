@@ -16,9 +16,7 @@ class QuestionsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-    }    
+    }
 
     // MARK: - Table view data source
 
@@ -44,6 +42,7 @@ class QuestionsTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
