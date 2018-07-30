@@ -21,6 +21,9 @@ class QuestionCell: UITableViewCell
 			} else {
 				statusLabel.text = "Can you answer this question?"
 			}
+
+			let frame = self.frame
+			self.frame = CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: intrinsicContentSize.height + 15)
 		}
 	}
 

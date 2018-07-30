@@ -58,8 +58,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can you answer this question?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbv-Jb-YHK">
-                                                    <rect key="frame" x="15" y="84" width="345" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can you answer this question?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbv-Jb-YHK">
+                                                    <rect key="frame" x="15" y="84" width="345" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="345" id="pUl-Yb-HCD"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -80,7 +83,6 @@
                                             <constraints>
                                                 <constraint firstItem="Nbv-Jb-YHK" firstAttribute="leading" secondItem="nbd-wa-0jE" secondAttribute="leading" id="5aR-GD-7GU"/>
                                                 <constraint firstItem="Nbv-Jb-YHK" firstAttribute="trailing" secondItem="UqD-bY-p2i" secondAttribute="trailingMargin" id="DQD-on-nic"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Nbv-Jb-YHK" secondAttribute="bottom" constant="15" id="E7Q-Sc-YiF"/>
                                                 <constraint firstItem="qce-0F-L19" firstAttribute="leading" secondItem="3NJ-pg-GeA" secondAttribute="trailing" constant="13" id="IiK-Je-pIj"/>
                                                 <constraint firstItem="3NJ-pg-GeA" firstAttribute="top" secondItem="nbd-wa-0jE" secondAttribute="bottom" constant="8" symbolic="YES" id="MM6-wq-nOk"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="aXd-3J-lZE" secondAttribute="trailing" id="NWi-Kb-aUN"/>
@@ -89,6 +91,7 @@
                                                 <constraint firstItem="qce-0F-L19" firstAttribute="top" secondItem="aXd-3J-lZE" secondAttribute="bottom" constant="9" id="RAB-kZ-ZQc"/>
                                                 <constraint firstItem="nbd-wa-0jE" firstAttribute="top" secondItem="UqD-bY-p2i" secondAttribute="topMargin" constant="15" id="eUR-Uw-aWn"/>
                                                 <constraint firstItem="aXd-3J-lZE" firstAttribute="top" secondItem="nbd-wa-0jE" secondAttribute="top" id="j7b-5Y-huZ"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Nbv-Jb-YHK" secondAttribute="bottom" constant="15" id="keY-nf-PjG"/>
                                                 <constraint firstItem="aXd-3J-lZE" firstAttribute="leading" secondItem="nbd-wa-0jE" secondAttribute="trailing" constant="15" id="s6V-xw-xpH"/>
                                                 <constraint firstItem="qce-0F-L19" firstAttribute="leading" secondItem="aXd-3J-lZE" secondAttribute="leading" id="ytM-EL-5UF"/>
                                                 <constraint firstItem="Nbv-Jb-YHK" firstAttribute="top" secondItem="3NJ-pg-GeA" secondAttribute="bottom" constant="8" symbolic="YES" id="zEv-qo-BQ5"/>
