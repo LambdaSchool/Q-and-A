@@ -14,5 +14,18 @@ class Q_AListCell: UITableViewCell {
     @IBOutlet weak var askedByLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     
-
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    private func updateViews() {
+        
+        guard let question = question else {return}
+        
+        questionLabel.text = question.aQuestion
+        askedByLabel.text = question.asker
+        answerLabel.text = "Tap to view answer."
+    }
 }
