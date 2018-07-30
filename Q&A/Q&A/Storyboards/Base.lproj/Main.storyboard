@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -93,12 +94,68 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Q&amp;A" id="BRi-qq-jaT">
-                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="Rkf-H1-oDN"/>
+                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="Rkf-H1-oDN">
+                            <connections>
+                                <segue destination="lgC-rj-MuG" kind="show" identifier="ShowAskQuestion" id="kzf-AK-U8B"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bc5-bf-2c1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="896.79999999999995" y="107.49625187406298"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="n4k-xp-m4u">
+            <objects>
+                <viewController id="lgC-rj-MuG" customClass="AskQuestionViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JNN-6h-LTZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kau-Ew-vlY">
+                                <rect key="frame" x="0.0" y="80" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hvF-Rj-qaG">
+                                <rect key="frame" x="0.0" y="118" width="375" height="144"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="X3M-Eb-xWc"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kau-Ew-vlY" firstAttribute="top" secondItem="cWr-9y-a2F" secondAttribute="top" constant="16" id="BZ3-AU-S5a"/>
+                            <constraint firstItem="hvF-Rj-qaG" firstAttribute="leading" secondItem="cWr-9y-a2F" secondAttribute="leading" id="C3m-5V-PBI"/>
+                            <constraint firstItem="cWr-9y-a2F" firstAttribute="trailing" secondItem="Kau-Ew-vlY" secondAttribute="trailing" id="Sgx-Jk-IyY"/>
+                            <constraint firstItem="cWr-9y-a2F" firstAttribute="trailing" secondItem="hvF-Rj-qaG" secondAttribute="trailing" id="SyM-GC-Hc3"/>
+                            <constraint firstItem="hvF-Rj-qaG" firstAttribute="top" secondItem="Kau-Ew-vlY" secondAttribute="bottom" constant="8" id="gjo-yQ-KRK"/>
+                            <constraint firstItem="Kau-Ew-vlY" firstAttribute="leading" secondItem="cWr-9y-a2F" secondAttribute="leading" id="mog-bo-vaV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cWr-9y-a2F"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="XOd-ud-0Pv">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="WJw-0a-W80">
+                            <connections>
+                                <action selector="submitQuestion:" destination="lgC-rj-MuG" id="8b3-FE-LQK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerTextView" destination="hvF-Rj-qaG" id="JC4-8i-bIV"/>
+                        <outlet property="askerNameTextField" destination="Kau-Ew-vlY" id="3Ft-6I-nfh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50x-lC-3Se" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1598" y="108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Apf-vL-eEU">
