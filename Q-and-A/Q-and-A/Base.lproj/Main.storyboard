@@ -132,6 +132,7 @@
                                     <outlet property="askedByTextLabel" destination="9hg-Y9-g4h" id="EFd-CZ-JlD"/>
                                     <outlet property="nextActionTextLabel" destination="nUy-qt-8pj" id="AsG-T7-xfA"/>
                                     <outlet property="questionTextLabel" destination="U8s-Iz-Hsv" id="paW-tB-a65"/>
+                                    <segue destination="6Xt-Qm-8ha" kind="show" identifier="ShowSubmitAnswerView" id="iFy-Jd-lWV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -143,7 +144,7 @@
                     <navigationItem key="navigationItem" title="Q&amp;A" id="kbU-Nz-9aY">
                         <barButtonItem key="rightBarButtonItem" title="Ask Question" id="isT-aL-kuc">
                             <connections>
-                                <segue destination="Ag2-jB-C3Q" kind="show" identifier="ShowSubmitQuestion" id="nxS-C6-HQ6"/>
+                                <segue destination="Ag2-jB-C3Q" kind="show" identifier="ShowSubmitQuestionView" id="nxS-C6-HQ6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -159,9 +160,55 @@
                     <view key="view" contentMode="scaleToFill" id="Kom-NY-A9B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="x3R-mM-84y">
+                                <rect key="frame" x="16" y="80" width="343" height="333.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjd-m5-bxk">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXW-eV-c3w">
+                                        <rect key="frame" x="0.0" y="36.5" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHk-9x-9ag">
+                                        <rect key="frame" x="0.0" y="73" width="343" height="116.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pyM-iO-dGR">
+                                        <rect key="frame" x="0.0" y="205.5" width="343" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QHk-9x-9ag" firstAttribute="leading" secondItem="x3R-mM-84y" secondAttribute="leading" id="BQG-8K-2zM"/>
+                                    <constraint firstAttribute="trailing" secondItem="pyM-iO-dGR" secondAttribute="trailing" id="LXc-vA-wHL"/>
+                                    <constraint firstItem="pyM-iO-dGR" firstAttribute="leading" secondItem="x3R-mM-84y" secondAttribute="leading" id="aZV-ds-ETX"/>
+                                    <constraint firstAttribute="trailing" secondItem="QHk-9x-9ag" secondAttribute="trailing" id="lDy-wX-GLp"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="x3R-mM-84y" firstAttribute="height" secondItem="Kom-NY-A9B" secondAttribute="height" multiplier="1:2" id="7jP-5E-PCN"/>
+                            <constraint firstItem="xQE-Qt-L5x" firstAttribute="trailing" secondItem="x3R-mM-84y" secondAttribute="trailing" constant="16" id="EDi-C3-4Pr"/>
+                            <constraint firstItem="x3R-mM-84y" firstAttribute="leading" secondItem="xQE-Qt-L5x" secondAttribute="leading" constant="16" id="Mbv-j4-2tR"/>
+                            <constraint firstItem="x3R-mM-84y" firstAttribute="top" secondItem="xQE-Qt-L5x" secondAttribute="top" constant="16" id="OVK-Z1-R0P"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xQE-Qt-L5x"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Nts-cV-9Qn">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="6so-nj-F9w"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tG-Rt-pRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
