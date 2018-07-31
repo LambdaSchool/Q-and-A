@@ -12,11 +12,9 @@ class QuestionController {
     
     var questions: [Question] = []
     
-    func createQuesiton(question: String, asker: String, answer: String?, answerer: String?) -> Question {
+    func createQuesiton(question: String, asker: String, answer: String? = nil, answerer: String? = nil) {
         let question = Question(question: question, asker: asker, answer: answer, answerer: answerer)
         questions.append(question)
-        
-        return question
     }
     
     func update(question: Question, answer: String, answerer: String) {
