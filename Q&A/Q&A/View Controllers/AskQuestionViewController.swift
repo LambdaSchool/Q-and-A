@@ -10,7 +10,7 @@ import UIKit
 
 class AskQuestionViewController: UIViewController {
 
-    let questionController: QuestionController? = nil
+    var questionController: QuestionController?
     
     @IBOutlet var askerNameTextField: UITextField!
     @IBOutlet var questionTextView: UITextView!

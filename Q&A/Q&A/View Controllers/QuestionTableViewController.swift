@@ -50,6 +50,16 @@ class QuestionTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let askQuestionVC = segue.destination as? AskQuestionViewController {
+            askQuestionVC.questionController = questionController
+        }
         
+        if let answerQuestionVC = segue.destination as? AnswerViewController {
+            answerQuestionVC.questionController = questionController
+            
+            guard let index = tableView.indexPathForSelectedRow?.row else { return }
+            let question = questionController.questions[index]
+            answerQuestionVC.question = question
+        }
     }
 }

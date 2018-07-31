@@ -47,13 +47,5 @@ class AnswerViewController: UIViewController {
     }
     
         // If question (from the variable) gets called before the viewDidLoad(), then all the outlets/action will be nil and the updateViews() will crashed. Setting all the properties in the updateViews() to be optionals will fix it so that if they're nil, then nothing will happen.
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-    
-
+ 
 }
