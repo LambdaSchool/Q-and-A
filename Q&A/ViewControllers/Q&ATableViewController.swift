@@ -9,40 +9,71 @@
 import UIKit
 
 class Q_ATableViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    
+    let questionController = QuestionController()
+    let questions: [Question] = []
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+        
+        return questionController.questions.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "QACell", for: indexPath)
-
-        // Configure the cell...
-
+        guard let questionCell = cell as? Q_AListCell else {return cell}
+        
+        let question = questionController.questions[indexPath.row]
+        
+        questionCell.question = question
+        questionCell.questionLabel.text = question.aQuestion
+        questionCell.askedByLabel.text = question.asker
+        questionCell.answerLabel.text = question.answer
+        
         return cell
     }
     
 
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let question = questionController.questions[indexPath.row]
+            questionController.deleteQuestion(question: question)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+    }
 
-    /*ToAnswerView"ToAskQuestion"
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "ToAskQuestion" {
+            
+            guard let askViewController = segue.destination as? AskQuestionViewController else {return}
+            
+            askViewController.questionController = questionController
+            
+        } else if segue.identifier == "ToAnswerView" {
+            
+            guard let answerViewController = segue.destination as? AnswerQuestionViewController,
+                let indexPath = tableView.indexPathForSelectedRow else {return}
+            
+            answerViewController.questionController = questionController
+            answerViewController.question = questionController.questions[indexPath.row]
+            
+            
+        }
     }
-    */
+    
 
 }

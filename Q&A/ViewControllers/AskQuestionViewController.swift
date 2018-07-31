@@ -13,13 +13,16 @@ class AskQuestionViewController: UIViewController {
     @IBOutlet weak var askerNameTextField: UITextField!
     @IBOutlet weak var askQuestionTextView: UITextView!
     
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-    }
-
+    var questionController = QuestionController()
+    
     @IBAction func submitQuestion(_ sender: Any) {
         
+        guard let askerName = askerNameTextField.text,
+            let askQuestion = askQuestionTextView.text else {return}
+        
+        questionController.createQuestion(with: askQuestion, asker: askerName)
+        
+        navigationController?.popViewController(animated: true)
     }
     
     

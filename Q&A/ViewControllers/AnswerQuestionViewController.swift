@@ -15,16 +15,28 @@ class AnswerQuestionViewController: UIViewController {
     @IBOutlet weak var answererNameTextfield: UITextField!
     @IBOutlet weak var answerTextView: UITextView!
     
-    
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
+    var questionController = QuestionController()
+    var question: Question?
 
+    override func viewWillAppear(_ animated: Bool) {
+        updateViews()
     }
-
+    
     @IBAction func submitAnswer(_ sender: Any) {
         
+        guard let answererName = answererNameTextfield.text,
+            let answer = answerTextView.text else {return}
+        
+        //questionController.updateWithAnswer(with: question!, answer: answer, answerer: answererName)
+        questionController.updateQuestion(with: question!, aQuestion: (question?.aQuestion)!, asker: (question?.asker)!, answer: answer, answerer: answererName)
+        
+        navigationController?.popViewController(animated: true)
     }
     
 
+    func updateViews() {
+        questionLabel.text = question?.aQuestion
+        askerLabel.text = question?.asker
+        
+    }
 }

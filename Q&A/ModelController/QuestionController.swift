@@ -18,19 +18,30 @@ class QuestionController {
     }
     
     func updateQuestion(with question: Question, aQuestion: String, asker: String, answer: String?, answerer: String?) {
-        
+
         if let index = questions.index(of: question) {
-            
+
             var tempQuestion = question
             tempQuestion.aQuestion = aQuestion
             tempQuestion.asker = asker
             tempQuestion.answer = answer
             tempQuestion.answerer = answerer
-            
+
             questions.remove(at: index)
             questions.insert(question, at: index)
         }
     }
+    
+//    func updateWithAnswer(with question: Question, answer: String?, answerer: String?) {
+//        if let index = questions.index(of: question) {
+//            var tempQuestion = question
+//            tempQuestion.answer = answer
+//            tempQuestion.answerer = answerer
+//
+//            questions.remove(at: index)
+//            questions.insert(question, at: index)
+//        }
+//    }
     
     func deleteQuestion(question: Question) {
         

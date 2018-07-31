@@ -26,6 +26,6 @@ class Q_AListCell: UITableViewCell {
         
         questionLabel.text = question.aQuestion
         askedByLabel.text = question.asker
-        answerLabel.text = "Tap to view answer."
+        answerLabel.text = question.answer
     }
 }
