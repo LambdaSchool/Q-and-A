@@ -14,6 +14,9 @@
 		9411A4F92118D88400BC0E14 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411A4F82118D88400BC0E14 /* Question.swift */; };
 		9411A4FC2118E41600BC0E14 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411A4FB2118E41600BC0E14 /* QuestionController.swift */; };
 		9411A4FE2118F80000BC0E14 /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411A4FD2118F80000BC0E14 /* QuestionsTableViewController.swift */; };
+		9411A5002118F96900BC0E14 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411A4FF2118F96900BC0E14 /* QuestionTableViewCell.swift */; };
+		9411A5032118FC1F00BC0E14 /* AnswerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9411A5022118FC1F00BC0E14 /* AnswerView.storyboard */; };
+		9411A5052119026600BC0E14 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411A5042119026600BC0E14 /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		9411A4F82118D88400BC0E14 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		9411A4FB2118E41600BC0E14 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		9411A4FD2118F80000BC0E14 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
+		9411A4FF2118F96900BC0E14 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		9411A5022118FC1F00BC0E14 /* AnswerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnswerView.storyboard; sourceTree = "<group>"; };
+		9411A5042119026600BC0E14 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +64,12 @@
 		9411A4E42118D75800BC0E14 /* Q-and-A */ = {
 			isa = PBXGroup;
 			children = (
+				9411A5022118FC1F00BC0E14 /* AnswerView.storyboard */,
+				9411A5012118FBA800BC0E14 /* view controller */,
 				9411A4FA2118E3E200BC0E14 /* model controller */,
 				9411A4F72118D87000BC0E14 /* model */,
 				9411A4E52118D75800BC0E14 /* AppDelegate.swift */,
 				9411A4E92118D75800BC0E14 /* Main.storyboard */,
-				9411A4FD2118F80000BC0E14 /* QuestionsTableViewController.swift */,
 				9411A4EC2118D77600BC0E14 /* Assets.xcassets */,
 				9411A4EE2118D77600BC0E14 /* LaunchScreen.storyboard */,
 				9411A4F12118D77600BC0E14 /* Info.plist */,
@@ -84,6 +91,16 @@
 				9411A4FB2118E41600BC0E14 /* QuestionController.swift */,
 			);
 			path = "model controller";
+			sourceTree = "<group>";
+		};
+		9411A5012118FBA800BC0E14 /* view controller */ = {
+			isa = PBXGroup;
+			children = (
+				9411A5042119026600BC0E14 /* AnswerViewController.swift */,
+				9411A4FF2118F96900BC0E14 /* QuestionTableViewCell.swift */,
+				9411A4FD2118F80000BC0E14 /* QuestionsTableViewController.swift */,
+			);
+			path = "view controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9411A4F02118D77600BC0E14 /* LaunchScreen.storyboard in Resources */,
+				9411A5032118FC1F00BC0E14 /* AnswerView.storyboard in Resources */,
 				9411A4ED2118D77600BC0E14 /* Assets.xcassets in Resources */,
 				9411A4EB2118D75800BC0E14 /* Main.storyboard in Resources */,
 			);
@@ -157,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9411A5052119026600BC0E14 /* AnswerViewController.swift in Sources */,
 				9411A4F92118D88400BC0E14 /* Question.swift in Sources */,
+				9411A5002118F96900BC0E14 /* QuestionTableViewCell.swift in Sources */,
 				9411A4FE2118F80000BC0E14 /* QuestionsTableViewController.swift in Sources */,
 				9411A4E62118D75800BC0E14 /* AppDelegate.swift in Sources */,
 				9411A4FC2118E41600BC0E14 /* QuestionController.swift in Sources */,

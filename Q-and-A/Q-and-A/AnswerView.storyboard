@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z08-Lq-2AJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--answerView-->
+        <scene sceneID="emb-lM-Nzj">
+            <objects>
+                <viewController title="answerView" id="z08-Lq-2AJ" customClass="AnswerViewController" customModule="Q_and_A" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="1Yd-Cj-Qoc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kbP-1y-LoY">
+                                <rect key="frame" x="0.0" y="80" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4tD-Bn-ZHs">
+                                <rect key="frame" x="0.0" y="118" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kbP-1y-LoY" firstAttribute="top" secondItem="6lA-ba-Iho" secondAttribute="top" constant="16" id="1DF-M2-Atj"/>
+                            <constraint firstItem="6lA-ba-Iho" firstAttribute="trailing" secondItem="4tD-Bn-ZHs" secondAttribute="trailing" id="64w-aV-mGk"/>
+                            <constraint firstItem="4tD-Bn-ZHs" firstAttribute="height" secondItem="1Yd-Cj-Qoc" secondAttribute="height" id="BWO-fj-9Tt"/>
+                            <constraint firstItem="4tD-Bn-ZHs" firstAttribute="leading" secondItem="6lA-ba-Iho" secondAttribute="leading" id="Es4-fg-efD"/>
+                            <constraint firstItem="kbP-1y-LoY" firstAttribute="leading" secondItem="6lA-ba-Iho" secondAttribute="leading" id="Hj6-07-BeB"/>
+                            <constraint firstItem="6lA-ba-Iho" firstAttribute="trailing" secondItem="kbP-1y-LoY" secondAttribute="trailing" id="aFd-4K-rih"/>
+                            <constraint firstItem="4tD-Bn-ZHs" firstAttribute="top" secondItem="kbP-1y-LoY" secondAttribute="bottom" constant="8" id="bWc-ZE-Jwj"/>
+                            <constraint firstItem="4tD-Bn-ZHs" firstAttribute="width" secondItem="1Yd-Cj-Qoc" secondAttribute="height" multiplier="1:1" id="hq1-h7-mFr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6lA-ba-Iho"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="GNd-2B-J78">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="dZs-yg-1kz"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6rM-FQ-WLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880.79999999999995" y="155.17241379310346"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZU2-rH-Jbz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Slc-aJ-xXA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LhD-js-yKb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="z08-Lq-2AJ" kind="relationship" relationship="rootViewController" id="wMF-s2-18d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xXd-io-VCX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58.399999999999999" y="155.17241379310346"/>
+        </scene>
+    </scenes>
+</document>

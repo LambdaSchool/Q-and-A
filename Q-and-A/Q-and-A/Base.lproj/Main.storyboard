@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="154" id="3ek-fp-5Z9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="154" id="3ek-fp-5Z9" customClass="QuestionTableViewCell" customModule="Q_and_A" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="154"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3ek-fp-5Z9" id="03D-Lu-f6P">
@@ -31,7 +31,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-Nz-aAN">
                                                     <rect key="frame" x="0.0" y="0.0" width="137.5" height="20.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question:     " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eql-vg-6qQ">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question:     " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eql-vg-6qQ" customClass="Q">
                                                             <rect key="frame" x="0.0" y="0.0" width="95.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -78,6 +78,11 @@
                                         <constraint firstItem="o47-iu-zIv" firstAttribute="top" secondItem="03D-Lu-f6P" secondAttribute="top" constant="11" id="vvS-Lh-yTE"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="askerLabel" destination="ej6-Nr-QyQ" id="CbA-F6-Jcp"/>
+                                    <outlet property="questionLabel" destination="H8c-aA-4Nj" id="2S2-iS-tHD"/>
+                                    <segue destination="iet-3Z-ZHx" kind="show" identifier="answerVIew" id="YXF-OG-vxH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -92,6 +97,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fk-jW-Am0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="988" y="-23.838080959520241"/>
+        </scene>
+        <!--AnswerView-->
+        <scene sceneID="KYI-rA-7PD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AnswerView" id="iet-3Z-ZHx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bpc-lB-Vmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1565" y="-107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wcr-b5-i2I">
