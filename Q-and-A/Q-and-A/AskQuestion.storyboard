@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--answerView-->
+        <!--askQuestion-->
         <scene sceneID="emb-lM-Nzj">
             <objects>
-                <viewController title="answerView" id="z08-Lq-2AJ" customClass="AnswerViewController" customModule="Q_and_A" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="askQuestion" id="z08-Lq-2AJ" customClass="AskQuestionViewController" customModule="Q_and_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="1Yd-Cj-Qoc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4tD-Bn-ZHs">
                                 <rect key="frame" x="0.0" y="118" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -48,9 +47,13 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="GNd-2B-J78">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="dZs-yg-1kz"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="dZs-yg-1kz"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="askerSubmitLabel" destination="kbP-1y-LoY" id="MNr-5L-1GM"/>
+                        <outlet property="questionLabel" destination="4tD-Bn-ZHs" id="Hn2-mT-VST"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6rM-FQ-WLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

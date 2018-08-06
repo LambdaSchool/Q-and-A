@@ -81,7 +81,7 @@
                                 <connections>
                                     <outlet property="askerLabel" destination="ej6-Nr-QyQ" id="CbA-F6-Jcp"/>
                                     <outlet property="questionLabel" destination="H8c-aA-4Nj" id="2S2-iS-tHD"/>
-                                    <segue destination="iet-3Z-ZHx" kind="show" identifier="answerVIew" id="YXF-OG-vxH"/>
+                                    <segue destination="uMk-Fk-Gm9" kind="show" identifier="AnswerQuestion" id="iGQ-eY-7Lo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -91,20 +91,32 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Q&amp;A" id="Lqc-Ih-WGc">
-                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="Eif-hd-izt"/>
+                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="Eif-hd-izt">
+                            <connections>
+                                <segue destination="HPa-uc-uCQ" kind="show" identifier="AskQuestion" id="xRJ-Q1-kvO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fk-jW-Am0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="988" y="-23.838080959520241"/>
         </scene>
-        <!--AnswerView-->
-        <scene sceneID="KYI-rA-7PD">
+        <!--AskQuestion-->
+        <scene sceneID="ATB-P8-JFi">
             <objects>
-                <viewControllerPlaceholder storyboardName="AnswerView" id="iet-3Z-ZHx" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bpc-lB-Vmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="AskQuestion" id="HPa-uc-uCQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eK5-mk-w5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1565" y="-107"/>
+            <point key="canvasLocation" x="1492" y="-74"/>
+        </scene>
+        <!--AnswerQuestion-->
+        <scene sceneID="W8Y-pn-uW7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AnswerQuestion" id="uMk-Fk-Gm9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JuH-BR-luk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481" y="44"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wcr-b5-i2I">
