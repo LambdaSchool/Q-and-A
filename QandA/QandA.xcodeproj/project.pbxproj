@@ -15,6 +15,8 @@
 		FF7DE8712118E4C0009DB52B /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7DE8702118E4C0009DB52B /* QuestionController.swift */; };
 		FF7DE8772118F3BE009DB52B /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7DE8762118F3BE009DB52B /* QuestionsTableViewController.swift */; };
 		FF7DE8792118F3D5009DB52B /* QuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7DE8782118F3D5009DB52B /* QuestionsTableViewCell.swift */; };
+		FF7DE87B2118FA85009DB52B /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7DE87A2118FA85009DB52B /* AskQuestionViewController.swift */; };
+		FF7DE87D21190241009DB52B /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7DE87C21190241009DB52B /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		FF7DE8702118E4C0009DB52B /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		FF7DE8762118F3BE009DB52B /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
 		FF7DE8782118F3D5009DB52B /* QuestionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewCell.swift; sourceTree = "<group>"; };
+		FF7DE87A2118FA85009DB52B /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
+		FF7DE87C21190241009DB52B /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +69,9 @@
 				FF7DE8752118E4F6009DB52B /* View Controllers */,
 				FF7DE8742118E4E4009DB52B /* Storyboards */,
 				FF7DE85C2118E3E0009DB52B /* AppDelegate.swift */,
+				FF7DE8782118F3D5009DB52B /* QuestionsTableViewCell.swift */,
 				FF7DE8632118E3E1009DB52B /* Assets.xcassets */,
 				FF7DE8682118E3E1009DB52B /* Info.plist */,
-				FF7DE8782118F3D5009DB52B /* QuestionsTableViewCell.swift */,
 			);
 			path = QandA;
 			sourceTree = "<group>";
@@ -101,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				FF7DE8762118F3BE009DB52B /* QuestionsTableViewController.swift */,
+				FF7DE87A2118FA85009DB52B /* AskQuestionViewController.swift */,
+				FF7DE87C21190241009DB52B /* AnswerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -177,7 +183,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF7DE86F2118E4B4009DB52B /* Question.swift in Sources */,
+				FF7DE87D21190241009DB52B /* AnswerViewController.swift in Sources */,
 				FF7DE85D2118E3E0009DB52B /* AppDelegate.swift in Sources */,
+				FF7DE87B2118FA85009DB52B /* AskQuestionViewController.swift in Sources */,
 				FF7DE8792118F3D5009DB52B /* QuestionsTableViewCell.swift in Sources */,
 				FF7DE8712118E4C0009DB52B /* QuestionController.swift in Sources */,
 				FF7DE8772118F3BE009DB52B /* QuestionsTableViewController.swift in Sources */,

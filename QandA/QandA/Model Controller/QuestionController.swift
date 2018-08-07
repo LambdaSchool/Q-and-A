@@ -10,12 +10,12 @@ import Foundation
 
 class QuestionController {
     
-//    func create(with question: String, asker: String, answer: String?, answerer: String?) -> Question {
-//        let questionAsked = Question(question: question, asker: asker, answer: answer, answerer: answerer)
-//
-//        questions.append(questionAsked)
-//        return question
-//    }
+    func create(with question: String, asker: String, answer: String?, answerer: String?) -> Question {
+        let questionAsked = Question(question: question, asker: asker, answer: answer, answerer: answerer)
+
+        questions.append(questionAsked)
+        return questionAsked
+    }
     
     func update(questionAsked: Question, with question: String, asker: String, answer: String?, answerer: String?) {
         guard let index = questions.index(of: questionAsked) else { return }
@@ -27,7 +27,7 @@ class QuestionController {
         scratch.answerer = answerer
         
         questions.remove(at: index)
-        questions.append(scratch)
+        questions.insert(scratch, at: index)
     }
     
     func delete(questionAsked: Question) {
