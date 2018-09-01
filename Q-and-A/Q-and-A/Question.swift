@@ -9,11 +9,15 @@
 import Foundation
 
 struct Question: Equatable {
+    
+    // MARK: - Properties
     let question: String
     let asker: String
     var answer: String?
     var answerer: String?
     
+    // MARK: - Initializers
+    //Normal Initializer
     init(question: String, asker: String) {
         self.question = question
         self.asker = asker
@@ -21,7 +25,7 @@ struct Question: Equatable {
         self.answerer = nil
     }
     
-    //Initializer for add sample questions
+    //Initializer for adding sample questions
     init(question: String, asker: String, answer: String, answerer: String) {
         self.question = question
         self.asker = asker
