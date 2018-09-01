@@ -19,5 +19,17 @@ class QuestionTableViewCell: UITableViewCell {
     @IBOutlet weak var askedByTextLabel: UILabel!
     @IBOutlet weak var instructionTextLabel: UILabel!
     
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    private func updateViews() {
+        guard let question = question else { return }
+        questionTextLabel.text = question.question
+        askedByTextLabel.text = question.asker
+        instructionTextLabel.text = question.answer == nil ? "Tap to answer question" : "Tap to view answer"
+    }
 
 }
