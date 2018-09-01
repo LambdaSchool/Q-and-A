@@ -20,4 +20,12 @@ struct Question: Equatable {
         self.answer = nil
         self.answerer = nil
     }
+    
+    //Initializer for add sample questions
+    init(question: String, asker: String, answer: String, answerer: String) {
+        self.question = question
+        self.asker = asker
+        self.answer = answer
+        self.answerer = answerer
+    }
 }

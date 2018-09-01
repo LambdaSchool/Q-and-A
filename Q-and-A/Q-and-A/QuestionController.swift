@@ -10,7 +10,7 @@ import Foundation
 
 class QuestionController {
     //Array to hold questions. The data source for the application
-    private(set) var questions: [Question] = []
+    private(set) var questions: [Question] = [Question(question: "What is for lunch?", asker: "Bill", answer: "Tacos", answerer: "Joe"), Question(question: "What time is lunch?", asker: "Tom"), Question(question: "Where is everyone getting that coffee from?", asker: "Joe", answer: "It is in the break room", answerer: "Cindy")]
     
     //Create method to initialize a question and add it to the array
     func create(question: String, asker: String) {
