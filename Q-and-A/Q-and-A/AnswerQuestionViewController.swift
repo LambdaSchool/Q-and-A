@@ -13,7 +13,7 @@ class AnswerQuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // updateViews()
+        updateViews()
     }
     
     @IBOutlet weak var questionLabel: UILabel!
@@ -22,13 +22,7 @@ class AnswerQuestionViewController: UIViewController {
     @IBOutlet weak var answerTextView: UITextView!
     
     var questionController: QuestionController?
-    var question: Question? {
-        didSet {
-            if isViewLoaded {
-                updateViews()
-            }
-        }
-    }
+    var question: Question? 
     
     @IBAction func submitAnswer(_ sender: UIBarButtonItem) {
         guard let answerer = answererTextField.text, !answerer.isEmpty,
@@ -43,6 +37,7 @@ class AnswerQuestionViewController: UIViewController {
     private func updateViews() {
         guard let question = question else { return }
         
+        title = question.question
         questionLabel.text = question.question
         askerLabel.text = question.asker
         answererTextField.text = question.answerer ?? ""
