@@ -84,9 +84,8 @@
                                 <connections>
                                     <outlet property="answerLabel" destination="c8P-WB-mpc" id="Qqq-Sh-303"/>
                                     <outlet property="askerLabel" destination="AX4-2w-LcF" id="jhH-yu-TRg"/>
-                                    <outlet property="question" destination="snE-y3-b5F" id="x8j-hY-S1A"/>
                                     <outlet property="questionLabel" destination="snE-y3-b5F" id="pse-U0-ixd"/>
-                                    <segue destination="TB2-LU-co3" kind="show" identifier="ShowQuestion" id="K0f-kb-VUV"/>
+                                    <segue destination="TB2-LU-co3" kind="show" identifier="AnswerQuestion" id="K0f-kb-VUV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

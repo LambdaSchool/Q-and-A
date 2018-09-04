@@ -11,10 +11,9 @@ import UIKit
 class QuestionTableViewCell: UITableViewCell {
     
     func updateViews() {
-        print(question)
         questionLabel?.text = question?.question
         askerLabel?.text = question?.asker
-        question?.answer == nil ? (answerLabel?.text = "Tap to view answer.") : (answerLabel?.text = "Can you answer this?")
+        question?.answer == nil ? (answerLabel?.text = "Can you answer this?") : (answerLabel?.text = "Tap to View Answer.")
     }
 
     override func awakeFromNib() {
@@ -22,11 +21,6 @@ class QuestionTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     var question: Question? {
         didSet {
