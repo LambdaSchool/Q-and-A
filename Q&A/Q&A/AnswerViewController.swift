@@ -22,7 +22,7 @@ class AnswerViewController: UIViewController {
             nameTextField?.text = question?.answerer
             answerTextView?.text = question?.answer
         }
-        
+        self.title = question?.question
         questionNameLabel?.text = question?.asker
         questionBodyLabel.text = question?.question
     }
@@ -37,7 +37,6 @@ class AnswerViewController: UIViewController {
             let answer = answerTextView.text,
             let question = question
         else { return }
-        
         questionController?.updateQuestion(question: question, answer: answer, answerer: name)
         navigationController?.popViewController(animated: true)
     }
