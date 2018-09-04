@@ -31,8 +31,8 @@ class AnswerViewController: UIViewController {
         
         guard let question = question else {return}
         
-        showQuestionLabel.text = question.question
-        askerNameLabel.text = question.asker
+        guard case showQuestionLabel.text = question.question else {return}
+        guard case askerNameLabel.text = question.asker else {return}
     
         
     }
