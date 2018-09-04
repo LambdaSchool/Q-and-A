@@ -12,7 +12,8 @@ import Foundation
 class QuestionController {
     
     func createQuestion(question: String, asker: String, answer: String? = nil, answerer: String? = nil) {
-        questions.append(Question(question: question, asker: asker, answer: answer, answerer: answerer))
+        let question = Question(question: question, asker: asker, answer: answer, answerer: answerer)
+        questions.append(question)
     }
     
     func updateQuestion(question: Question, answer: String? = nil, answerer: String? = nil){

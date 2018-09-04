@@ -82,9 +82,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="answerLabel" destination="c8P-WB-mpc" id="Qqq-Sh-303"/>
                                     <outlet property="askerLabel" destination="AX4-2w-LcF" id="jhH-yu-TRg"/>
                                     <outlet property="question" destination="snE-y3-b5F" id="x8j-hY-S1A"/>
                                     <outlet property="questionLabel" destination="snE-y3-b5F" id="pse-U0-ixd"/>
+                                    <segue destination="TB2-LU-co3" kind="show" identifier="ShowQuestion" id="K0f-kb-VUV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -113,7 +115,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsY-14-bRz">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsY-14-bRz">
                                 <rect key="frame" x="0.0" y="132" width="375" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -122,7 +124,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g3R-NA-cfr">
                                 <rect key="frame" x="0.0" y="170" width="375" height="222.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -147,13 +148,78 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="questionTextField" destination="rsY-14-bRz" id="Y4f-fy-Gex"/>
+                        <outlet property="nameTextField" destination="rsY-14-bRz" id="cEi-FC-Ls6"/>
                         <outlet property="questionTextView" destination="g3R-NA-cfr" id="wYd-Al-U2n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYM-bt-NU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2026.4000000000001" y="-268.51574212893553"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="6iQ-62-Oxq">
+            <objects>
+                <viewController id="TB2-LU-co3" customClass="AnswerViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="trW-6t-UNt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GDT-4z-95n">
+                                <rect key="frame" x="0.0" y="116" width="375" height="333.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yI-A6-RzA">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9W-mj-F3i">
+                                        <rect key="frame" x="0.0" y="20.5" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4dB-8E-0ri">
+                                        <rect key="frame" x="0.0" y="41" width="375" height="164.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QFU-uS-Eub">
+                                        <rect key="frame" x="0.0" y="205.5" width="375" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Kc-Py-JcJ" firstAttribute="trailing" secondItem="GDT-4z-95n" secondAttribute="trailing" id="AiX-by-InU"/>
+                            <constraint firstItem="GDT-4z-95n" firstAttribute="height" secondItem="trW-6t-UNt" secondAttribute="height" multiplier="0.5" id="GoK-U4-hpK"/>
+                            <constraint firstItem="GDT-4z-95n" firstAttribute="top" secondItem="4Kc-Py-JcJ" secondAttribute="top" id="fJ0-mt-cO2"/>
+                            <constraint firstItem="GDT-4z-95n" firstAttribute="leading" secondItem="4Kc-Py-JcJ" secondAttribute="leading" id="gSa-cv-fDw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Kc-Py-JcJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="K7s-Wv-QqU">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="Tya-mT-aEI">
+                            <connections>
+                                <action selector="submitAnswer:" destination="TB2-LU-co3" id="hov-5k-66c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerTextView" destination="QFU-uS-Eub" id="Hz3-67-OpR"/>
+                        <outlet property="nameTextField" destination="4dB-8E-0ri" id="CeI-GG-5Ps"/>
+                        <outlet property="questionBodyLabel" destination="X9W-mj-F3i" id="XoU-qP-6MB"/>
+                        <outlet property="questionNameLabel" destination="6yI-A6-RzA" id="2cE-tp-egD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDA-DW-v0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1590" y="387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0lp-RF-hHq">

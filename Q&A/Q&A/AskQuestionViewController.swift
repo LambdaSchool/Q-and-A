@@ -21,11 +21,17 @@ class AskQuestionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func submitQuestion(_ sender: Any) {
+        guard let name = nameTextField.text,
+            let question = questionTextView.text
+            else { return }
+        questionController?.createQuestion(question: question, asker: name)
+        navigationController?.popViewController(animated: true)
     }
-    
-    @IBOutlet weak var questionTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var questionTextView: UITextView!
     
+    
+    var questionController: QuestionController?
     /*
     // MARK: - Navigation
 
