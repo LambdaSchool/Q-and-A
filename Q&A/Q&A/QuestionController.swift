@@ -16,7 +16,17 @@ class QuestionController {
     }
     
     func updateQuestion(question: Question, answer: String? = nil, answerer: String? = nil){
-        question.answer = answer
+        guard let index = questions.index(of: question) else { return }
+        var newQuestion = question
+        newQuestion.answer = answerer
+        newQuestion.answer = answerer
+        questions.remove(at: index)
+        questions.insert(newQuestion, at: index)
+    }
+    
+    func deleteQuestion(question: Question){
+        guard let index = questions.index(of: question) else { return }
+        questions.remove(at: index)
     }
     
     
