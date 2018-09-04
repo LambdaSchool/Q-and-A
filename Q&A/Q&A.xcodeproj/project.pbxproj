@@ -15,6 +15,7 @@
 		A103F174213E009600B75B2F /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A103F173213E009600B75B2F /* QuestionController.swift */; };
 		A103F176213E0BDB00B75B2F /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A103F175213E0BDB00B75B2F /* QuestionsTableViewController.swift */; };
 		A103F178213E0C2D00B75B2F /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A103F177213E0C2D00B75B2F /* QuestionTableViewCell.swift */; };
+		A103F17A213E135300B75B2F /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A103F179213E135300B75B2F /* AskQuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A103F173213E009600B75B2F /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		A103F175213E0BDB00B75B2F /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
 		A103F177213E0C2D00B75B2F /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		A103F179213E135300B75B2F /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				A103F15F213DFFCC00B75B2F /* AppDelegate.swift */,
 				A103F163213DFFCC00B75B2F /* Main.storyboard */,
+				A103F179213E135300B75B2F /* AskQuestionViewController.swift */,
 				A103F177213E0C2D00B75B2F /* QuestionTableViewCell.swift */,
 				A103F175213E0BDB00B75B2F /* QuestionsTableViewController.swift */,
 				A103F166213DFFCD00B75B2F /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 			files = (
 				A103F172213E002E00B75B2F /* Question.swift in Sources */,
 				A103F178213E0C2D00B75B2F /* QuestionTableViewCell.swift in Sources */,
+				A103F17A213E135300B75B2F /* AskQuestionViewController.swift in Sources */,
 				A103F160213DFFCC00B75B2F /* AppDelegate.swift in Sources */,
 				A103F174213E009600B75B2F /* QuestionController.swift in Sources */,
 				A103F176213E0BDB00B75B2F /* QuestionsTableViewController.swift in Sources */,

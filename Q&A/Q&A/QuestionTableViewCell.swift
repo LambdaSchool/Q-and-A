@@ -9,6 +9,10 @@
 import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
+    
+    func updateViews() {
+        
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +23,12 @@ class QuestionTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
     }
     
     @IBOutlet weak var questionLabel: UILabel!
