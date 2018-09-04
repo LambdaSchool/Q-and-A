@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ModelController {
+class QuestionController {
     
     private(set) var questions : [Question] = []
     
