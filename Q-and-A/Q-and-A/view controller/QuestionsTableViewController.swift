@@ -12,6 +12,7 @@ class QuestionsTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
 
@@ -30,8 +31,13 @@ class QuestionsTableViewController: UITableViewController {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
-        <#code#>
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let question = questionController.questions[indexPath.row]
+            questionController.delete(question: question)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
     }
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

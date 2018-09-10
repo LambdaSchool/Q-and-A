@@ -17,7 +17,11 @@ class QuestionTableViewCell: UITableViewCell {
         askerAppearLabel.text = cellQuestion.asker
     }
  
-    var question: Question?
+    var question: Question?{
+        didSet{
+            updateView()
+        }
+    }
     @IBOutlet weak var questionAppear: UILabel!
     @IBOutlet weak var askerAppearLabel: UILabel!
 }

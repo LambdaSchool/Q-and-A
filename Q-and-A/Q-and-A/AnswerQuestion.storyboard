@@ -68,7 +68,11 @@
                         <viewLayoutGuide key="safeArea" id="2IU-9H-Bdf"/>
                     </view>
                     <navigationItem key="navigationItem" id="gHh-Ux-t33">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="lZD-YH-iho"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="lZD-YH-iho">
+                            <connections>
+                                <action selector="submitAnswer:" destination="XeS-0P-mPV" id="yMd-fD-BHL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="answerTextView" destination="JdU-WS-fVu" id="Sz4-6M-Lrf"/>

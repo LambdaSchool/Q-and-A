@@ -47,7 +47,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="GNd-2B-J78">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="dZs-yg-1kz"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="dZs-yg-1kz">
+                            <connections>
+                                <action selector="submitQuestion:" destination="z08-Lq-2AJ" id="D9Z-IB-xBD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

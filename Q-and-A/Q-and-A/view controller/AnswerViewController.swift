@@ -15,23 +15,24 @@ class AnswerViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func updateView() {
+        
     }
+
+    @IBAction func submitAnswer(_ sender: Any) {
+        guard let question = question else {return}
+        let questionAnswer = answerTextView.text
+         let questionAnswerer = answererNameTextfield.text
+        questionController?.updateQuestion(question: question, answer: questionAnswer, answerer: questionAnswerer)
+    }
+    
     @IBOutlet weak var questionAppearLabel: UILabel!
     @IBOutlet weak var askerNameAppearLabel: UILabel!
     @IBOutlet weak var answerTextView: UITextView!
     @IBOutlet weak var answererNameTextfield: UITextField!
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    var question: Question?
+    var questionController: QuestionController?
 
 }
