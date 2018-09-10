@@ -13,7 +13,10 @@ class QuestionController {
     // CRUD
     // Read + Create
     
+    //Reading Variable
     private(set) var questions: [Question] = []
+    
+    //Create
     
     func createQuestion (question:String, asker:String) {
         let question = Question(question: question, asker: asker)
@@ -22,21 +25,27 @@ class QuestionController {
         
     // UPDATE
     // Update func that takes in answer string, and answerer string to add to the question
+    
     func updateQuestion(question: Question, answer:String, answerer: String){
             guard let index = questions.index(of: question) else {return}
         
-        //Declare new variable and set as new question
-        var newQuestion = question
-        newQuestion.answer = answer
-        newQuestion.answerer = answerer
-        questions.remove(at: index)
-        questions.insert(newQuestion, at: index)
+        // Trying to grab the initial and replace question
+        questions[index].answer = answer
+        questions[index].answerer = answerer
         
         
-        // Trying to grab the initial question
-        //    questions[index].answer = answer
-        //    questions[index].answerer = answerer
+        // Old Redudant Code
+//        Declare new variable and set as new question
+//        var newQuestion = question
+//
+//        newQuestion.answer = answer
+//        newQuestion.answerer = answerer
+//
+//        questions.remove(at: index)
+//        questions.insert(newQuestion, at: index)
+//
         
+       
     }
     
     // DELETE
