@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C34E76F9213A034B00D6FE6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E76F8213A034B00D6FE6C /* AppDelegate.swift */; };
-		C34E76FB213A034B00D6FE6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E76FA213A034B00D6FE6C /* ViewController.swift */; };
 		C34E76FE213A034B00D6FE6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34E76FC213A034B00D6FE6C /* Main.storyboard */; };
 		C34E7700213A034F00D6FE6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C34E76FF213A034F00D6FE6C /* Assets.xcassets */; };
 		C34E7703213A034F00D6FE6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34E7701213A034F00D6FE6C /* LaunchScreen.storyboard */; };
@@ -23,7 +22,6 @@
 /* Begin PBXFileReference section */
 		C34E76F5213A034B00D6FE6C /* Q&A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Q&A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34E76F8213A034B00D6FE6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C34E76FA213A034B00D6FE6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C34E76FD213A034B00D6FE6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C34E76FF213A034F00D6FE6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C34E7702213A034F00D6FE6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,14 +64,11 @@
 		C34E76F7213A034B00D6FE6C /* Q&A */ = {
 			isa = PBXGroup;
 			children = (
-				C34E76F8213A034B00D6FE6C /* AppDelegate.swift */,
-				C34E76FA213A034B00D6FE6C /* ViewController.swift */,
-				C36F48822146467000CFCE81 /* Storyboards */,
 				C36F48812146466000CFCE81 /* Model */,
 				C36F48802146464A00CFCE81 /* View Controllers */,
-				C34E76FF213A034F00D6FE6C /* Assets.xcassets */,
-				C34E7701213A034F00D6FE6C /* LaunchScreen.storyboard */,
-				C34E7704213A034F00D6FE6C /* Info.plist */,
+				C36F48822146467000CFCE81 /* Storyboards */,
+				C36F48832146478100CFCE81 /* Custom Cell */,
+				C36F4884214647D100CFCE81 /* Resources */,
 			);
 			path = "Q&A";
 			sourceTree = "<group>";
@@ -82,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				C36F4878214645BF00CFCE81 /* QuestionTableViewController.swift */,
-				C36F487A214645D100CFCE81 /* QuestionTableViewCell.swift */,
 				C36F487C2146460800CFCE81 /* AskQuestionViewController.swift */,
 				C36F487E2146463000CFCE81 /* AnswerViewController.swift */,
 			);
@@ -104,6 +98,25 @@
 				C34E76FC213A034B00D6FE6C /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C36F48832146478100CFCE81 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C36F487A214645D100CFCE81 /* QuestionTableViewCell.swift */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		C36F4884214647D100CFCE81 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C34E76F8213A034B00D6FE6C /* AppDelegate.swift */,
+				C34E76FF213A034F00D6FE6C /* Assets.xcassets */,
+				C34E7701213A034F00D6FE6C /* LaunchScreen.storyboard */,
+				C34E7704213A034F00D6FE6C /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +196,6 @@
 				C36F487B214645D100CFCE81 /* QuestionTableViewCell.swift in Sources */,
 				C36F487F2146463000CFCE81 /* AnswerViewController.swift in Sources */,
 				C36F487D2146460800CFCE81 /* AskQuestionViewController.swift in Sources */,
-				C34E76FB213A034B00D6FE6C /* ViewController.swift in Sources */,
 				C34E76F9213A034B00D6FE6C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7JG93VFG2G;
-				INFOPLIST_FILE = "Q&A/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Q&A/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7JG93VFG2G;
-				INFOPLIST_FILE = "Q&A/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Q&A/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
