@@ -15,8 +15,16 @@ class QuestionTableViewCell: UITableViewCell {
         
         questionAppear.text = cellQuestion.question
         askerAppearLabel.text = cellQuestion.asker
+        
+        if cellQuestion.answer == nil {
+            answerLabel.text = "Can you answer this?"
+        } else {
+            answerLabel.text = "Tap to see answer."
+        }
+        
     }
- 
+    @IBOutlet weak var answerLabel: UILabel!
+    
     var question: Question?{
         didSet{
             updateView()

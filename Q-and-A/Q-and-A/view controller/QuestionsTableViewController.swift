@@ -41,8 +41,14 @@ class QuestionsTableViewController: UITableViewController {
     }
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AskQuestion"{
-           
+        if segue.identifier == "AskQuestion" {
+           guard let detailVC = segue.destination as? AskQuestionViewController else {return}
+                detailVC.questionController = questionController
+        }else if segue.identifier == "AnswerQuestion" {
+            guard let detailVC = segue.destination as? AnswerViewController,
+            let indexPath = tableView.indexPathForSelectedRow else {return}
+            detailVC.questionController = questionController
+            detailVC.question = questionController.questions[indexPath.row]
         }
     }
 

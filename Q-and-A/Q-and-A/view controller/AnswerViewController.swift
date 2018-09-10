@@ -18,6 +18,15 @@ class AnswerViewController: UIViewController {
     
     func updateView() {
         
+        guard let question = question else {return}
+        
+        title = question.question
+        askerNameAppearLabel.text = question.asker
+        questionAppearLabel.text = question.question
+        answererNameTextfield.text = question.answerer
+        answerTextView.text = question.answer
+        
+        
     }
 
     @IBAction func submitAnswer(_ sender: Any) {
@@ -26,6 +35,7 @@ class AnswerViewController: UIViewController {
          let questionAnswerer = answererNameTextfield.text
         questionController?.updateQuestion(question: question, answer: questionAnswer, answerer: questionAnswerer)
     }
+    
     
     @IBOutlet weak var questionAppearLabel: UILabel!
     @IBOutlet weak var askerNameAppearLabel: UILabel!

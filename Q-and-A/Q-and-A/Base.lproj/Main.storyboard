@@ -79,6 +79,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="answerLabel" destination="z5r-N1-Ws1" id="mmE-zf-Ejw"/>
                                     <outlet property="askerLabel" destination="ej6-Nr-QyQ" id="CbA-F6-Jcp"/>
                                     <outlet property="questionLabel" destination="H8c-aA-4Nj" id="2S2-iS-tHD"/>
                                     <segue destination="uMk-Fk-Gm9" kind="show" identifier="AnswerQuestion" id="iGQ-eY-7Lo"/>
