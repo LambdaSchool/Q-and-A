@@ -20,8 +20,17 @@ class AskQuestionViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func submitQuestionButton(_ sender: Any) {
+        
+    }
     
-
+    @IBOutlet weak var submitQuestionTextField: UITextField!
+    
+    @IBOutlet weak var submitQuestionTextView: UITextView!
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

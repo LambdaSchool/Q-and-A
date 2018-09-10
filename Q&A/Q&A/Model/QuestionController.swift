@@ -34,7 +34,7 @@ class QuestionController {
         questions[index].answerer = answerer
         
         
-        // Old Redudant Code
+        // Old Redundant Code
 //        Declare new variable and set as new question
 //        var newQuestion = question
 //
