@@ -42,6 +42,7 @@ class QuestionTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if (segue.identifier == "ShowAnswer") {
             guard let showAnswerVC = segue.destination as? AnswerViewController else {return}
             showAnswerVC.questionConroller = questionController
