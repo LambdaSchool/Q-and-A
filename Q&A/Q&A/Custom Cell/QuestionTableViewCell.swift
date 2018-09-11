@@ -31,8 +31,6 @@ class QuestionTableViewCell: UITableViewCell {
     
     }
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

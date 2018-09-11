@@ -82,11 +82,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="answerLabel" destination="vDK-qf-Agq" id="7Uc-s3-TWF"/>
-                                    <outlet property="answerTextLabel" destination="vDK-qf-Agq" id="Y1H-eG-kRJ"/>
-                                    <outlet property="askedByTextLabel" destination="cXg-9N-vVW" id="UO7-fU-kGL"/>
                                     <outlet property="askerLabel" destination="cXg-9N-vVW" id="HqH-2t-L2n"/>
                                     <outlet property="questionLabel" destination="4Ya-ro-Tg9" id="PIQ-jk-HKa"/>
-                                    <outlet property="questionTextLabel" destination="5A6-Pq-3mR" id="Jhl-Yd-FGn"/>
                                     <segue destination="b4O-Pa-4T7" kind="show" identifier="ShowAnswer" id="uR2-8i-JZL"/>
                                 </connections>
                             </tableViewCell>
@@ -210,7 +207,6 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mNw-IK-kzB">
                                         <rect key="frame" x="0.0" y="70.666666666666657" width="240" height="289.33333333333337"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -234,7 +230,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="answerNameTextField" destination="KYG-3z-lET" id="o3A-LT-ncf"/>
                         <outlet property="answerTextView" destination="mNw-IK-kzB" id="5bU-Sn-wYN"/>
                         <outlet property="answererNameTextField" destination="KYG-3z-lET" id="BDM-ky-sgD"/>
                         <outlet property="askerLabel" destination="cDW-Sh-pno" id="WWf-ov-gaE"/>
