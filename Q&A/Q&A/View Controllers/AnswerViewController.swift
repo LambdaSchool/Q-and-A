@@ -11,13 +11,16 @@ import UIKit
 class AnswerViewController: UIViewController {
 
     var questionConroller: QuestionController?
-    var question : Question?
+    
+    var question : Question? {
+        didSet { updateViews()
+        }
+    }
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var askerLabel: UILabel!
     @IBOutlet weak var answererNameTextField: UITextField!
     @IBOutlet weak var answerTextView: UITextView!
-    
     
     
     @IBAction func submitAnswer(_ sender: Any) {
@@ -30,13 +33,13 @@ class AnswerViewController: UIViewController {
         
     }
     
-    private func updateViews(){
+     func updateViews(){
         if (question?.answer != nil && question?.answerer != nil) {
             answererNameTextField?.text =  question?.answerer
-            answerTextView.text = question?.answer
+            answerTextView?.text = question?.answer
         }
         questionLabel?.text = question?.question
-        askerLabel.text = question?.asker
+        askerLabel?.text = question?.asker
         self.title = question?.question
         
     }
