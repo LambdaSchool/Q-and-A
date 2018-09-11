@@ -178,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="1678" y="-352"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="COA-dj-VuE">
             <objects>
-                <viewController id="b4O-Pa-4T7" sceneMemberID="viewController">
+                <viewController id="b4O-Pa-4T7" customClass="AnswerViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vD3-ka-H6o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,6 +226,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="22Z-wD-rXP"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Xi7-pt-fRz">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="yWP-Im-PCn">
+                            <connections>
+                                <action selector="submitAnswer:" destination="b4O-Pa-4T7" id="hBB-mR-4gF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerNameTextField" destination="KYG-3z-lET" id="o3A-LT-ncf"/>
+                        <outlet property="answerTextView" destination="mNw-IK-kzB" id="5bU-Sn-wYN"/>
+                        <outlet property="answererNameTextField" destination="KYG-3z-lET" id="BDM-ky-sgD"/>
+                        <outlet property="askerLabel" destination="cDW-Sh-pno" id="WWf-ov-gaE"/>
+                        <outlet property="questionLabel" destination="84k-nW-tu4" id="9BI-AC-PlS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biK-M1-6Wp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
