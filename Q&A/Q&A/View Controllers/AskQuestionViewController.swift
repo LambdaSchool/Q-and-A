@@ -21,7 +21,7 @@ class AskQuestionViewController: UIViewController {
     }
     
     // connected outlets
-    // call questionController createQuestions Method
+    // call questionController --> createQuestions Method
     // have navigation controller pop to previous controller
     
     @IBAction func submitQuestionButton(_ sender: Any) {
