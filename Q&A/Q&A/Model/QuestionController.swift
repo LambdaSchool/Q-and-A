@@ -21,7 +21,7 @@ class QuestionController {
     func createQuestion (question:String, asker:String) {
         let question = Question(question: question, asker: asker)
             questions.append(question)
-        }
+    }
         
     // UPDATE
     // Update func that takes in answer string, and answerer string to add to the question

@@ -10,35 +10,29 @@ import UIKit
 
 class AskQuestionViewController: UIViewController {
 
+    var questionController: QuestionController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    @IBAction func submitQuestionButton(_ sender: Any) {
-        
     }
     
+    // connected outlets
+    // call questionController createQuestions Method
+    // have navigation controller pop to previous controller
+    
+    @IBAction func submitQuestionButton(_ sender: Any) {
+        guard let submitQuestionTextField = submitQuestionTextField.text,
+            let submitQuestionTextView = submitQuestionTextView.text else {return}
+        questionController?.createQuestion(question: submitQuestionTextField, asker: submitQuestionTextView)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    // Next time use shorter names, although these are very descriptive
     @IBOutlet weak var submitQuestionTextField: UITextField!
     
     @IBOutlet weak var submitQuestionTextView: UITextView!
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
