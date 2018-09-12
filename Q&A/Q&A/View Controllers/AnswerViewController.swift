@@ -35,9 +35,11 @@ class AnswerViewController: UIViewController {
         guard let question = question else { return }
         
         // TODO Fix This
+    
         title = question.question
         questionLabel.text = question.question
-        askerLabel.text = question.asker
+       askerLabel.text = question.asker
+        
         
         guard let answerer = question.answerer,
             let answer = question.answer else { return }

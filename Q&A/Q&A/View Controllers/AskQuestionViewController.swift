@@ -27,7 +27,7 @@ class AskQuestionViewController: UIViewController {
     @IBAction func submitQuestionButton(_ sender: Any) {
         guard let submitQuestionTextField = submitQuestionTextField.text,
             let submitQuestionTextView = submitQuestionTextView.text else {return}
-        questionController?.createQuestion(question: submitQuestionTextField, asker: submitQuestionTextView)
+        questionController?.createQuestion(question: submitQuestionTextView, asker: submitQuestionTextField)
         navigationController?.popViewController(animated: true)
     }
     
