@@ -1,11 +1,3 @@
-//
-//  QuestionTableViewCell.swift
-//  Q&A
-//
-//  Created by Paul Yi on 10/10/18.
-//  Copyright © 2018 Paul Yi. All rights reserved.
-//
-
 import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
