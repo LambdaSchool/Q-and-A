@@ -9,20 +9,24 @@
 import Foundation
 
 class QuestionController {
-    var questions = [Question]()
+    private(set) var questions: [Question] = []
     
-    func createQuestion(question: String, asker: String, answer: String) {
+    func createQuestion(question: String, asker: String) {
         let question = Question(question: question, asker: asker)
-        question.append(question)
+        questions.append(question)
     }
 
-    func update(question: Question, answer: String, answerer: String) {
+    func updateQuestion(question: Question, answer: String, answerer: String) {
+        guard let index = questions.index(of: question) else {return}
+        
+        questions[index].answer = answer
+        questions[index].answerer = answerer
         
     }
 
-    func delete(question: Question) {
-        guard let index = question.index(of:) else {return}
+    func deleteQuestion(question: Question) {
+        guard let index = questions.index(of: question) else {return}
         questions.remove(at: index)
-        question.filter({ $0 != question})
+//        question.filter({ $0 != question})
     }
 }
