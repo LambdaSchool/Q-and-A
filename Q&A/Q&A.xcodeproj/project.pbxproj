@@ -14,6 +14,8 @@
 		4B0ADED6216E880D009C7DBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0ADED4216E880D009C7DBA /* LaunchScreen.storyboard */; };
 		4B0ADEDE216E88CD009C7DBA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADEDD216E88CD009C7DBA /* Question.swift */; };
 		4B0ADEE0216E8A7E009C7DBA /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADEDF216E8A7E009C7DBA /* QuestionController.swift */; };
+		4B0ADEE2216E9462009C7DBA /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADEE1216E9462009C7DBA /* QuestionTableViewController.swift */; };
+		4B0ADEE4216E9473009C7DBA /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADEE3216E9473009C7DBA /* QuestionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4B0ADED7216E880D009C7DBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B0ADEDD216E88CD009C7DBA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		4B0ADEDF216E8A7E009C7DBA /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		4B0ADEE1216E9462009C7DBA /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
+		4B0ADEE3216E9473009C7DBA /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				4B0ADECB216E880C009C7DBA /* AppDelegate.swift */,
 				4B0ADECD216E880C009C7DBA /* ViewController.swift */,
 				4B0ADECF216E880C009C7DBA /* Main.storyboard */,
+				4B0ADEE1216E9462009C7DBA /* QuestionTableViewController.swift */,
+				4B0ADEE3216E9473009C7DBA /* QuestionTableViewCell.swift */,
 				4B0ADEDD216E88CD009C7DBA /* Question.swift */,
 				4B0ADEDF216E8A7E009C7DBA /* QuestionController.swift */,
 				4B0ADED2216E880D009C7DBA /* Assets.xcassets */,
@@ -143,6 +149,8 @@
 			files = (
 				4B0ADEDE216E88CD009C7DBA /* Question.swift in Sources */,
 				4B0ADECE216E880C009C7DBA /* ViewController.swift in Sources */,
+				4B0ADEE2216E9462009C7DBA /* QuestionTableViewController.swift in Sources */,
+				4B0ADEE4216E9473009C7DBA /* QuestionTableViewCell.swift in Sources */,
 				4B0ADECC216E880C009C7DBA /* AppDelegate.swift in Sources */,
 				4B0ADEE0216E8A7E009C7DBA /* QuestionController.swift in Sources */,
 			);
