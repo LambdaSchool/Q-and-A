@@ -17,6 +17,7 @@
 		4B0ADEE2216E9462009C7DBA /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADEE1216E9462009C7DBA /* QuestionsTableViewController.swift */; };
 		4B0ADEE4216E9473009C7DBA /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADEE3216E9473009C7DBA /* QuestionTableViewCell.swift */; };
 		4B0ADEE6216EAADC009C7DBA /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADEE5216EAADC009C7DBA /* AskQuestionViewController.swift */; };
+		4B0ADEE8216EBAB3009C7DBA /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADEE7216EBAB3009C7DBA /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4B0ADEE1216E9462009C7DBA /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
 		4B0ADEE3216E9473009C7DBA /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		4B0ADEE5216EAADC009C7DBA /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
+		4B0ADEE7216EBAB3009C7DBA /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				4B0ADECD216E880C009C7DBA /* ViewController.swift */,
 				4B0ADECF216E880C009C7DBA /* Main.storyboard */,
 				4B0ADEE5216EAADC009C7DBA /* AskQuestionViewController.swift */,
+				4B0ADEE7216EBAB3009C7DBA /* AnswerViewController.swift */,
 				4B0ADEE1216E9462009C7DBA /* QuestionsTableViewController.swift */,
 				4B0ADEE3216E9473009C7DBA /* QuestionTableViewCell.swift */,
 				4B0ADEDD216E88CD009C7DBA /* Question.swift */,
@@ -154,6 +157,7 @@
 				4B0ADECE216E880C009C7DBA /* ViewController.swift in Sources */,
 				4B0ADEE2216E9462009C7DBA /* QuestionsTableViewController.swift in Sources */,
 				4B0ADEE4216E9473009C7DBA /* QuestionTableViewCell.swift in Sources */,
+				4B0ADEE8216EBAB3009C7DBA /* AnswerViewController.swift in Sources */,
 				4B0ADEE6216EAADC009C7DBA /* AskQuestionViewController.swift in Sources */,
 				4B0ADECC216E880C009C7DBA /* AppDelegate.swift in Sources */,
 				4B0ADEE0216E8A7E009C7DBA /* QuestionController.swift in Sources */,
