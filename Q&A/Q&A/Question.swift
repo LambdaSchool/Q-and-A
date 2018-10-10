@@ -1,6 +1,6 @@
 import UIKit
 
-struct Question {
+struct Question: Equatable {
     let question: String
     let asker: String
     var answer: String?
