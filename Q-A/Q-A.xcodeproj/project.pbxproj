@@ -16,6 +16,7 @@
 		44E738DF216EA0EC00729E4C /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E738DE216EA0EC00729E4C /* QuestionTableViewController.swift */; };
 		44E738E1216EA19900729E4C /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E738E0216EA19900729E4C /* QuestionTableViewCell.swift */; };
 		44E738E3216EB37900729E4C /* SubmitQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E738E2216EB37900729E4C /* SubmitQuestionViewController.swift */; };
+		44E738E5216EEB8900729E4C /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E738E4216EEB8900729E4C /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		44E738DE216EA0EC00729E4C /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		44E738E0216EA19900729E4C /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		44E738E2216EB37900729E4C /* SubmitQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitQuestionViewController.swift; sourceTree = "<group>"; };
+		44E738E4216EEB8900729E4C /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				44E738C8216E881400729E4C /* AppDelegate.swift */,
 				44E738CC216E881400729E4C /* Main.storyboard */,
 				44E738E0216EA19900729E4C /* QuestionTableViewCell.swift */,
+				44E738E4216EEB8900729E4C /* AnswerViewController.swift */,
 				44E738DE216EA0EC00729E4C /* QuestionTableViewController.swift */,
 				44E738DA216E88CF00729E4C /* Question.swift */,
 				44E738DC216E8C2200729E4C /* QuestionController.swift */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44E738E3216EB37900729E4C /* SubmitQuestionViewController.swift in Sources */,
+				44E738E5216EEB8900729E4C /* AnswerViewController.swift in Sources */,
 				44E738DB216E88CF00729E4C /* Question.swift in Sources */,
 				44E738DF216EA0EC00729E4C /* QuestionTableViewController.swift in Sources */,
 				44E738E1216EA19900729E4C /* QuestionTableViewCell.swift in Sources */,

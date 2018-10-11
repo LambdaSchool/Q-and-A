@@ -11,21 +11,23 @@ import UIKit
 class SubmitQuestionViewController: UIViewController {
 
     
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var questionTextView: UITextView!
     
     
-    @IBOutlet weak var textField: UITextField!
-    
-    
-    @IBAction func SQbarButton(_ sender: Any) {
+    @IBOutlet weak var askerTextField: UITextField!
+    @IBAction func submitQuestion(_ sender: Any) {
+        guard let  question = questionTextView.text else {return}
+        guard let asker = askerTextField.text else {return}
         
+        if question == "" || asker == "" { return }
         
-        
+        qc?.Create(question: question, asker: asker)
+        navigationController?.popViewController(animated: true)
     }
     
     
     
-    var questionController: QuestionController?
+    var qc: QuestionController?
     
     
     override func viewDidLoad() {
