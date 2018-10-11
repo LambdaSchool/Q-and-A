@@ -10,6 +10,10 @@ import UIKit
 
 class QuestionTableViewController: UITableViewController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

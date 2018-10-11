@@ -6,11 +6,16 @@
 //  Copyright © 2018 Vijay Das. All rights reserved.
 //
 struct Question: Codable {
-    let question: String
-    let asker: String
-    let answer: String?
-    let answerer: String?
+    var question: String
+    var asker: String
+    var answer: String?
+    var answerer: String?
     
-// init(answer: String? = nil, answerer: String? = nil)
-    
+    init(asker: String, question: String, answer: String? = nil, answerer: String? = nil) {
+        self.asker = asker
+        self.question = question
+        self.answer = answer
+        self.answerer = answerer
+   }
+
 }

@@ -45,7 +45,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRy-Hd-TKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556" y="218"/>
+            <point key="canvasLocation" x="478" y="217"/>
         </scene>
         <!--Ask a Question:-->
         <scene sceneID="P2z-PS-BCZ">
@@ -90,22 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xc8-Br-gop" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1381.5999999999999" y="-162.3688155922039"/>
-        </scene>
-        <!--Answer-->
-        <scene sceneID="SRv-Eh-JjZ">
-            <objects>
-                <viewController title="Answer" id="YOL-qL-Mfc" customClass="AnswerViewController" customModule="Q_and_A" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Npl-3i-tNN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="kII-ck-vxU"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="74f-eC-e5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1382" y="563"/>
+            <point key="canvasLocation" x="1394" y="217"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Zh-2L-qev">
