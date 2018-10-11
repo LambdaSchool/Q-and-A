@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JgD-44-JeN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Q&A-->
+        <scene sceneID="HNO-rT-V4u">
+            <objects>
+                <tableViewController id="BeN-Du-vjG" customClass="QuestionTableViewController" customModule="Q_and_A" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ia8-Vz-pIX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Bab-7d-mwf">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bab-7d-mwf" id="NoW-hJ-p5b">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="iyK-t2-6XT" kind="show" identifier="answer" id="O2k-Cp-Uf0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BeN-Du-vjG" id="JT6-W1-pSP"/>
+                            <outlet property="delegate" destination="BeN-Du-vjG" id="0J4-fX-efz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Q&amp;A" id="Uki-eU-Gwo">
+                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="rdU-cV-RLP">
+                            <connections>
+                                <segue destination="iyK-t2-6XT" kind="show" identifier="ask" id="KBq-Qh-iK3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tRy-Hd-TKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478" y="217"/>
+        </scene>
+        <!--Ask a Question:-->
+        <scene sceneID="P2z-PS-BCZ">
+            <objects>
+                <viewController title="Ask a Question:" id="iyK-t2-6XT" customClass="AskViewController" customModule="Q_and_A" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QXW-Nz-Jsv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3RW-3G-21f">
+                                <rect key="frame" x="16" y="161" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Ask a question:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xl6-zf-M2e">
+                                <rect key="frame" x="16" y="210" width="343" height="67"/>
+                                <color key="backgroundColor" red="1" green="0.82729146954290167" blue="0.052907016571996812" alpha="0.18367627640845072" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3RW-3G-21f" firstAttribute="leading" secondItem="Xl6-zf-M2e" secondAttribute="leading" id="Fdx-ln-pJR"/>
+                            <constraint firstItem="3RW-3G-21f" firstAttribute="leading" secondItem="QXW-Nz-Jsv" secondAttribute="leadingMargin" id="HsI-u1-OXV"/>
+                            <constraint firstItem="3RW-3G-21f" firstAttribute="top" secondItem="wC0-1M-eHf" secondAttribute="top" constant="45" id="LoV-r0-aLQ"/>
+                            <constraint firstItem="3RW-3G-21f" firstAttribute="trailing" secondItem="QXW-Nz-Jsv" secondAttribute="trailingMargin" id="aK0-Dr-haX"/>
+                            <constraint firstItem="Xl6-zf-M2e" firstAttribute="top" secondItem="3RW-3G-21f" secondAttribute="bottom" constant="19" id="nSb-Wa-BZv"/>
+                            <constraint firstItem="wC0-1M-eHf" firstAttribute="bottom" secondItem="Xl6-zf-M2e" secondAttribute="bottom" constant="390" id="oxn-pC-4Xw"/>
+                            <constraint firstItem="3RW-3G-21f" firstAttribute="trailing" secondItem="Xl6-zf-M2e" secondAttribute="trailing" id="tpO-9i-oj1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wC0-1M-eHf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="jnJ-Cf-c4d">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="0gI-mA-Xen"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="field" destination="3RW-3G-21f" id="x4t-Yj-VK1"/>
+                        <outlet property="textView" destination="Xl6-zf-M2e" id="8Sm-g0-AmI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xc8-Br-gop" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1394" y="217"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Zh-2L-qev">
+            <objects>
+                <navigationController id="JgD-44-JeN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="rau-je-tZz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BeN-Du-vjG" kind="relationship" relationship="rootViewController" id="2sD-xn-qqP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9k-oL-23U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396" y="218"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KBq-Qh-iK3"/>
+    </inferredMetricsTieBreakers>
+</document>
