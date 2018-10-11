@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QandA/AnswerViewController.swift"
+            timestampString = "560920704.760354"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "AnswerViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QandA.AnswerViewController.questionLabel.getter : weak Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "QandA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mosesrobinson/Desktop/CODING%20PROJECTS%20--%20LAMBDA/Developement/Q-and-A/QandA/QandA/AnswerViewController.swift"
+                  timestampString = "560920704.97445"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QandA.AnswerViewController.questionLabel.setter : weak Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "QandA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mosesrobinson/Desktop/CODING%20PROJECTS%20--%20LAMBDA/Developement/Q-and-A/QandA/QandA/AnswerViewController.swift"
+                  timestampString = "560920704.980363"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QandA.AnswerViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; QandA.AnswerViewController"
+                  moduleName = "QandA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mosesrobinson/Desktop/CODING%20PROJECTS%20--%20LAMBDA/Developement/Q-and-A/QandA/QandA/AnswerViewController.swift"
+                  timestampString = "560920704.982913"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "311">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QandA.AnswerViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;QandA.AnswerViewController&gt;"
+                  moduleName = "QandA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mosesrobinson/Desktop/CODING%20PROJECTS%20--%20LAMBDA/Developement/Q-and-A/QandA/QandA/AnswerViewController.swift"
+                  timestampString = "560920704.986237"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "279">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

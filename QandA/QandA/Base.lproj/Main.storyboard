@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="79" id="jgv-aI-A3A" customClass="QuestionTableViewCell" customModule="QandA" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="79" id="jgv-aI-A3A" customClass="QuestionTableViewCell" customModule="QandA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jgv-aI-A3A" id="67h-wh-38T">
@@ -84,6 +84,7 @@
                                     <outlet property="askedByNameLabel" destination="DQE-jW-DGg" id="sWv-eX-Fe7"/>
                                     <outlet property="questionLabel" destination="NuB-4i-LPR" id="Ct7-4P-EXp"/>
                                     <outlet property="questionTitleLabel" destination="N7b-x5-o6y" id="cBu-qj-dDi"/>
+                                    <segue destination="RVu-vz-vf2" kind="show" identifier="answerQuestionSegue" id="xr2-qk-xpA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -92,10 +93,10 @@
                             <outlet property="delegate" destination="p4E-4o-nM2" id="Poi-FJ-rvj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qLR-tO-cVt">
+                    <navigationItem key="navigationItem" title="Q&amp;A" id="qLR-tO-cVt">
                         <barButtonItem key="rightBarButtonItem" title="Ask Question" id="pLb-5n-tIx">
                             <connections>
-                                <segue destination="jjv-cr-Hz7" kind="show" id="AQ1-0g-hTE"/>
+                                <segue destination="jjv-cr-Hz7" kind="show" identifier="askQuestionSegue" id="AQ1-0g-hTE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -104,22 +105,96 @@
             </objects>
             <point key="canvasLocation" x="948" y="-13.043478260869566"/>
         </scene>
-        <!--Title-->
+        <!--Answer-->
+        <scene sceneID="top-V9-JaM">
+            <objects>
+                <viewController id="RVu-vz-vf2" customClass="AnswerViewController" customModule="QandA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ew7-0Z-IbD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GcS-we-Hlq">
+                                <rect key="frame" x="0.0" y="124" width="375" height="275.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPi-KA-klh">
+                                        <rect key="frame" x="153" y="0.0" width="69" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGa-Wy-qdk">
+                                        <rect key="frame" x="165" y="40.5" width="45" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tAx-KV-qZ8">
+                                        <rect key="frame" x="20" y="81" width="335" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="4j8-2b-Sht"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Answer" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LnG-2Q-GRu">
+                                        <rect key="frame" x="8" y="131" width="359" height="144.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tAx-KV-qZ8" firstAttribute="leading" secondItem="GcS-we-Hlq" secondAttribute="leading" constant="20" id="4K0-1H-eyB"/>
+                                    <constraint firstAttribute="trailing" secondItem="LnG-2Q-GRu" secondAttribute="trailing" constant="8" id="8JI-ev-NAK"/>
+                                    <constraint firstItem="LnG-2Q-GRu" firstAttribute="leading" secondItem="GcS-we-Hlq" secondAttribute="leading" constant="8" id="PLE-rQ-fyq"/>
+                                    <constraint firstAttribute="trailing" secondItem="tAx-KV-qZ8" secondAttribute="trailing" constant="20" id="YWL-Jr-JHx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bax-UY-hIj" firstAttribute="trailing" secondItem="GcS-we-Hlq" secondAttribute="trailing" id="J6m-gA-LQZ"/>
+                            <constraint firstItem="GcS-we-Hlq" firstAttribute="top" secondItem="bax-UY-hIj" secondAttribute="top" constant="8" id="dtb-v0-7ND"/>
+                            <constraint firstItem="GcS-we-Hlq" firstAttribute="height" secondItem="bax-UY-hIj" secondAttribute="height" multiplier="1/2" id="foQ-Or-h3I"/>
+                            <constraint firstItem="GcS-we-Hlq" firstAttribute="leading" secondItem="bax-UY-hIj" secondAttribute="leading" id="hJb-l0-JCi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bax-UY-hIj"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Answer" id="Fxa-Lp-dfl">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="tTJ-mg-2t5">
+                            <connections>
+                                <action selector="submitAnswer:" destination="RVu-vz-vf2" id="899-LB-092"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerField" destination="LnG-2Q-GRu" id="nFd-OG-p8i"/>
+                        <outlet property="nameField" destination="tAx-KV-qZ8" id="VkZ-Fb-Z1l"/>
+                        <outlet property="nameLabel" destination="NGa-Wy-qdk" id="ezO-vY-3qv"/>
+                        <outlet property="questionLabel" destination="pPi-KA-klh" id="4y2-S9-I8p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXC-UG-NZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.8" y="456.52173913043481"/>
+        </scene>
+        <!--Ask Question-->
         <scene sceneID="5hx-If-lgt">
             <objects>
-                <viewController id="jjv-cr-Hz7" sceneMemberID="viewController">
+                <viewController title="Ask Question" id="jjv-cr-Hz7" customClass="AskQuestionViewController" customModule="QandA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fPb-2W-1jg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SSv-7z-6AN">
-                                <rect key="frame" x="0.0" y="80" width="375" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SSv-7z-6AN">
+                                <rect key="frame" x="0.0" y="132" width="375" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Answer" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nNJ-FP-ODK">
-                                <rect key="frame" x="0.0" y="118" width="375" height="201"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Question" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nNJ-FP-ODK">
+                                <rect key="frame" x="0.0" y="170" width="375" height="183.5"/>
                                 <color key="backgroundColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -137,9 +212,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g3H-X6-T1Y"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="FxQ-if-VVD">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="S7f-rS-zB8"/>
+                    <navigationItem key="navigationItem" title="Ask A Question" id="FxQ-if-VVD">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="S7f-rS-zB8">
+                            <connections>
+                                <action selector="submitQuestion:" destination="jjv-cr-Hz7" id="hDa-74-mgv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameField" destination="SSv-7z-6AN" id="zQn-i7-GAW"/>
+                        <outlet property="questionView" destination="nNJ-FP-ODK" id="sXy-57-M34"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNj-AJ-QyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,8 +233,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V4H-kV-NhV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Eg2-li-crn">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Eg2-li-crn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
