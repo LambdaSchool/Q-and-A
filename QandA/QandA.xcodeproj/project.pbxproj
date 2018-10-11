@@ -17,7 +17,6 @@
 		39785F9F216EAD0400A3619D /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39785F9E216EAD0400A3619D /* QuestionTableViewCell.swift */; };
 		39785FA1216EC23C00A3619D /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39785FA0216EC23C00A3619D /* AskQuestionViewController.swift */; };
 		39785FA3216EE74700A3619D /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39785FA2216EE74700A3619D /* AnswerViewController.swift */; };
-		39785FA5216EE94C00A3619D /* QuestionControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39785FA4216EE94C00A3619D /* QuestionControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		39785F9E216EAD0400A3619D /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		39785FA0216EC23C00A3619D /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
 		39785FA2216EE74700A3619D /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
-		39785FA4216EE94C00A3619D /* QuestionControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +68,6 @@
 				39785F98216E89FB00A3619D /* Question.swift */,
 				39785F9A216E8A0D00A3619D /* QuestionController.swift */,
 				39785F8A216E875200A3619D /* Main.storyboard */,
-				39785FA4216EE94C00A3619D /* QuestionControllerProtocol.swift */,
 				39785FA2216EE74700A3619D /* AnswerViewController.swift */,
 				39785FA0216EC23C00A3619D /* AskQuestionViewController.swift */,
 				39785F9C216EAB0900A3619D /* QuestionsTableViewController.swift */,
@@ -155,7 +152,6 @@
 			files = (
 				39785F99216E89FB00A3619D /* Question.swift in Sources */,
 				39785F9D216EAB0900A3619D /* QuestionsTableViewController.swift in Sources */,
-				39785FA5216EE94C00A3619D /* QuestionControllerProtocol.swift in Sources */,
 				39785F9F216EAD0400A3619D /* QuestionTableViewCell.swift in Sources */,
 				39785FA3216EE74700A3619D /* AnswerViewController.swift in Sources */,
 				39785FA1216EC23C00A3619D /* AskQuestionViewController.swift in Sources */,
