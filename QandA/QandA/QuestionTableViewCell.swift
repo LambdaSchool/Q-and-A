@@ -9,17 +9,17 @@ class QuestionTableViewCell: UITableViewCell {
     @IBOutlet weak var answerLabel: UILabel!
     
     
-    private func updateViews() {
-        questionLabel?.text = question?.question
-        askedByNameLabel?.text = question?.asker
-        answerLabel?.text = question?.answer
-    }
-    
-    
     var question: Question? {
         didSet {
             updateViews()
         }
+    }
+    
+    
+    private func updateViews() {
+        questionLabel?.text = question?.question
+        askedByNameLabel?.text = question?.asker
+        answerLabel?.text = question?.answer
     }
     
     override func awakeFromNib() {

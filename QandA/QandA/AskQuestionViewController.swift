@@ -11,7 +11,6 @@ class AskQuestionViewController: UIViewController {
         @IBOutlet weak var nameField: UITextField!
         @IBOutlet weak var questionView: UITextView!
     
-    
         @IBAction func submitQuestion(_ sender: Any) {
             guard let name = nameField.text,
                 let question = questionView.text
