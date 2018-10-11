@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "QuestionTableViewController.viewWillAppear(_:):QuestionTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "QuestionTableViewController.prepare(for:sender:):QuestionTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SubmitQuestionViewController.submitQuestion(_:):SubmitQuestionViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
