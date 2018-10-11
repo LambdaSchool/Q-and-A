@@ -9,7 +9,7 @@
 import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
-
+    
     
     @IBOutlet weak var question: UIStackView!
     
@@ -21,16 +21,32 @@ class QuestionTableViewCell: UITableViewCell {
     @IBOutlet weak var answer: UILabel!
     
     
+    //question: Question?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    private func updateViews() {
+        guard let q = q else {return}
+        askedBy.text = q.asker
+        answer.text = q.answer
+        
+        
     }
-
+    
+    
+    var q: Question? {
+        didSet {
+            updateViews()
+            
+        }
+    }
+    
+    
+    
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }

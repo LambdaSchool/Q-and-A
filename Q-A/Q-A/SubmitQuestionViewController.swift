@@ -19,7 +19,13 @@ class SubmitQuestionViewController: UIViewController {
     
     @IBAction func SQbarButton(_ sender: Any) {
         
+        
+        
     }
+    
+    
+    
+    var questionController: QuestionController?
     
     
     override func viewDidLoad() {

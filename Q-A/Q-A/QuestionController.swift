@@ -36,7 +36,7 @@ class QuestionController {
     }
     
     
-    func Delete(question: Question, answer: String, answerer: String) {
+    func Delete(question: Question) {
         
         for index in 0..<questions.count {
             if questions[index].question == question.question {

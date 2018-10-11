@@ -73,13 +73,13 @@
         <!--Q&A-->
         <scene sceneID="gkM-Ye-7dW">
             <objects>
-                <tableViewController id="gFi-3I-aL2" sceneMemberID="viewController">
+                <tableViewController id="gFi-3I-aL2" customClass="QuestionTableViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jk4-kQ-61R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="90" id="oa7-jm-auk" customClass="QuestionTableViewCell" customModule="Q_A" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuestionCell" rowHeight="90" id="oa7-jm-auk" customClass="QuestionTableViewCell" customModule="Q_A" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oa7-jm-auk" id="FqH-V7-KT4">
@@ -143,6 +143,7 @@
                                     <outlet property="answer" destination="jXZ-ir-eJo" id="Mr9-re-pEq"/>
                                     <outlet property="askedBy" destination="A2A-iN-Kpi" id="8Tp-9V-eJG"/>
                                     <outlet property="question" destination="JdR-T2-8Kn" id="s5c-12-jFC"/>
+                                    <segue destination="VYV-uS-6Vd" kind="show" identifier="submitanswer-segue" id="6e6-vf-2NI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -157,7 +158,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EjX-P1-OC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864.8" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1655" y="60"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ben-9V-MfN">
