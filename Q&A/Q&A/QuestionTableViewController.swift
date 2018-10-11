@@ -12,6 +12,7 @@ class QuestionTableViewController: UITableViewController {
 
     let questionController = QuestionController()
     // MARK: - Table view data source
+    // let questionCon2 = QuestionController.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()

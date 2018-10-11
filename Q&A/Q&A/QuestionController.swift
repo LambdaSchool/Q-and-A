@@ -9,6 +9,7 @@
 import Foundation
 
 class QuestionController {
+    // static var shared = QuestionController()
     var questions = [Question]()
     
     func create(question: String, asker: String) {

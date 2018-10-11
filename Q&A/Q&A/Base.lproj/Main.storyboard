@@ -164,13 +164,13 @@
                                 <rect key="frame" x="0.0" y="136" width="375" height="333.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-HE-lVl">
-                                        <rect key="frame" x="144.5" y="0.0" width="86" height="24"/>
+                                        <rect key="frame" x="20" y="0.0" width="335" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1P-lF-sbO">
-                                        <rect key="frame" x="166" y="76" width="43.5" height="20.5"/>
+                                        <rect key="frame" x="20" y="76" width="335" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -191,6 +191,8 @@
                                 <constraints>
                                     <constraint firstItem="sRA-XK-ax4" firstAttribute="leading" secondItem="y3h-bx-53E" secondAttribute="leading" id="1pD-wR-6BR"/>
                                     <constraint firstItem="4MW-mU-L24" firstAttribute="leading" secondItem="y3h-bx-53E" secondAttribute="leading" id="C6K-oS-zlY"/>
+                                    <constraint firstItem="x1P-lF-sbO" firstAttribute="leading" secondItem="y3h-bx-53E" secondAttribute="leading" constant="20" id="G1F-wU-Pre"/>
+                                    <constraint firstItem="VNr-HE-lVl" firstAttribute="leading" secondItem="y3h-bx-53E" secondAttribute="leading" constant="20" id="KHt-zn-oKK"/>
                                     <constraint firstAttribute="trailing" secondItem="4MW-mU-L24" secondAttribute="trailing" id="Mp2-Y3-81T"/>
                                     <constraint firstAttribute="trailing" secondItem="sRA-XK-ax4" secondAttribute="trailing" id="PZ8-ig-G9R"/>
                                 </constraints>
