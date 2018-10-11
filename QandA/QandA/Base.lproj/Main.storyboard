@@ -138,7 +138,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Answer" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LnG-2Q-GRu">
-                                        <rect key="frame" x="8" y="131" width="359" height="144.5"/>
+                                        <rect key="frame" x="0.0" y="131" width="375" height="144.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -146,8 +146,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="tAx-KV-qZ8" firstAttribute="leading" secondItem="GcS-we-Hlq" secondAttribute="leading" constant="20" id="4K0-1H-eyB"/>
-                                    <constraint firstAttribute="trailing" secondItem="LnG-2Q-GRu" secondAttribute="trailing" constant="8" id="8JI-ev-NAK"/>
-                                    <constraint firstItem="LnG-2Q-GRu" firstAttribute="leading" secondItem="GcS-we-Hlq" secondAttribute="leading" constant="8" id="PLE-rQ-fyq"/>
+                                    <constraint firstAttribute="trailing" secondItem="LnG-2Q-GRu" secondAttribute="trailing" id="8JI-ev-NAK"/>
+                                    <constraint firstItem="LnG-2Q-GRu" firstAttribute="leading" secondItem="GcS-we-Hlq" secondAttribute="leading" id="PLE-rQ-fyq"/>
                                     <constraint firstAttribute="trailing" secondItem="tAx-KV-qZ8" secondAttribute="trailing" constant="20" id="YWL-Jr-JHx"/>
                                 </constraints>
                             </stackView>
