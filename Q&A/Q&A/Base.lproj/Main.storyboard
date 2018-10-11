@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r9o-76-hw9">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,19 +14,19 @@
             <objects>
                 <tableViewController title="Q&amp;A" id="MfY-bd-vsH" customClass="QuestionsTableViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kur-0O-PgJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="146" id="QBH-3u-rfa" customClass="QuestionTableViewCell" customModule="Q_A" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="146"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="146"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QBH-3u-rfa" id="6Te-Vg-Byi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="145.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="145.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aQe-nt-nbO">
-                                            <rect key="frame" x="24" y="19" width="327" height="108"/>
+                                            <rect key="frame" x="28" y="19" width="358" height="108"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZjS-qZ-v2C">
                                                     <rect key="frame" x="0.0" y="0.0" width="123.5" height="20.5"/>
@@ -91,8 +91,8 @@
                             <outlet property="delegate" destination="MfY-bd-vsH" id="1Ea-Xj-J1z"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="lAp-ah-vvx">
-                        <barButtonItem key="leftBarButtonItem" title="Ask Question" id="vc6-FR-z1u">
+                    <navigationItem key="navigationItem" title="Q&amp;A" id="lAp-ah-vvx">
+                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="vc6-FR-z1u">
                             <connections>
                                 <segue destination="ppf-Z1-H6h" kind="show" identifier="askQuestion" id="6QT-fx-Zup"/>
                             </connections>
@@ -108,34 +108,33 @@
             <objects>
                 <viewController id="B98-y4-TrX" customClass="AnswerViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1PS-eh-CWW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="ykU-en-6zo">
-                                <rect key="frame" x="16" y="88" width="240" height="222.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LuZ-sa-AyS">
+                                <rect key="frame" x="8" y="160" width="398" height="448"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zw5-B6-J00" userLabel="Question">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWw-mf-Uqk">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0a-Sy-rhm" userLabel="Asker">
-                                        <rect key="frame" x="0.0" y="56.5" width="42" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUt-oP-s5S">
+                                        <rect key="frame" x="0.0" y="28.5" width="398" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtX-Na-TKy" userLabel="Answerer Name">
-                                        <rect key="frame" x="0.0" y="113" width="25" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bqL-tZ-55x">
+                                        <rect key="frame" x="0.0" y="57" width="398" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uA8-MN-5bC" userLabel="Question Answer">
-                                        <rect key="frame" x="0.0" y="179" width="240" height="43.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dqc-C6-ber">
+                                        <rect key="frame" x="0.0" y="95" width="398" height="353"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -144,7 +143,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ykU-en-6zo" firstAttribute="height" secondItem="1PS-eh-CWW" secondAttribute="height" multiplier="1:3" id="wrb-TW-E0P"/>
+                            <constraint firstItem="LuZ-sa-AyS" firstAttribute="leading" secondItem="pos-28-5Tl" secondAttribute="leading" constant="8" id="4F1-DJ-aoO"/>
+                            <constraint firstItem="LuZ-sa-AyS" firstAttribute="top" secondItem="pos-28-5Tl" secondAttribute="top" constant="20" id="Sha-mj-sIe"/>
+                            <constraint firstItem="LuZ-sa-AyS" firstAttribute="height" secondItem="1PS-eh-CWW" secondAttribute="height" multiplier="1:2" id="cWO-ZH-hGG"/>
+                            <constraint firstItem="pos-28-5Tl" firstAttribute="trailing" secondItem="LuZ-sa-AyS" secondAttribute="trailing" constant="8" id="wDa-Sr-Gm1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pos-28-5Tl"/>
                     </view>
@@ -158,34 +160,33 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="answerTextView" destination="uA8-MN-5bC" id="mVR-Fu-3a1"/>
-                        <outlet property="answererLabel" destination="gtX-Na-TKy" id="GU4-4k-4NS"/>
-                        <outlet property="askerLabel" destination="j0a-Sy-rhm" id="jeJ-vc-mph"/>
-                        <outlet property="questionLabel" destination="zw5-B6-J00" id="PCo-tQ-zpj"/>
+                        <outlet property="answerTextView" destination="dqc-C6-ber" id="nMO-il-nbs"/>
+                        <outlet property="answererTextField" destination="bqL-tZ-55x" id="O6N-Fu-5dh"/>
+                        <outlet property="askerLabel" destination="vUt-oP-s5S" id="lSe-ul-C3S"/>
+                        <outlet property="questionLabel" destination="PWw-mf-Uqk" id="d8G-DT-OdT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HqW-93-xmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1487.2" y="-178.56071964017991"/>
         </scene>
-        <!--Title-->
+        <!--Ask A Question-->
         <scene sceneID="32P-JV-xEf">
             <objects>
                 <viewController id="ppf-Z1-H6h" customClass="AskQuestionViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A8V-z6-Q1b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="irC-9s-d0X">
-                                <rect key="frame" x="0.0" y="80" width="375" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="irC-9s-d0X">
+                                <rect key="frame" x="0.0" y="156" width="414" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0a0-bv-aw2">
-                                <rect key="frame" x="0.0" y="118" width="375" height="222.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <rect key="frame" x="0.0" y="194" width="414" height="298.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -203,8 +204,8 @@
                         <viewLayoutGuide key="safeArea" id="vB5-7G-bZl"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="iYw-cU-nGg">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="eTI-tD-0ak">
+                    <navigationItem key="navigationItem" title="Ask A Question" id="iYw-cU-nGg">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="eTI-tD-0ak">
                             <connections>
                                 <action selector="submitQuestion:" destination="ppf-Z1-H6h" id="LEt-3F-Gor"/>
                             </connections>
@@ -226,8 +227,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r9o-76-hw9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JEK-em-dej">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="JEK-em-dej">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

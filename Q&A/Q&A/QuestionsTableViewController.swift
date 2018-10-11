@@ -5,6 +5,7 @@ class QuestionsTableViewController: UITableViewController {
    let questionController = QuestionController()
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.reloadData()
     }
     
@@ -32,7 +33,19 @@ class QuestionsTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
-  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "askQuestion" {
+            guard let destinationVC = segue.destination as? AskQuestionViewController else { return }
+            destinationVC.questionController = questionController
+        } else if segue.identifier == "answerQuestion" {
+            guard let destinationVC = segue.destination as? AnswerViewController,
+                let indexPath = tableView.indexPathForSelectedRow else { return }
+            
+            let question = questionController.questions[indexPath.row]
+            destinationVC.questionController = questionController
+            destinationVC.question = question
+        }
+    }
     
     
 

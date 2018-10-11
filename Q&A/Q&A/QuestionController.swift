@@ -4,9 +4,11 @@ class QuestionController {
     
     private(set) var questions: [Question] = []
     
-    func createQuestion(question: String, asker: String) {
+    func createQuestion(question: String, asker: String) -> Question {
         let question = Question(question: question, asker: asker)
         questions.append(question)
+        
+        return question
     }
     
     func updateQuestion(question: Question, answer: String, answerer: String) {

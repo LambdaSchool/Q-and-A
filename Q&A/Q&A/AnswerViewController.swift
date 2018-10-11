@@ -28,6 +28,11 @@ class AnswerViewController: UIViewController {
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateViews()
+    }
+    
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var askerLabel: UILabel!
     @IBOutlet weak var answererTextField: UITextField!
