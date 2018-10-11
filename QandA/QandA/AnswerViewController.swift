@@ -15,6 +15,7 @@ class AnswerViewController: UIViewController {
             let answer = answerField.text,
             let question = question
             else {return}
+        
         questionController?.updateQuestion(q: question, answer: answer, answerer: name)
         navigationController?.popViewController(animated: true)
     }

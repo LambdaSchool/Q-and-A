@@ -16,6 +16,7 @@ class AskQuestionViewController: UIViewController {
             guard let name = nameField.text,
                 let question = questionView.text
                 else {return}
+            
             questionController?.createQuestion(question: question, asker: name)
             navigationController?.popViewController(animated: true)
         }
