@@ -28,7 +28,20 @@ do {
     if let string = String(data: joeencoded, encoding: .utf8) {
     print(string)
     }
+    
+    let joedecoded = try JSONDecoder().decode(Student.self, from: joeencoded)
+    print(joedecoded)
+    
+    let myString = """
+     {"name":"Will Bundy","age":23,"cohort":"iOS1"}
+     """
+    if let stringData = myString.data(using: .utf8) {
+    let willdecoded = try JSONDecoder().decode(Student.self, from: stringData)
+    print(willdecoded)
+    }
 } catch {
     print ("ERROR:\(error)")
 
 }
+
+

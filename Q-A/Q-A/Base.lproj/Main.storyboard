@@ -44,7 +44,7 @@
                         <viewLayoutGuide key="safeArea" id="fCc-2P-EW3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="tHE-3E-dNQ">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="z0V-A1-7PE">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="z0V-A1-7PE">
                             <connections>
                                 <action selector="submitQuestion:" destination="tvf-ER-zaP" id="n0K-4g-VIl"/>
                             </connections>
