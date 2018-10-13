@@ -35,7 +35,8 @@ class QuestionTableViewCell: UITableViewCell {
         askedByLabel?.text = question?.asker
         justALabel?.text = question?.answer
     
-        question?.answer == nil ? (justALabel?.text = "Can you answer this?" ) : (justALabel?.text = "Tap to view Answer")
+//        question?.answer == nil ? (justALabel?.text = "Can you answer this?" ) : (justALabel?.text = "Tap to view Answer")
+        justALabel?.text = question?.answer == nil ? "Can you answer this?" : "Tap to view Answer"
         
     }
 
