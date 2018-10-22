@@ -110,29 +110,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kev-8j-c6b">
-                                <rect key="frame" x="8" y="124" width="359" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a6b-dO-AyQ">
+                                <rect key="frame" x="0.0" y="132" width="375" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Fp-aG-UTL" userLabel="Question View">
-                                <rect key="frame" x="8" y="162" width="359" height="220"/>
-                                <color key="backgroundColor" red="0.97429151270000003" green="1" blue="0.22539630899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6s0-I8-XFl">
+                                <rect key="frame" x="0.0" y="170" width="375" height="375"/>
+                                <color key="backgroundColor" red="0.93489243686422008" green="1" blue="0.997922036765855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6s0-I8-XFl" secondAttribute="height" id="XOE-cC-pyU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Kev-8j-c6b" firstAttribute="leading" secondItem="Ipx-kY-U8S" secondAttribute="leading" constant="8" id="0JI-IU-dXd"/>
-                            <constraint firstItem="Ipx-kY-U8S" firstAttribute="trailing" secondItem="2Fp-aG-UTL" secondAttribute="trailing" constant="8" id="5Ol-TT-PnT"/>
-                            <constraint firstItem="Ipx-kY-U8S" firstAttribute="trailing" secondItem="Kev-8j-c6b" secondAttribute="trailing" constant="8" id="DL3-9h-cLi"/>
-                            <constraint firstItem="2Fp-aG-UTL" firstAttribute="leading" secondItem="Ipx-kY-U8S" secondAttribute="leading" constant="8" id="TSZ-qK-fwL"/>
-                            <constraint firstItem="Kev-8j-c6b" firstAttribute="top" secondItem="Ipx-kY-U8S" secondAttribute="top" constant="8" id="czF-Ds-72T"/>
-                            <constraint firstItem="2Fp-aG-UTL" firstAttribute="top" secondItem="Kev-8j-c6b" secondAttribute="bottom" constant="8" id="d1b-a2-zdU"/>
-                            <constraint firstItem="2Fp-aG-UTL" firstAttribute="height" secondItem="GOy-fi-ew4" secondAttribute="height" multiplier="0.33" id="jNZ-Cx-yig"/>
-                            <constraint firstItem="2Fp-aG-UTL" firstAttribute="top" secondItem="Kev-8j-c6b" secondAttribute="bottom" constant="8" id="vMK-Ki-pkr"/>
+                            <constraint firstItem="6s0-I8-XFl" firstAttribute="leading" secondItem="Ipx-kY-U8S" secondAttribute="leading" id="3VD-rb-q3E"/>
+                            <constraint firstItem="a6b-dO-AyQ" firstAttribute="top" secondItem="Ipx-kY-U8S" secondAttribute="top" constant="16" id="DIG-BD-Eze"/>
+                            <constraint firstItem="Ipx-kY-U8S" firstAttribute="trailing" secondItem="6s0-I8-XFl" secondAttribute="trailing" id="fD7-Jq-plr"/>
+                            <constraint firstItem="6s0-I8-XFl" firstAttribute="top" secondItem="a6b-dO-AyQ" secondAttribute="bottom" constant="8" id="rqu-8H-fNy"/>
+                            <constraint firstItem="a6b-dO-AyQ" firstAttribute="leading" secondItem="Ipx-kY-U8S" secondAttribute="leading" id="vOq-yv-zB1"/>
+                            <constraint firstItem="Ipx-kY-U8S" firstAttribute="trailing" secondItem="a6b-dO-AyQ" secondAttribute="trailing" id="wpk-FT-8UY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ipx-kY-U8S"/>
                     </view>
@@ -144,8 +145,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="nameField" destination="Kev-8j-c6b" id="UIV-v7-IQk"/>
-                        <outlet property="questionView" destination="2Fp-aG-UTL" id="uTr-g6-e91"/>
+                        <outlet property="nameField" destination="a6b-dO-AyQ" id="RGt-KI-jNm"/>
+                        <outlet property="questionView" destination="6s0-I8-XFl" id="sJX-lo-zcl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5T3-Rv-ggM" userLabel="First Responder" sceneMemberID="firstResponder"/>
