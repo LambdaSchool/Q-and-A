@@ -2,7 +2,12 @@ import UIKit
 
 class QuestionTableViewController: UITableViewController {
     
+    @IBOutlet weak var questionLabel: UILabel!
     let questionController = QuestionController()
+    
+    @IBOutlet weak var askerLabel: UILabel!
+    
+    @IBOutlet weak var answerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +51,6 @@ class QuestionTableViewController: UITableViewController {
             askQuestionSegueVC.questionController = questionController
         }
     }
-    
 }
 
 

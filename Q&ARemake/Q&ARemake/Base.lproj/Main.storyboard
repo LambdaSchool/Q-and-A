@@ -37,7 +37,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eow-oa-Tdo">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eow-oa-Tdo" userLabel="Question Label">
                                                             <rect key="frame" x="111.5" y="0.0" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -54,7 +54,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cka-ok-zOL">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cka-ok-zOL" userLabel="Asker Label">
                                                             <rect key="frame" x="113" y="0.0" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -65,7 +65,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="cka-ok-zOL" secondAttribute="trailing" id="aYp-q0-Tk3"/>
                                                     </constraints>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8q-NP-SF5">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8q-NP-SF5" userLabel="Answer Label">
                                                     <rect key="frame" x="0.0" y="91" width="327" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -101,6 +101,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerLabel" destination="R8q-NP-SF5" id="qpV-c6-unI"/>
+                        <outlet property="askerLabel" destination="cka-ok-zOL" id="MLC-aU-Ykz"/>
+                        <outlet property="questionLabel" destination="eow-oa-Tdo" id="nnP-36-i0h"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zrh-xN-dX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,14 +184,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="toW-y9-xUz" userLabel="Submit QuestionText Text View">
-                                <rect key="frame" x="0.0" y="145" width="375" height="222.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="toW-y9-xUz" userLabel="Submit QuestionText Text View">
+                                <rect key="frame" x="0.0" y="145.5" width="375" height="222.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hv4-f1-ttM">
-                                <rect key="frame" x="0.0" y="107" width="375" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hv4-f1-ttM">
+                                <rect key="frame" x="0.0" y="107" width="375" height="30.5"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -197,9 +202,11 @@
                             <constraint firstItem="hv4-f1-ttM" firstAttribute="leading" secondItem="8hu-2C-hE8" secondAttribute="leading" id="1vf-aK-rE6"/>
                             <constraint firstItem="toW-y9-xUz" firstAttribute="top" secondItem="hv4-f1-ttM" secondAttribute="bottom" constant="8" id="BB8-tS-7Hp"/>
                             <constraint firstItem="toW-y9-xUz" firstAttribute="leading" secondItem="8hu-2C-hE8" secondAttribute="leading" id="H8w-pK-t0B"/>
+                            <constraint firstItem="hv4-f1-ttM" firstAttribute="top" secondItem="8hu-2C-hE8" secondAttribute="top" constant="43" id="MWl-bC-jXs"/>
                             <constraint firstItem="8hu-2C-hE8" firstAttribute="trailing" secondItem="toW-y9-xUz" secondAttribute="trailing" id="dci-mM-3Mn"/>
                             <constraint firstItem="hv4-f1-ttM" firstAttribute="trailing" secondItem="8hu-2C-hE8" secondAttribute="trailing" id="gxR-Nv-Q5r"/>
                             <constraint firstItem="toW-y9-xUz" firstAttribute="height" secondItem="kbp-i4-aOO" secondAttribute="height" multiplier="1/3" id="sHL-af-BZp"/>
+                            <constraint firstItem="8hu-2C-hE8" firstAttribute="bottom" secondItem="toW-y9-xUz" secondAttribute="bottom" constant="299" id="uF9-FS-uIC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8hu-2C-hE8"/>
                     </view>

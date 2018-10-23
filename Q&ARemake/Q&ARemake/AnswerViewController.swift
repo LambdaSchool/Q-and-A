@@ -26,9 +26,6 @@ class AnswerViewController: UIViewController {
     func updateViews(){
         
         guard let question = question else { return }
-        
-        // TODO Fix This
-        
         title = question.question
         questionLabel.text = question.question
         askerLabel.text = question.asker
@@ -41,18 +38,13 @@ class AnswerViewController: UIViewController {
         answerTextView.text = answer
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateViews()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
 }
