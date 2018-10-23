@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="154" id="7q0-8A-VIR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="154" id="7q0-8A-VIR" customClass="QuestionTableViewCell" customModule="Q_ARemake" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="154"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7q0-8A-VIR" id="M1s-GW-yR4">
@@ -85,7 +85,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="osu-5U-cBe" kind="show" id="XOf-Bo-Ibh"/>
+                                    <outlet property="answerLabel" destination="R8q-NP-SF5" id="6oy-W0-2Fq"/>
+                                    <outlet property="askerLabel" destination="cka-ok-zOL" id="cDH-GQ-Ed4"/>
+                                    <outlet property="questionLabel" destination="eow-oa-Tdo" id="AYS-T3-Bve"/>
+                                    <segue destination="osu-5U-cBe" kind="show" identifier="ShowAnswer" id="XOf-Bo-Ibh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -97,15 +100,10 @@
                     <navigationItem key="navigationItem" title="Q&amp;A" id="cAg-g3-9hy">
                         <barButtonItem key="rightBarButtonItem" title="Ask Question" id="aEa-NZ-FUH">
                             <connections>
-                                <segue destination="5hG-OM-FPe" kind="show" id="Z4e-Wb-gKz"/>
+                                <segue destination="5hG-OM-FPe" kind="show" identifier="askQuestionSegue" id="Z4e-Wb-gKz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="answerLabel" destination="R8q-NP-SF5" id="qpV-c6-unI"/>
-                        <outlet property="askerLabel" destination="cka-ok-zOL" id="MLC-aU-Ykz"/>
-                        <outlet property="questionLabel" destination="eow-oa-Tdo" id="nnP-36-i0h"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zrh-xN-dX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

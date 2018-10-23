@@ -2,12 +2,8 @@ import UIKit
 
 class QuestionTableViewController: UITableViewController {
     
-    @IBOutlet weak var questionLabel: UILabel!
-    let questionController = QuestionController()
-    
-    @IBOutlet weak var askerLabel: UILabel!
-    
-    @IBOutlet weak var answerLabel: UILabel!
+let questionController = QuestionController()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
