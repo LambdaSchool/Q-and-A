@@ -12,13 +12,13 @@
         <!--Q&A-->
         <scene sceneID="sWA-y8-mDS">
             <objects>
-                <tableViewController id="GIJ-aU-nMr" sceneMemberID="viewController">
+                <tableViewController id="GIJ-aU-nMr" customClass="QuestionTableViewController" customModule="Q_ARemake" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kGw-1s-3p4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="154" id="7q0-8A-VIR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="154" id="7q0-8A-VIR">
                                 <rect key="frame" x="0.0" y="28" width="375" height="154"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7q0-8A-VIR" id="M1s-GW-yR4">
@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="573.60000000000002" y="107.49625187406298"/>
         </scene>
-        <!--View Controller-->
+        <!--Answer View Controller-->
         <scene sceneID="uUd-4j-jMi">
             <objects>
-                <viewController id="osu-5U-cBe" sceneMemberID="viewController">
+                <viewController id="osu-5U-cBe" customClass="AnswerViewController" customModule="Q_ARemake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8K9-Fm-7pM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,17 +154,27 @@
                         <viewLayoutGuide key="safeArea" id="Jrt-Yb-cvY"/>
                     </view>
                     <navigationItem key="navigationItem" id="vus-es-MzZ">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="BFw-p5-Spv"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="BFw-p5-Spv">
+                            <connections>
+                                <action selector="submitAnswer:" destination="osu-5U-cBe" id="uVh-fU-SDU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextView" destination="PwR-ru-eDb" id="yeJ-ag-Nrt"/>
+                        <outlet property="answererNameTextField" destination="T5o-QH-KdL" id="skT-mh-qFT"/>
+                        <outlet property="askerLabel" destination="7aa-0c-f5S" id="6Wz-nY-kXm"/>
+                        <outlet property="questionLabel" destination="nVo-E2-TEv" id="aJ8-Hi-0Dy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycR-Wc-pKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1410.4000000000001" y="386.35682158920542"/>
         </scene>
-        <!--View Controller-->
+        <!--Ask Question View Controller-->
         <scene sceneID="PP8-NF-ppG">
             <objects>
-                <viewController id="5hG-OM-FPe" sceneMemberID="viewController">
+                <viewController id="5hG-OM-FPe" customClass="AskQuestionViewController" customModule="Q_ARemake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kbp-i4-aOO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +182,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="toW-y9-xUz" userLabel="Submit QuestionText Text View">
                                 <rect key="frame" x="0.0" y="145" width="375" height="222.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -195,8 +204,16 @@
                         <viewLayoutGuide key="safeArea" id="8hu-2C-hE8"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ir5-yC-vdu">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="UG6-Tp-hzr"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="UG6-Tp-hzr">
+                            <connections>
+                                <action selector="submitQuestionButton:" destination="5hG-OM-FPe" id="mgU-Vc-1DE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="submitQuestionTextField" destination="hv4-f1-ttM" id="g8e-qC-mha"/>
+                        <outlet property="submitQuestionTextView" destination="toW-y9-xUz" id="dae-yq-x2G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rak-tD-lUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

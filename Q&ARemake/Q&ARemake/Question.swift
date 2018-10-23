@@ -6,7 +6,7 @@ struct Question: Equatable {
     var answer:String?
     var answerer:String?
     
-    init(question: String, asker: String, answer: String? = nil , answerer: String? = nil) {
+    init(question: String, asker: String, answer: String? = nil, answerer: String? = nil) {
         self.question = question
         self.asker = asker
         self.answer = answer
