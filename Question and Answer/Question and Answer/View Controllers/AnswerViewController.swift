@@ -15,12 +15,18 @@ class AnswerView: UIViewController {
     
     @IBOutlet weak var answererName: UITextField!
     
-    //Unwrap Question Picker
+    @IBOutlet weak var questionViewLabel: UILabel!
     
-    
-    
+    //Make sure of current question
+    let current = IndexPath().row
     
     //Display Questions
+    func pointless() {
+        
+        guard let theQuestion = questionViewLabel else { return }
+        theQuestion.text = thequestions[current].question
+        
+        }
     
     
     
@@ -28,22 +34,18 @@ class AnswerView: UIViewController {
     
     @IBAction func answerButton(_ sender: UIButton) {
         
-        guard let currentQuestion = questionPicker else { return }
-
-        
-        
-        //Unwrap answer entries
-        
-        guard let theAnswer = answerEntry else { return }
-        guard let theAnswerer = answererName else { return }
+        //Unwrap the entries
+        guard let theAnswer = answerEntry.text else { return }
+        guard let theAnswerer = answererName.text else { return }
         
         //Append the answer to the existing question
         
-        QuestionManager().update(needsUpdate: <#T##Question#>, answer: theAnswer, answerer: theAnswerer)
+        QuestionManager().update(needsUpdate: thequestions[current], answer: theAnswer, answerer: theAnswerer)
+        
+        answerEntry.text = ""
+        answererName.text = ""
         
     }
-    
-    
     
     //Default code
     override func viewDidLoad() {

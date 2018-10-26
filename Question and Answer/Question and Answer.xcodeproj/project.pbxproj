@@ -17,6 +17,7 @@
 		4CD12F8F217FF081006441DF /* AskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD12F8E217FF081006441DF /* AskViewController.swift */; };
 		4CD12F91217FF09B006441DF /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD12F90217FF09B006441DF /* AnswerViewController.swift */; };
 		4CD12F95217FFE5A006441DF /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD12F94217FFE5A006441DF /* Questions.swift */; };
+		4CEBF221218219D6008DC5D2 /* QuestionDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBF220218219D6008DC5D2 /* QuestionDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4CD12F8E217FF081006441DF /* AskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskViewController.swift; sourceTree = "<group>"; };
 		4CD12F90217FF09B006441DF /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		4CD12F94217FFE5A006441DF /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		4CEBF220218219D6008DC5D2 /* QuestionDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				4CD12F90217FF09B006441DF /* AnswerViewController.swift */,
 				4CD12F7C217EE19A006441DF /* QuestionListController.swift */,
+				4CEBF220218219D6008DC5D2 /* QuestionDetailController.swift */,
 				4CD12F8E217FF081006441DF /* AskViewController.swift */,
 				4C0E440F21800DE90021A314 /* CellController.swift */,
 			);
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CEBF221218219D6008DC5D2 /* QuestionDetailController.swift in Sources */,
 				4C0E441021800DE90021A314 /* CellController.swift in Sources */,
 				4CD12F8F217FF081006441DF /* AskViewController.swift in Sources */,
 				4CD12F8D217EE1F6006441DF /* Question.swift in Sources */,

@@ -11,6 +11,7 @@ import Foundation
 struct Question {
     var question: String
     var asker: String
-    var answer: String? = nil
+    var answer: String? = nil 
     var answerer: String? = nil
+    
 }

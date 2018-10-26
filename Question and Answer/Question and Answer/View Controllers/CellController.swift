@@ -11,19 +11,10 @@ import UIKit
 
 class CellController: UITableViewCell {
     
-    @IBOutlet weak var questionLabel: UILabel!
-    
-    
-   /* var triviaDisplay: String
-        
-    init(triviaDisplay: String) {
-        self.triviaDisplay = triviaDisplay
-        super.init()
+    func showQuestions() {
+            
+        self.textLabel?.text = thequestions[IndexPath().row].question
+
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    */
     
 }
