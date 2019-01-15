@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Question {
-    let question: String
-    let asker: String
+struct Question: Equatable {
+    var question: String
+    var asker: String
     var answer: String?
     var answerer: String?
     

@@ -34,6 +34,10 @@ class QuestionsTableViewController: UITableViewController {
             guard let answerVC = segue.destination as? AnswerViewController,
             let cell = sender as? QuestionTableViewCell else { return }
             answerVC.question = cell.question
+            answerVC.questionController = questionController
+        } else if segue.identifier == "AskQuestionSegue" {
+            guard let askQuestionVC = segue.destination as? AskQuestionViewController else { return }
+            askQuestionVC.questionController = questionController
         }
     }
     
