@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84319BE821EE8A00004E7DB6 /* AskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84319BE721EE8A00004E7DB6 /* AskViewController.swift */; };
+		84319BEA21EE8E41004E7DB6 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84319BE921EE8E41004E7DB6 /* AnswerViewController.swift */; };
 		84B8AA1E21EE797800B09F33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8AA1D21EE797800B09F33 /* AppDelegate.swift */; };
 		84B8AA2321EE797800B09F33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B8AA2121EE797800B09F33 /* Main.storyboard */; };
 		84B8AA2521EE797900B09F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B8AA2421EE797900B09F33 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		84319BE721EE8A00004E7DB6 /* AskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskViewController.swift; sourceTree = "<group>"; };
+		84319BE921EE8E41004E7DB6 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		84B8AA1A21EE797800B09F33 /* Q & A 1.15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Q & A 1.15.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B8AA1D21EE797800B09F33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B8AA2221EE797800B09F33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,8 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				84B8AA3321EE861B00B09F33 /* QuestionTableViewCell.swift */,
-				84319BE721EE8A00004E7DB6 /* AskViewController.swift */,
 				84B8AA3521EE862A00B09F33 /* QuestionTableViewController.swift */,
+				84319BE721EE8A00004E7DB6 /* AskViewController.swift */,
+				84319BE921EE8E41004E7DB6 /* AnswerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84319BE821EE8A00004E7DB6 /* AskViewController.swift in Sources */,
+				84319BEA21EE8E41004E7DB6 /* AnswerViewController.swift in Sources */,
 				84B8AA3021EE7A4200B09F33 /* Question.swift in Sources */,
 				84B8AA3621EE862A00B09F33 /* QuestionTableViewController.swift in Sources */,
 				84B8AA3421EE861B00B09F33 /* QuestionTableViewCell.swift in Sources */,
