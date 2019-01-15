@@ -14,6 +14,8 @@ class AskQuestionViewController: UIViewController {
     
     @IBOutlet weak var questionTextView: UITextView!
     
+    var questionController: QuestionController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +23,11 @@ class AskQuestionViewController: UIViewController {
     }
     
     @IBAction func submitQuestionBarButtonTapped(_ sender: UIBarButtonItem) {
+        
+        guard let name = nameTextField.text, !name.isEmpty, let question = questionTextView.text, !question.isEmpty else {return}
+        
+        questionController?.create(question: question, asker: name)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
