@@ -21,5 +21,6 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var askerLabel: UILabel!
     @IBOutlet weak var answererNameTextField: UITextField!
     @IBOutlet weak var answerTextView: UITextView!
+    var question: Question?
     
 }

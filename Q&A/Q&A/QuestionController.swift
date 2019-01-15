@@ -11,8 +11,11 @@ import Foundation
 class QuestionController {
     private(set) var questions: [Question] = []
     
-    func create(question: Question) {
-        questions.append(question)
+    func create(question: String, asker: String) {
+        var newQuestion: Question
+        newQuestion.question = question
+        newQuestion.asker = asker
+        questions.append(newQuestion)
     }
     
     func update(question: Question, index: Int) {
@@ -20,7 +23,7 @@ class QuestionController {
         questions[index].answerer = question.answerer
     }
     
-    func delete(question: Question, index: Int) {
+    func delete(at index: Int) {
         questions.remove(at: index)
     }
 }
