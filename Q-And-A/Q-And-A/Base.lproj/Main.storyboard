@@ -118,11 +118,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x7X-dE-fLY">
-                                <rect key="frame" x="0.0" y="194" width="414" height="276"/>
+                                <rect key="frame" x="0.0" y="194.00000000000003" width="414" height="298.66666666666674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" secondItem="WTm-Lo-OFD" secondAttribute="height" multiplier="1/3" priority="100" placeholder="YES" id="xqq-rb-n7R"/>
-                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -135,6 +132,7 @@
                             <constraint firstItem="7B9-6b-hPj" firstAttribute="leading" secondItem="vAE-Mu-bby" secondAttribute="leading" id="bff-J3-wdR"/>
                             <constraint firstItem="7B9-6b-hPj" firstAttribute="top" secondItem="vAE-Mu-bby" secondAttribute="top" constant="16" id="cVs-AC-Hua"/>
                             <constraint firstItem="x7X-dE-fLY" firstAttribute="top" secondItem="7B9-6b-hPj" secondAttribute="bottom" constant="8" id="kdR-gp-Teo"/>
+                            <constraint firstItem="x7X-dE-fLY" firstAttribute="height" secondItem="WTm-Lo-OFD" secondAttribute="height" multiplier="1/3" id="uWp-HT-GDG"/>
                             <constraint firstItem="vAE-Mu-bby" firstAttribute="trailing" secondItem="x7X-dE-fLY" secondAttribute="trailing" id="w6N-id-JMc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vAE-Mu-bby"/>
@@ -143,6 +141,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Submit Question" id="GNS-Dh-qfO">
                             <connections>
                                 <action selector="submitButton:" destination="sEF-Ua-aA7" id="Htj-N4-KhY"/>
+                                <segue destination="5Fc-I9-VXq" kind="show" identifier="submitSegue" id="vLJ-Rt-RL0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -154,6 +153,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4Q-Bq-scX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1701" y="-46"/>
+        </scene>
+        <!--Answer Question-->
+        <scene sceneID="Lxe-Rl-fHE">
+            <objects>
+                <viewController title="Answer Question" id="5Fc-I9-VXq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mtl-M5-OWf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Ivp-2X-YMW">
+                                <rect key="frame" x="8" y="140" width="398" height="448"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvL-ON-PJY">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ZVt-2j-uNx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlf-dy-2t0">
+                                        <rect key="frame" x="0.0" y="36" width="398" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="aHS-nJ-h7X"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DbS-er-Vzq">
+                                        <rect key="frame" x="0.0" y="72" width="398" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="NCn-ea-bTu"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cEs-o2-MkN">
+                                        <rect key="frame" x="0.0" y="108" width="398" height="340"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ivp-2X-YMW" firstAttribute="leading" secondItem="4bK-vr-m9b" secondAttribute="leading" constant="8" id="7Gd-K6-AW3"/>
+                            <constraint firstItem="4bK-vr-m9b" firstAttribute="top" secondItem="Ivp-2X-YMW" secondAttribute="top" id="AWN-nz-hBQ"/>
+                            <constraint firstItem="4bK-vr-m9b" firstAttribute="trailing" secondItem="Ivp-2X-YMW" secondAttribute="trailing" constant="8" id="MPD-7T-Khs"/>
+                            <constraint firstItem="Ivp-2X-YMW" firstAttribute="height" secondItem="mtl-M5-OWf" secondAttribute="height" multiplier="0.5" id="gI3-CB-YdS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4bK-vr-m9b"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Question Placeholder" id="h0I-os-YfE">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="DKl-Rr-DRU"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMl-nj-rsx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2414" y="-46"/>
         </scene>
         <!--Q&A-->
         <scene sceneID="Ktf-c4-Cos">
