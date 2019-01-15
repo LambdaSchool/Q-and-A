@@ -16,13 +16,16 @@ class QuestionController {
     }
     
     func updateQuestion(question: Question, answer: String?, answerer: String?) {
+        guard let index = questions.index(of: question) else { return }
+        var question = questions[index]
         
+        question.answer = answer
+        question.answerer = answerer
     }
     
     func deleteQuestion(question: Question) {
-        
-        let indexPath = questions[IndexPath.]
-        questions.remove(at: indexPath)
+        guard let index = questions.index(of: question) else { return }
+        questions.remove(at: index)
     }
     
     //MARK: - Properties
