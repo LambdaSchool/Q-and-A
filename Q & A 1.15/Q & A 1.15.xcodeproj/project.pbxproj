@@ -42,8 +42,6 @@
 		84B8AA1121EE797800B09F33 = {
 			isa = PBXGroup;
 			children = (
-				84B8AA2F21EE7A4200B09F33 /* Question.swift */,
-				84B8AA3121EE7D3500B09F33 /* QuestionController.swift */,
 				84B8AA1C21EE797800B09F33 /* Q & A 1.15 */,
 				84B8AA1B21EE797800B09F33 /* Products */,
 			);
@@ -61,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				84B8AA1D21EE797800B09F33 /* AppDelegate.swift */,
+				84B8AA3121EE7D3500B09F33 /* QuestionController.swift */,
+				84B8AA2F21EE7A4200B09F33 /* Question.swift */,
 				84B8AA1F21EE797800B09F33 /* ViewController.swift */,
 				84B8AA2121EE797800B09F33 /* Main.storyboard */,
 				84B8AA2421EE797900B09F33 /* Assets.xcassets */,
