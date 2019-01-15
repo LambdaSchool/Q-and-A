@@ -204,8 +204,16 @@
                         <viewLayoutGuide key="safeArea" id="zKy-UX-v1W"/>
                     </view>
                     <navigationItem key="navigationItem" id="vRF-4R-t5T">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="g2M-Kg-v2z"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="g2M-Kg-v2z">
+                            <connections>
+                                <action selector="saveClicked:" destination="Nie-oQ-qcv" id="x91-CK-KYe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="BTr-Z2-Shu" id="TAB-9g-uKj"/>
+                        <outlet property="textView" destination="UZF-S4-akT" id="TGc-pw-EFm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8uZ-Hr-3na" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

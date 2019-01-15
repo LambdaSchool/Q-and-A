@@ -3,12 +3,18 @@ import UIKit
 
 class AskViewController: UIViewController {
     
+    var questionController: QuestionController?
+    
+    
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textView: UITextView!
     
     @IBAction func submitQuestion(_ sender: Any) {
-        // fill in
+        guard let text = textField.text, !text.isEmpty else { return }
+        questionController?.createQuestion(question: text)
+        textField.text = nil
         
+        // poptoPrevious..
     }
     
     override func viewDidLoad() {
