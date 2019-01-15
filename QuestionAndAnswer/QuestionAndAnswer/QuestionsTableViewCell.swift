@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionTableViewCell: UITableViewCell {
+class QuestionsTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var questionLabel: UILabel!

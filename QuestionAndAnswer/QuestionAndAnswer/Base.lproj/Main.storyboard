@@ -6,19 +6,20 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Q&A-->
         <scene sceneID="wJ1-fS-bKk">
             <objects>
-                <tableViewController id="dGi-L0-0Ff" customClass="QuestionTableViewController" customModule="QuestionAndAnswer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="dGi-L0-0Ff" customClass="QuestionsTableViewController" customModule="QuestionAndAnswer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="F2H-lj-TCa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="90" id="wR5-jl-G4R" customClass="QuestionTableViewCell" customModule="QuestionAndAnswer" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="90" id="wR5-jl-G4R" customClass="QuestionsTableViewCell" customModule="QuestionAndAnswer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wR5-jl-G4R" id="nyl-ok-Lxk">
@@ -109,6 +110,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="553-aa-bW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1317" y="-46"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iWh-Xg-v8y">
+            <objects>
+                <viewController id="YCZ-7d-koi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZJY-Sp-yDW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JmU-ze-aLS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dKU-4K-miz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016" y="-42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vXE-cX-vHN">
