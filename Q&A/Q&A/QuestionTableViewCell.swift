@@ -9,16 +9,22 @@
 import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    private func updateViews() {
+        guard let unwrappedQuestion = question else { return }
+        questionLabel.text = unwrappedQuestion.question
+        askerLabel.text = unwrappedQuestion.asker
+    }
+    
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var askerLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
+    
 
 }
