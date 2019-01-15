@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1bi-sh-RhY">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -104,27 +104,68 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Q&amp;A" id="lP4-NY-rSJ">
-                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="tl7-9R-GTw"/>
+                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="tl7-9R-GTw">
+                            <connections>
+                                <segue destination="YCZ-7d-koi" kind="show" identifier="toAskQuestionVC" id="i02-85-oo9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="553-aa-bW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1317" y="-46"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="iWh-Xg-v8y">
             <objects>
-                <viewController id="YCZ-7d-koi" sceneMemberID="viewController">
+                <viewController id="YCZ-7d-koi" customClass="AskQuestionViewController" customModule="QuestionAndAnswer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZJY-Sp-yDW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="87n-hC-BwJ">
+                                <rect key="frame" x="0.0" y="156" width="414" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nnI-96-Tcf">
+                                <rect key="frame" x="0.0" y="194" width="414" height="169"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nnI-96-Tcf" secondAttribute="height" multiplier="414:169" id="E0W-a7-cIM"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nnI-96-Tcf" firstAttribute="top" secondItem="87n-hC-BwJ" secondAttribute="bottom" constant="8" id="4Cy-ZF-Fhk"/>
+                            <constraint firstItem="nnI-96-Tcf" firstAttribute="leading" secondItem="JmU-ze-aLS" secondAttribute="leading" id="B45-cY-eUE"/>
+                            <constraint firstItem="nnI-96-Tcf" firstAttribute="trailing" secondItem="JmU-ze-aLS" secondAttribute="trailing" id="d1X-7G-g35"/>
+                            <constraint firstItem="87n-hC-BwJ" firstAttribute="leading" secondItem="JmU-ze-aLS" secondAttribute="leading" id="ivc-ix-Aak"/>
+                            <constraint firstItem="87n-hC-BwJ" firstAttribute="top" secondItem="JmU-ze-aLS" secondAttribute="top" constant="16" id="rzD-g6-pYx"/>
+                            <constraint firstItem="JmU-ze-aLS" firstAttribute="trailing" secondItem="87n-hC-BwJ" secondAttribute="trailing" id="tOI-UM-y5G"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JmU-ze-aLS"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="xdt-Rl-8aR">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="TEn-xz-0Kw">
+                            <connections>
+                                <action selector="submitQuestionBarButtonTapped:" destination="YCZ-7d-koi" id="lox-jd-SdL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="87n-hC-BwJ" id="SzP-Uu-mj9"/>
+                        <outlet property="questionTextView" destination="nnI-96-Tcf" id="Dfo-Db-SxQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dKU-4K-miz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016" y="-42"/>
+            <point key="canvasLocation" x="2015.9420289855075" y="-42.1875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vXE-cX-vHN">

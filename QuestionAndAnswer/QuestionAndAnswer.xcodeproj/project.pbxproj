@@ -15,6 +15,7 @@
 		7AAEEF3F21EE6AB200900F2A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAEEF3E21EE6AB200900F2A /* Question.swift */; };
 		7AAEEF4121EE6BE300900F2A /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAEEF4021EE6BE300900F2A /* QuestionController.swift */; };
 		7AAEEF4321EE791D00900F2A /* QuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAEEF4221EE791D00900F2A /* QuestionsTableViewCell.swift */; };
+		7AAEEF4521EE7A8100900F2A /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAEEF4421EE7A8100900F2A /* AskQuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7AAEEF3E21EE6AB200900F2A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		7AAEEF4021EE6BE300900F2A /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		7AAEEF4221EE791D00900F2A /* QuestionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewCell.swift; sourceTree = "<group>"; };
+		7AAEEF4421EE7A8100900F2A /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				7AAEEF4221EE791D00900F2A /* QuestionsTableViewCell.swift */,
 				7AAEEF3E21EE6AB200900F2A /* Question.swift */,
 				7AAEEF4021EE6BE300900F2A /* QuestionController.swift */,
+				7AAEEF4421EE7A8100900F2A /* AskQuestionViewController.swift */,
 				7AAEEF3021EE6A3F00900F2A /* Main.storyboard */,
 				7AAEEF3321EE6A4100900F2A /* Assets.xcassets */,
 				7AAEEF3521EE6A4100900F2A /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			files = (
 				7AAEEF3F21EE6AB200900F2A /* Question.swift in Sources */,
 				7AAEEF4321EE791D00900F2A /* QuestionsTableViewCell.swift in Sources */,
+				7AAEEF4521EE7A8100900F2A /* AskQuestionViewController.swift in Sources */,
 				7AAEEF2F21EE6A3F00900F2A /* QuestionsTableViewController.swift in Sources */,
 				7AAEEF2D21EE6A3F00900F2A /* AppDelegate.swift in Sources */,
 				7AAEEF4121EE6BE300900F2A /* QuestionController.swift in Sources */,
