@@ -12,6 +12,7 @@
 		2714961E21EE74D900218AFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2714961C21EE74D900218AFB /* Main.storyboard */; };
 		2714962021EE74D900218AFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2714961F21EE74D900218AFB /* Assets.xcassets */; };
 		2714962321EE74D900218AFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2714962121EE74D900218AFB /* LaunchScreen.storyboard */; };
+		2714962B21EE822100218AFB /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2714962A21EE822100218AFB /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2714961F21EE74D900218AFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2714962221EE74D900218AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2714962421EE74D900218AFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2714962A21EE822100218AFB /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				2714961821EE74D900218AFB /* AppDelegate.swift */,
 				2714961A21EE74D900218AFB /* ViewController.swift */,
 				2714961C21EE74D900218AFB /* Main.storyboard */,
+				2714962A21EE822100218AFB /* Question.swift */,
 				2714961F21EE74D900218AFB /* Assets.xcassets */,
 				2714962121EE74D900218AFB /* LaunchScreen.storyboard */,
 				2714962421EE74D900218AFB /* Info.plist */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2714962B21EE822100218AFB /* Question.swift in Sources */,
 				2714961B21EE74D900218AFB /* ViewController.swift in Sources */,
 				2714961921EE74D900218AFB /* AppDelegate.swift in Sources */,
 			);
