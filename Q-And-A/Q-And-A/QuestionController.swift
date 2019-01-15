@@ -28,7 +28,6 @@ class QuestionController {
     }
     
     func Delete(question : Question){
-//        let questionToRemove = question.question
         var index = 0
         while index < questions.count {
             if questions[index] == question {
