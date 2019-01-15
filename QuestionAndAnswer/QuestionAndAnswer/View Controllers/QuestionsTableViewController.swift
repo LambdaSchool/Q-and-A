@@ -22,9 +22,18 @@ class QuestionsTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        <#code#>
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AskQuestionSegue" {
+            guard let vc = segue.destination as? AskQuestionViewController else { return }
+            vc.questionController = questionController
+        } else if segue.identifier == "CellSegue" {
+            guard let vc = segue.destination as? AnswerViewController,
+                let indexPath = tableView.indexPathForSelectedRow else { return }
+            let question = questionController.questions[indexPath.row]
+            vc.question = question
+            vc.questionController = questionController
+        }
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return questionController.questions.count

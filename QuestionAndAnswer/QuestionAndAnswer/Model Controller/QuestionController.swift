@@ -17,11 +17,13 @@ class QuestionController {
     }
     
     func update(question: Question, answer: String, answerer: String){
-       
+      guard let index = questions.index(of: question) else { return }
+        questions[index].answer = answer
+        questions[index].answerer = answerer
     }
     
     func deleteQuestion(at index: Int) {
-        // fill this in
+    
         questions.remove(at: index)
     }
     

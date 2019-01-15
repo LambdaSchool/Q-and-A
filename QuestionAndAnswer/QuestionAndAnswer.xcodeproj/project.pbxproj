@@ -69,9 +69,8 @@
 				7AAEEF4821EE7FC300900F2A /* View */,
 				7AAEEF4921EE7FD100900F2A /* Model */,
 				7AAEEF4A21EE7FDF00900F2A /* Model Controller */,
-				7AAEEF3021EE6A3F00900F2A /* Main.storyboard */,
+				7AAEEF4C21EE922100900F2A /* Storyboards */,
 				7AAEEF3321EE6A4100900F2A /* Assets.xcassets */,
-				7AAEEF3521EE6A4100900F2A /* LaunchScreen.storyboard */,
 				7AAEEF3821EE6A4100900F2A /* Info.plist */,
 			);
 			path = QuestionAndAnswer;
@@ -109,6 +108,15 @@
 				7AAEEF4621EE7D4300900F2A /* AnswerViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7AAEEF4C21EE922100900F2A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7AAEEF3021EE6A3F00900F2A /* Main.storyboard */,
+				7AAEEF3521EE6A4100900F2A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

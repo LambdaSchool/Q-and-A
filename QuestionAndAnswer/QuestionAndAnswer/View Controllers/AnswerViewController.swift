@@ -20,21 +20,46 @@ class AnswerViewController: UIViewController {
     
     
     var questionController: QuestionController?
-    var question: Question?
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        updateViews()
     }
     
 
    
     @IBAction func submitAnswerBarButtonTapped(_ sender: UIBarButtonItem) {
-        guard let answer = answerTextView.text, !answer.isEmpty, let answerer = answererTextField.text, !answerer.isEmpty else {return}
+        guard let answer = answerTextView.text, !answer.isEmpty, let answerer = answererTextField.text, !answerer.isEmpty, let question = question, let questionController = questionController else {return}
         
+        questionController.update(question: question, answer: answer, answerer: answerer)
         
         navigationController?.popViewController(animated: true)
+    }
+    
+    private func updateViews(){
+        guard isViewLoaded else { return }
+        if let question = question {
+            questionLabel.text = question.question
+            askerLabel.text = question.asker
+            answererTextField.text = question.answerer
+            answerTextView.text = question.answer
+        } else {
+            questionLabel.text = nil
+            askerLabel.text = nil
+            answererTextField.text = nil
+            answerTextView.text = nil
+        }
     }
     
 }
