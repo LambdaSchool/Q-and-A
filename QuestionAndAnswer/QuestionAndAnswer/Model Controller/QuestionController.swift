@@ -20,9 +20,9 @@ class QuestionController {
        
     }
     
-    func delete(question: Question){
-        //need to make Question struct equatable for this to work..
-        guard let index = questions.index(of: question) else {return}
+    func deleteQuestion(at index: Int) {
+        // fill this in
         questions.remove(at: index)
     }
+    
 }

@@ -65,18 +65,50 @@
 			isa = PBXGroup;
 			children = (
 				7AAEEF2C21EE6A3F00900F2A /* AppDelegate.swift */,
-				7AAEEF2E21EE6A3F00900F2A /* QuestionsTableViewController.swift */,
-				7AAEEF4221EE791D00900F2A /* QuestionsTableViewCell.swift */,
-				7AAEEF3E21EE6AB200900F2A /* Question.swift */,
-				7AAEEF4021EE6BE300900F2A /* QuestionController.swift */,
-				7AAEEF4421EE7A8100900F2A /* AskQuestionViewController.swift */,
-				7AAEEF4621EE7D4300900F2A /* AnswerViewController.swift */,
+				7AAEEF4B21EE7FEF00900F2A /* View Controllers */,
+				7AAEEF4821EE7FC300900F2A /* View */,
+				7AAEEF4921EE7FD100900F2A /* Model */,
+				7AAEEF4A21EE7FDF00900F2A /* Model Controller */,
 				7AAEEF3021EE6A3F00900F2A /* Main.storyboard */,
 				7AAEEF3321EE6A4100900F2A /* Assets.xcassets */,
 				7AAEEF3521EE6A4100900F2A /* LaunchScreen.storyboard */,
 				7AAEEF3821EE6A4100900F2A /* Info.plist */,
 			);
 			path = QuestionAndAnswer;
+			sourceTree = "<group>";
+		};
+		7AAEEF4821EE7FC300900F2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7AAEEF4221EE791D00900F2A /* QuestionsTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7AAEEF4921EE7FD100900F2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7AAEEF3E21EE6AB200900F2A /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7AAEEF4A21EE7FDF00900F2A /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7AAEEF4021EE6BE300900F2A /* QuestionController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		7AAEEF4B21EE7FEF00900F2A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7AAEEF2E21EE6A3F00900F2A /* QuestionsTableViewController.swift */,
+				7AAEEF4421EE7A8100900F2A /* AskQuestionViewController.swift */,
+				7AAEEF4621EE7D4300900F2A /* AnswerViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
