@@ -14,6 +14,11 @@ class QuestionTableViewCell: UITableViewCell {
         guard let unwrappedQuestion = question else { return }
         questionLabel.text = unwrappedQuestion.question
         askerLabel.text = unwrappedQuestion.asker
+        if question?.answer != nil && question?.answer != "" {
+            messageLabel.text = "Tap to view answer."
+        } else {
+            messageLabel.text = "Can you answer this?"
+        }
     }
     
     var question: Question? {
