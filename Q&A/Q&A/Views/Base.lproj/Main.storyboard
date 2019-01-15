@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="147" id="dri-D5-ALs" customClass="QuestionTableViewCell" customModule="Q_A" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="147" id="dri-D5-ALs" customClass="QuestionTableViewCell" customModule="Q_A" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="147"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dri-D5-ALs" id="xzW-yb-M6v">
@@ -88,7 +88,7 @@
                                     <outlet property="askerLabel" destination="Uzv-nC-9VY" id="SeA-Jd-8Cq"/>
                                     <outlet property="canYouAnswerLabel" destination="ybU-N5-YqL" id="VG8-Y6-aRy"/>
                                     <outlet property="questionLabel" destination="noh-5Y-UOd" id="cRg-eX-fCq"/>
-                                    <segue destination="bL7-UR-j1f" kind="show" id="1By-BZ-VA0"/>
+                                    <segue destination="bL7-UR-j1f" kind="show" identifier="answerQuestion" id="1By-BZ-VA0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -165,7 +165,7 @@
         <!--Title-->
         <scene sceneID="ve9-Fl-Krv">
             <objects>
-                <viewController id="bL7-UR-j1f" sceneMemberID="viewController">
+                <viewController id="bL7-UR-j1f" customClass="AnswerViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V0B-L5-HGm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,8 +211,18 @@
                         <viewLayoutGuide key="safeArea" id="mxn-YF-Vp5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="3JO-NF-IaU">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="jxS-5q-Xce"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="jxS-5q-Xce">
+                            <connections>
+                                <action selector="submitAnswer:" destination="bL7-UR-j1f" id="mgp-An-vO6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextView" destination="DRm-z7-82q" id="ohq-0h-fax"/>
+                        <outlet property="answererTextField" destination="b5O-BM-dJB" id="D8t-Jp-CMj"/>
+                        <outlet property="askerLabel" destination="4Gb-2L-epe" id="5Zb-Kj-rCy"/>
+                        <outlet property="questionLabel" destination="YxY-3G-0dz" id="vGT-kL-fA6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bD-SW-PKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

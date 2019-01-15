@@ -30,7 +30,7 @@ class QuestionController {
     }
     
     func deleteQuestion(question: Question) {
-        guard let questions.index(of: question) else { return }
+        guard let index = questions.index(of: question) else { return }
         questions.remove(at: index)
     }
 }
