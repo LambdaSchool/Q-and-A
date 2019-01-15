@@ -6,19 +6,20 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Q & A-->
         <scene sceneID="FBp-In-baz">
             <objects>
-                <tableViewController id="FaY-L1-0Lj" sceneMemberID="viewController">
+                <tableViewController id="FaY-L1-0Lj" customClass="QuestionTableViewController" customModule="Q___A_1_15" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zsA-Xc-l4s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="187" id="mW3-f2-GCX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="187" id="mW3-f2-GCX" customClass="QuestionTableViewCell" customModule="Q___A_1_15" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="187"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mW3-f2-GCX" id="HAZ-wP-Bgo">
@@ -78,6 +79,10 @@
                                         <constraint firstItem="dCA-hN-7dq" firstAttribute="leading" secondItem="HAZ-wP-Bgo" secondAttribute="leadingMargin" constant="8" id="sUl-J9-YvR"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="askedByLabel" destination="mXe-He-ago" id="Ksf-F0-vvD"/>
+                                    <outlet property="questionLabel" destination="Phy-Hn-DNm" id="PXv-dt-6XH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -86,12 +91,68 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Q &amp; A" id="HYQ-qA-jR6">
-                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="0St-3o-OGn"/>
+                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="0St-3o-OGn">
+                            <connections>
+                                <segue destination="wwn-IW-KIK" kind="show" id="TTw-Te-6Iy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hO-tz-cQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1124" y="169.56521739130437"/>
+        </scene>
+        <!--Ask View Controller-->
+        <scene sceneID="x7t-eb-kh2">
+            <objects>
+                <viewController id="wwn-IW-KIK" customClass="AskViewController" customModule="Q___A_1_15" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z2H-Fw-Aeu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E3S-TP-Dlk">
+                                <rect key="frame" x="0.0" y="132" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H7w-ac-Iod">
+                                <rect key="frame" x="0.0" y="170" width="375" height="125"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H7w-ac-Iod" secondAttribute="height" multiplier="3/1" id="hhl-vX-Qwd"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yq0-4X-upI" firstAttribute="trailing" secondItem="H7w-ac-Iod" secondAttribute="trailing" id="5iI-qF-4Bf"/>
+                            <constraint firstItem="H7w-ac-Iod" firstAttribute="leading" secondItem="yq0-4X-upI" secondAttribute="leading" id="EPL-Fe-D7l"/>
+                            <constraint firstItem="E3S-TP-Dlk" firstAttribute="top" secondItem="yq0-4X-upI" secondAttribute="top" constant="16" id="LMw-LP-Kol"/>
+                            <constraint firstItem="H7w-ac-Iod" firstAttribute="top" secondItem="E3S-TP-Dlk" secondAttribute="bottom" constant="8" id="awA-0q-f4G"/>
+                            <constraint firstItem="yq0-4X-upI" firstAttribute="trailing" secondItem="E3S-TP-Dlk" secondAttribute="trailing" id="bKK-tg-byz"/>
+                            <constraint firstItem="E3S-TP-Dlk" firstAttribute="leading" secondItem="yq0-4X-upI" secondAttribute="leading" id="hU9-1W-bRZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yq0-4X-upI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zVG-ao-qvK">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="64B-TZ-xxk">
+                            <connections>
+                                <action selector="submitQuestion:" destination="wwn-IW-KIK" id="vwl-81-Xci"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="E3S-TP-Dlk" id="c6v-Rg-IDN"/>
+                        <outlet property="textView" destination="H7w-ac-Iod" id="Iyn-yt-AdX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GkL-5T-ww0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1978" y="170"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JNJ-Gi-KBc">
