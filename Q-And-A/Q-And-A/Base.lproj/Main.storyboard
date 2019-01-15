@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="995.65217391304361" y="-45.535714285714285"/>
         </scene>
-        <!--Title-->
+        <!--Ask Placeholder-->
         <scene sceneID="wGX-nJ-3JJ">
             <objects>
-                <viewController title="Title" id="sEF-Ua-aA7" customClass="AskQuestionViewController" customModule="Q_And_A" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Ask Placeholder" id="sEF-Ua-aA7" customClass="AskQuestionViewController" customModule="Q_And_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WTm-Lo-OFD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vAE-Mu-bby"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="i5l-ZT-5Jb">
+                    <navigationItem key="navigationItem" title="Ask Placeholder" id="i5l-ZT-5Jb">
                         <barButtonItem key="rightBarButtonItem" title="Submit Question" id="GNS-Dh-qfO">
                             <connections>
                                 <action selector="submitButton:" destination="sEF-Ua-aA7" id="Htj-N4-KhY"/>
@@ -157,7 +157,7 @@
         <!--Answer Question-->
         <scene sceneID="Lxe-Rl-fHE">
             <objects>
-                <viewController title="Answer Question" id="5Fc-I9-VXq" sceneMemberID="viewController">
+                <viewController title="Answer Question" id="5Fc-I9-VXq" customClass="AnswerViewController" customModule="Q_And_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mtl-M5-OWf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +211,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4bK-vr-m9b"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Question Placeholder" id="h0I-os-YfE">
+                    <navigationItem key="navigationItem" title="Answer Placeholder" id="h0I-os-YfE">
                         <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="DKl-Rr-DRU"/>
                     </navigationItem>
                 </viewController>
