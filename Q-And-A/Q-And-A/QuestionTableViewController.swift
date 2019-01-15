@@ -10,6 +10,9 @@ import UIKit
 
 class QuestionTableViewController: UITableViewController {
 
+    @IBAction func askQuestionButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "askSegue", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
