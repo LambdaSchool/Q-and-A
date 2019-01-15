@@ -1,5 +1,5 @@
 //
-//  AskQuestionViewController.swift
+//  AnswerViewController.swift
 //  QuestionAndAnswer
 //
 //  Created by Dustin Koch on 1/15/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AskQuestionViewController: UIViewController {
+class AnswerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +26,14 @@ class AskQuestionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBOutlet weak var questionName: UITextField!
-    @IBOutlet weak var questionContext: UITextView!
+
     
+    //MARK: - Outlets
+    
+    @IBOutlet weak var questionAsked: UILabel!
+    @IBOutlet weak var personAsked: UILabel!
+    @IBOutlet weak var nameAnswered: UITextField!
+    @IBOutlet weak var answerProvided: UITextView!
     
     
 }

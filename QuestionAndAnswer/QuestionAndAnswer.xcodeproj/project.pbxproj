@@ -16,6 +16,7 @@
 		CA02B2C021EE809800487737 /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02B2BF21EE809800487737 /* QuestionsTableViewController.swift */; };
 		CA02B2C321EE87C400487737 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02B2C221EE87C400487737 /* QuestionTableViewCell.swift */; };
 		CA02B2C521EE8D1A00487737 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02B2C421EE8D1A00487737 /* AskQuestionViewController.swift */; };
+		CA02B2C721EE8D9C00487737 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02B2C621EE8D9C00487737 /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CA02B2BF21EE809800487737 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
 		CA02B2C221EE87C400487737 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		CA02B2C421EE8D1A00487737 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
+		CA02B2C621EE8D9C00487737 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		CA02B2C121EE80BB00487737 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CA02B2C621EE8D9C00487737 /* AnswerViewController.swift */,
 				CA02B2C421EE8D1A00487737 /* AskQuestionViewController.swift */,
 				CA02B2BF21EE809800487737 /* QuestionsTableViewController.swift */,
 			);
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA02B2BC21EE788D00487737 /* Question.swift in Sources */,
+				CA02B2C721EE8D9C00487737 /* AnswerViewController.swift in Sources */,
 				CA02B2C321EE87C400487737 /* QuestionTableViewCell.swift in Sources */,
 				CA02B2C521EE8D1A00487737 /* AskQuestionViewController.swift in Sources */,
 				CA02B2AA21EE745D00487737 /* AppDelegate.swift in Sources */,
