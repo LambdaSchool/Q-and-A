@@ -22,3 +22,12 @@ struct Question {
     }
     
 }
+extension Question : Equatable {
+    static func == ( lq: Question, rq: Question) -> Bool {
+        return
+            lq.question == rq.question &&
+            lq.asker    == rq.asker    &&
+            lq.answer   == rq.answer   &&
+            lq.answerer == rq.answerer
+    }
+}
