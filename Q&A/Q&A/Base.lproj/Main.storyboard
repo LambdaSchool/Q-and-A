@@ -79,6 +79,12 @@
                                         <constraint firstItem="VCA-lM-Rn4" firstAttribute="leading" secondItem="396-WU-zOS" secondAttribute="leading" constant="8" id="EzL-gs-HRy"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="askerLabel" destination="AWm-h7-vyZ" id="g0s-UM-aYa"/>
+                                    <outlet property="messageLabel" destination="LM4-yD-bSi" id="JCW-gj-Z6a"/>
+                                    <outlet property="questionLabel" destination="fBw-fE-Lzl" id="tmG-qk-LXU"/>
+                                    <segue destination="zLR-uC-YZf" kind="show" identifier="AnswerSegue" id="1yU-h1-opI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -89,7 +95,7 @@
                     <navigationItem key="navigationItem" title="Q&amp;A" id="LSh-iM-M8H">
                         <barButtonItem key="rightBarButtonItem" title="Ask Question" id="GJn-qQ-vaa">
                             <connections>
-                                <segue destination="5BU-Zo-Khy" kind="show" id="hKn-4b-0aO"/>
+                                <segue destination="5BU-Zo-Khy" kind="show" identifier="AskQuestionSegue" id="hKn-4b-0aO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -97,6 +103,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5YH-FP-jCU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1324" y="114.69265367316342"/>
+        </scene>
+        <!--Answer-->
+        <scene sceneID="gG4-9a-e1t">
+            <objects>
+                <viewController id="zLR-uC-YZf" customClass="AnswerViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pdv-wU-r0z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2qe-bw-Xhl">
+                                <rect key="frame" x="8" y="132" width="359" height="333.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oji-2y-IkB">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSt-GR-vQt">
+                                        <rect key="frame" x="0.0" y="28.5" width="359" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xCS-lx-DQd">
+                                        <rect key="frame" x="0.0" y="57" width="359" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GLY-2W-lZJ">
+                                        <rect key="frame" x="0.0" y="95" width="359" height="238.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z52-mz-6Ue" firstAttribute="trailing" secondItem="2qe-bw-Xhl" secondAttribute="trailing" constant="8" id="JF2-cr-Z48"/>
+                            <constraint firstItem="2qe-bw-Xhl" firstAttribute="top" secondItem="z52-mz-6Ue" secondAttribute="top" constant="16" id="To0-mO-oWm"/>
+                            <constraint firstItem="2qe-bw-Xhl" firstAttribute="height" secondItem="pdv-wU-r0z" secondAttribute="height" multiplier="0.5" id="i7k-xD-23c"/>
+                            <constraint firstItem="2qe-bw-Xhl" firstAttribute="leading" secondItem="z52-mz-6Ue" secondAttribute="leading" constant="8" id="tPx-LR-0ba"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z52-mz-6Ue"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Answer" id="vUy-or-Djc">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="eMt-gk-PLg">
+                            <connections>
+                                <action selector="submitAnswerButtonTapped:" destination="zLR-uC-YZf" id="Av6-86-Pe8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerTextView" destination="GLY-2W-lZJ" id="Qbj-Rc-YW5"/>
+                        <outlet property="answererNameTextField" destination="xCS-lx-DQd" id="o5P-vc-CXG"/>
+                        <outlet property="askerLabel" destination="uSt-GR-vQt" id="CgU-1A-AJv"/>
+                        <outlet property="questionLabel" destination="oji-2y-IkB" id="iJG-9L-ehj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUB-4C-ezR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1402" y="885"/>
         </scene>
         <!--Ask Question-->
         <scene sceneID="JqN-t1-AZE">
