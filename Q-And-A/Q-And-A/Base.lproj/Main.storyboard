@@ -78,6 +78,10 @@
                                         <constraint firstItem="Rxg-gr-jGl" firstAttribute="leading" secondItem="0p7-N4-Y05" secondAttribute="leading" constant="8" id="yNz-5D-8vE"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="askerLabel" destination="rp4-fc-sxQ" id="SPk-NN-3ub"/>
+                                    <outlet property="questionLabel" destination="NsH-lN-UmH" id="CQE-cS-n8o"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
