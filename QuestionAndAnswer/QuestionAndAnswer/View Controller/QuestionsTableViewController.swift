@@ -32,19 +32,31 @@ class QuestionsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        guard let questionCell = cell as? QuestionTableViewCell else { return cell}
+        
+        let question = questionController.questions[indexPath.row]
+        questionCell.question = question
+        
+        return questionCell
     }
-
+    
+    
+    
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            
+            let question = questionController.questions[indexPath.row]
+            questionController.delete(specificQuestion: question)
             
             tableView.deleteRows(at: [indexPath], with: .fade)
 //        } else if editingStyle == .insert {
 //            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-//        }    
+//
+//        }
     }
 
     // MARK: - Navigation
@@ -53,16 +65,24 @@ class QuestionsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "toQuestion"{
+            guard let questionDetailVC = segue.destination as? AskQuestionViewController,
+                let cell = sender as? AskQuestionViewController else { return }
+            
+            questionDetailVC.questionName = cell.questionName
+            
+        } else if segue.identifier == "toAnswer"{
+            guard let questionDetailVC = segue.destination as? AnswerViewController,
+                let cell = sender as? AnswerViewController else { return }
+            
+            questionDetailVC.answerProvided = cell.answerProvided
+            
+        }
+        
+        
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     //MARK: - Unused boilerplate
