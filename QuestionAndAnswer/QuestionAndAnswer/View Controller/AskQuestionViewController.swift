@@ -9,6 +9,9 @@
 import UIKit
 
 class AskQuestionViewController: UIViewController {
+    
+    var questionController: QuestionController?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,16 @@ class AskQuestionViewController: UIViewController {
     */
     @IBOutlet weak var questionName: UITextField!
     @IBOutlet weak var questionContext: UITextView!
+    @IBAction func submitQuestionTapped(_ sender: UIBarButtonItem) {
+        
+        guard let name = questionName.text else { return }
+        guard let question = questionContext.text else { return }
+        
+        questionController?.create(question: question, asker: name, answer: nil, answererer: nil)
+        
+        performSegue(withIdentifier: "toQuestion", sender: self)
+        
+    }
     
     
     

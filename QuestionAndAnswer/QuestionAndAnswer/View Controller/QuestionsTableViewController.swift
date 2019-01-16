@@ -15,14 +15,15 @@ class QuestionsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
+    
+    
     // MARK: - Table view data source
 
 
@@ -58,6 +59,7 @@ class QuestionsTableViewController: UITableViewController {
 //
 //        }
     }
+    }
 
     // MARK: - Navigation
 
@@ -83,7 +85,6 @@ class QuestionsTableViewController: UITableViewController {
         
     }
 
-    
     
     //MARK: - Unused boilerplate
     
@@ -129,3 +130,4 @@ class QuestionsTableViewController: UITableViewController {
     
     
 }
+

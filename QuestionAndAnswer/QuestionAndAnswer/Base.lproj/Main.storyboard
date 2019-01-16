@@ -148,7 +148,11 @@
                         <viewLayoutGuide key="safeArea" id="2Br-gO-9d3"/>
                     </view>
                     <navigationItem key="navigationItem" id="6l0-bB-W7m">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="giZ-Yg-LaA"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="giZ-Yg-LaA">
+                            <connections>
+                                <action selector="submitQuestionTapped:" destination="kaj-U2-XWX" id="Meu-ON-Ezp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="questionContext" destination="yqp-3u-nhU" id="AtQ-mu-Yiq"/>
