@@ -14,16 +14,16 @@
         <scene sceneID="NFa-ip-8wh">
             <objects>
                 <tableViewController id="l5P-2L-Eta" customClass="QuestionTableViewController" customModule="QandA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yVI-eo-dtz">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yVI-eo-dtz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="100" id="agg-BT-DQw" customClass="QuestionsTableViewCell" customModule="QandA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="110" id="agg-BT-DQw" customClass="QuestionsTableViewCell" customModule="QandA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="agg-BT-DQw" id="S4O-n6-aPU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="109.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t0b-wu-yYl">
@@ -81,12 +81,13 @@
                                         <constraint firstItem="ZBl-oi-hBY" firstAttribute="top" secondItem="t0b-wu-yYl" secondAttribute="bottom" constant="6" id="cDM-SY-3t5"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="askedByLabel" destination="MZQ-qE-UZv" id="KpE-6Q-RiD"/>
                                     <outlet property="otherLabel" destination="ZBl-oi-hBY" id="Gbu-00-yCZ"/>
-                                    <outlet property="question" destination="5bf-ow-Hly" id="XE7-nd-nds"/>
+                                    <outlet property="questLabel" destination="5bf-ow-Hly" id="XE7-nd-nds"/>
                                     <outlet property="questionLabel" destination="0nu-FH-O34" id="C83-6h-ePd"/>
-                                    <segue destination="bHu-Gd-5AI" kind="show" identifier="toAnswer" id="amr-Cg-FMw"/>
+                                    <segue destination="bHu-Gd-5AI" kind="show" identifier="toAnswer" id="DcO-Wo-2oP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -160,8 +161,18 @@
                         <viewLayoutGuide key="safeArea" id="PCQ-N8-UfP"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="6Hd-xZ-txD">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="icj-f6-yQs"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="icj-f6-yQs">
+                            <connections>
+                                <action selector="submitAnswer:" destination="bHu-Gd-5AI" id="5jp-qE-nLz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answereNameLabel" destination="EnV-v2-awm" id="WmE-3P-gGy"/>
+                        <outlet property="askerLabel" destination="wNd-Eo-oah" id="NF9-K8-aXc"/>
+                        <outlet property="inputQuestionLabel" destination="r26-Nr-R2Q" id="g71-ZZ-dz7"/>
+                        <outlet property="theAnswerTextField" destination="4pW-IH-h05" id="wFl-1Z-mR1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pxm-Wp-Imk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,11 +194,10 @@
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QDC-Jz-Zwl">
                                 <rect key="frame" x="0.0" y="194" width="414" height="260"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="260" id="Fai-mn-9Q1"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

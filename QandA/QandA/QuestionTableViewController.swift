@@ -10,81 +10,74 @@ import UIKit
 
 class QuestionTableViewController: UITableViewController {
 
+    //instead of using a shared instance, we are going to use this instance and pass it around to our other view controllers using the segue function at the bottom
+    let questionController = QuestionController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return questionController.questions.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        //create cell and set it to our custome table view cell class
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath) as? QuestionsTableViewCell else { return UITableViewCell() }
+        
+        //get our data model
+        let question = questionController.questions[indexPath.row]
+        
+        //now that we have our data model object, we can pass it to the property in our QuestionsTableViewCell file
+        cell.question = question
+      
+        //return the cell
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            // grab the data model to delete
+            let questionToDelete = questionController.questions[indexPath.row]
+            
+            //now that we have the data model object to delete we can call our delete function and delete it from our model's array
+            questionController.delete(question: questionToDelete)
+            
+            //after we've deleted it from our model's array we can delete the row/cell on the view.
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
+    
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+        if segue.identifier == "toQuestion" {
+            if let askVC = segue.destination as? AskQuestionViewController {
+                askVC.questionController = questionController
+            }
+        } else if segue.identifier == "toAnswer" {
+            if let ansVC = segue.destination as? AnswerViewController {
+                guard let index = tableView.indexPathForSelectedRow else { return }
+                let selectedQuestion = questionController.questions[index.row]
+                ansVC.questionController = questionController
+                ansVC.question = selectedQuestion
+            }
+        }
         // Pass the selected object to the new view controller.
     }
-    */
+ 
 
 }

@@ -9,26 +9,24 @@
 import UIKit
 
 class AskQuestionViewController: UIViewController {
+    
+    var questionController: QuestionController?
+    
     @IBOutlet weak var enterNameTextField: UITextField!
     @IBOutlet weak var questionTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func submitButton(_ sender: Any) {
+        //check to see if there's text in both fields
+        guard let nameText = enterNameTextField.text, !nameText.isEmpty, let questionText = questionTextView.text, !questionText.isEmpty else { return }
+        
+        //now that we have the information, we can add/create our model object which is the question
+        questionController?.addQuestion(with: questionText, asker: nameText)
+        
+        //dismiss the viewController
+        navigationController?.popToRootViewController(animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

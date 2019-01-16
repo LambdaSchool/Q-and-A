@@ -9,11 +9,26 @@
 import UIKit
 
 class QuestionsTableViewCell: UITableViewCell {
-    @IBOutlet weak var question: UILabel!
     
+    var question: Question? {
+        didSet{
+            updateViews()
+        }
+    }
+    
+    @IBOutlet weak var questLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var askedByLabel: UILabel!
     @IBOutlet weak var otherLabel: UILabel!
     
-    
+    func updateViews(){
+        guard let passedInQuestion = question else { return }
+        questionLabel.text = passedInQuestion.question
+        askedByLabel.text = passedInQuestion.asker
+        if otherLabel.text == nil {
+            otherLabel.text = "Press here to answer."
+        } else {
+            otherLabel.text = passedInQuestion.answer
+        }
+    }
 }
