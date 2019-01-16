@@ -10,8 +10,8 @@ import Foundation
 
 class QuestionController {
     func create(question: String, from asker: String) {
-        let q = Question(question: question, asker: asker)
-        questions.append(q)
+        let newQuestion = Question(question: question, asker: asker)
+        questions.append(newQuestion)
     }
     
     func update(question: Question, with answer: String, from answerer: String) {
