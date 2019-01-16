@@ -44,9 +44,9 @@ Create a new Swift file called "QuestionController.swift" and in it, make a clas
 Add the following to the `QuestionController`:
 
 - An array of `Question` objects called `questions` that will be used as the data source for the application.
-- A "Create" function that will initialize a `Question` object and add it to the `questions` array.
-- An "Update" function that takes in a `Question` (that you want to update), `answer` string, and an `answerer` string to add to the question.
-- A "Delete" function that takes in a `Question` to be deleted, and removes it from the `questions` array.
+- A "create" function that will initialize a `Question` object and add it to the `questions` array.
+- An "update" function that takes in a `Question` (that you want to update), `answer` string, and an `answerer` string to add to the question.
+- A "delete" function that takes in a `Question` to be deleted, and removes it from the `questions` array.
 
 ### Part 2 - Storyboards and Constraints
 
