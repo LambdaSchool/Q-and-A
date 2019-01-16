@@ -215,7 +215,11 @@
                         <viewLayoutGuide key="safeArea" id="EZJ-GO-E0e"/>
                     </view>
                     <navigationItem key="navigationItem" id="N3f-Jy-ywC">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="TPs-Hn-MoD"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="TPs-Hn-MoD">
+                            <connections>
+                                <action selector="answerButtonTapped:" destination="0w1-qn-Qn8" id="cTN-cB-pk8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="answerProvided" destination="HGV-XG-qCl" id="G94-OC-KGy"/>

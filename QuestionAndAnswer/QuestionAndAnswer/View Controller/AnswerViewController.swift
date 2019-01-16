@@ -37,6 +37,20 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var personAsked: UILabel!
     @IBOutlet weak var nameAnswered: UITextField!
     @IBOutlet weak var answerProvided: UITextView!
+    @IBAction func answerButtonTapped(_ sender: UIBarButtonItem) {
+        
+        guard let answer = answerProvided.text else { return }
+        guard let name = nameAnswered.text else { return }
+        
+        
+        if answer != "" && name != "" {
+            questionController?.update(specificQuestion: question, answer: answer, answerer: name)
+        }
+        
+        
+        navigationController?.popViewController(animated: true)
+        
+    }
     
     
 }
