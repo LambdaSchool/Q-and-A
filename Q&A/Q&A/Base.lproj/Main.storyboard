@@ -25,11 +25,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter your question..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OfO-O1-w4b">
-                                <rect key="frame" x="0.0" y="170" width="375" height="125"/>
+                                <rect key="frame" x="0.0" y="170" width="375" height="222.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="OfO-O1-w4b" secondAttribute="height" multiplier="3/1" id="KyP-HP-1MK"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -42,6 +39,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OfO-O1-w4b" secondAttribute="trailing" id="eYw-f6-5wb"/>
                             <constraint firstItem="PAF-ZV-C5Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ewM-ya-Nb6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PAF-ZV-C5Q" secondAttribute="trailing" id="gQc-2m-INy"/>
+                            <constraint firstItem="OfO-O1-w4b" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/3" id="hAe-31-YWL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -71,42 +69,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="mMi-Mt-c0B">
-                                <rect key="frame" x="16" y="116" width="309.5" height="334"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mMi-Mt-c0B">
+                                <rect key="frame" x="8" y="116" width="359" height="333.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7n-zr-rh7">
-                                        <rect key="frame" x="0.0" y="0.0" width="309.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1e-Ub-a2d">
-                                        <rect key="frame" x="0.0" y="65.5" width="309.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="40.5" width="359" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1dV-gU-Dxi">
-                                        <rect key="frame" x="0.0" y="131" width="309.5" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1dV-gU-Dxi">
+                                        <rect key="frame" x="0.0" y="81" width="359" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter answer..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5da-3q-iQN">
-                                        <rect key="frame" x="0.0" y="206" width="309.5" height="128"/>
+                                        <rect key="frame" x="0.0" y="131" width="359" height="202.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mMi-Mt-c0B" secondAttribute="height" multiplier="240:259" id="RPX-Hr-b4p"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="FOZ-ct-eNg" firstAttribute="trailing" secondItem="mMi-Mt-c0B" secondAttribute="trailing" constant="8" id="GZI-39-THc"/>
                             <constraint firstItem="mMi-Mt-c0B" firstAttribute="top" secondItem="FOZ-ct-eNg" secondAttribute="top" id="m9r-ge-ZyR"/>
+                            <constraint firstItem="mMi-Mt-c0B" firstAttribute="height" secondItem="2Fn-f5-RqV" secondAttribute="height" multiplier="1/2" id="mQU-Im-Trj"/>
+                            <constraint firstItem="mMi-Mt-c0B" firstAttribute="leading" secondItem="FOZ-ct-eNg" secondAttribute="leading" constant="8" id="xfo-JZ-ufa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FOZ-ct-eNg"/>
                     </view>

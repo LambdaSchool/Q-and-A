@@ -16,6 +16,11 @@ class AnswerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateViews()
+    }
+    
     var questionController: QuestionController?
     
     var question: Question? {
@@ -50,7 +55,7 @@ class AnswerViewController: UIViewController {
     }
     
     func updateViews() {
-        guard let question = question else { return }
+        guard let question = question, isViewLoaded else { return }
     
         questionLabel.text = question.question
         askerLabel.text = question.asker
