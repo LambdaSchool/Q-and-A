@@ -31,9 +31,15 @@ class TableViewController : UIViewController, UITableViewDataSource, UITableView
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "AnswerQuestionSegue"){
-            let answerViewController = AnswerViewController()
-            let indexPath = tableView.indexPath(for: sender as! CustomTableViewCell)
-            answerViewController.question = questionController.questions[indexPath!.row]
+            guard let indexPath = tableView.indexPathForSelectedRow,
+            let answerViewController = segue.destination as? AnswerViewController else {return}
+            let question = questionController.questions[indexPath.row]
+            answerViewController.question = question
+            answerViewController.questionController = questionController
+        } else if(segue.identifier == "AskQuestionSegue") {
+            guard let destinationVC = segue.destination as? AskQuestionViewController else { return }
+            
+            destinationVC.questionController = questionController
         }
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

@@ -11,7 +11,7 @@ import UIKit
 class AskQuestionViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textField: UITextField!
-    let questionController = QuestionController()
+    var questionController = QuestionController()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

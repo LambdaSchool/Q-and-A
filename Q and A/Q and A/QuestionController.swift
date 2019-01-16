@@ -15,10 +15,11 @@ class QuestionController{
         let question : Question = Question(question: question, asker: asker,answer: answer, answerer: answerer)
         questions.append(question)
     }
-    func update(question: inout Question, answer: String, answerer: String){
+    func update(question: Question, answer: String, answerer: String){
         //An "Update" function that takes in a Question (that you want to update), answer string, and an answerer string to add to the question.
-        question.answer = answer
-        question.answerer = answerer
+        guard let index = questions.index(of: question) else {return}
+        questions[index].answer = answer
+        questions[index].answerer = answerer
     }
     func delete(indexPath: Int){
         //A "Delete" function that takes in a Question to be deleted, and removes it from the questions array.
