@@ -10,16 +10,85 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Answer View Controller-->
+        <!--Answer-->
         <scene sceneID="LFJ-z2-P3s">
             <objects>
                 <viewController id="I7g-wj-X7A" customClass="AnswerViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y7s-Ph-L5v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="45U-Jk-DVu">
+                                <rect key="frame" x="8" y="132" width="359" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFD-Gl-2hX">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gj6-QP-JGG">
+                                        <rect key="frame" x="0.0" y="28.5" width="359" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gj6-QP-JGG" firstAttribute="leading" secondItem="PFD-Gl-2hX" secondAttribute="leading" id="Z8C-zs-1tB"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="35l-Xc-QDN">
+                                <rect key="frame" x="0.0" y="197" width="375" height="183.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sxN-BW-1eD">
+                                        <rect key="frame" x="8" y="0.0" width="359" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FVE-1b-air">
+                                        <rect key="frame" x="0.0" y="38" width="375" height="145.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FVE-1b-air" firstAttribute="leading" secondItem="35l-Xc-QDN" secondAttribute="leading" id="51g-0x-F6a"/>
+                                    <constraint firstAttribute="trailing" secondItem="FVE-1b-air" secondAttribute="trailing" id="77V-z4-CqE"/>
+                                    <constraint firstItem="sxN-BW-1eD" firstAttribute="leading" secondItem="35l-Xc-QDN" secondAttribute="leading" constant="8" id="Kgm-PT-zdf"/>
+                                    <constraint firstAttribute="trailing" secondItem="sxN-BW-1eD" secondAttribute="trailing" constant="8" id="QrO-vi-NNA"/>
+                                    <constraint firstItem="sxN-BW-1eD" firstAttribute="top" secondItem="35l-Xc-QDN" secondAttribute="top" id="cgw-mb-gnM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="35l-Xc-QDN" firstAttribute="trailing" secondItem="9So-Ic-8M4" secondAttribute="trailing" id="OAZ-IQ-8lx"/>
+                            <constraint firstItem="9So-Ic-8M4" firstAttribute="trailing" secondItem="45U-Jk-DVu" secondAttribute="trailing" constant="8" id="YVN-yO-Fw3"/>
+                            <constraint firstItem="35l-Xc-QDN" firstAttribute="height" secondItem="9So-Ic-8M4" secondAttribute="height" multiplier="1/3" id="bts-Mq-bFI"/>
+                            <constraint firstItem="35l-Xc-QDN" firstAttribute="leading" secondItem="9So-Ic-8M4" secondAttribute="leading" id="hdd-HG-UIJ"/>
+                            <constraint firstItem="35l-Xc-QDN" firstAttribute="top" secondItem="45U-Jk-DVu" secondAttribute="bottom" constant="16" id="jZ5-pv-qUi"/>
+                            <constraint firstItem="45U-Jk-DVu" firstAttribute="top" secondItem="9So-Ic-8M4" secondAttribute="top" constant="16" id="lbz-Da-MQD"/>
+                            <constraint firstItem="35l-Xc-QDN" firstAttribute="centerX" secondItem="y7s-Ph-L5v" secondAttribute="centerX" id="s6C-Na-MPo"/>
+                            <constraint firstItem="45U-Jk-DVu" firstAttribute="leading" secondItem="9So-Ic-8M4" secondAttribute="leading" constant="8" id="zeB-4g-bGv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9So-Ic-8M4"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Answer" id="fCF-Vk-JCV">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="Adj-7o-Ako">
+                            <connections>
+                                <action selector="tappedSubmit:" destination="I7g-wj-X7A" id="axH-p9-d0L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerView" destination="FVE-1b-air" id="CsG-3K-VlH"/>
+                        <outlet property="askerLabel" destination="gj6-QP-JGG" id="Y8v-9I-vxt"/>
+                        <outlet property="nameField" destination="sxN-BW-1eD" id="arc-as-I12"/>
+                        <outlet property="questionLabel" destination="PFD-Gl-2hX" id="vAB-yf-LdU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpX-kV-W6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,7 +162,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="askerLabel" destination="MEk-rD-HWV" id="ylW-zw-Dv8"/>
-                                    <outlet property="questionLAbel" destination="qXc-DU-ixz" id="6WX-PT-2Xm"/>
+                                    <outlet property="questionLabel" destination="qXc-DU-ixz" id="UGD-dC-lQ2"/>
                                     <outlet property="statusLabel" destination="HnP-bj-KpZ" id="8HA-Sp-Xk5"/>
                                     <segue destination="I7g-wj-X7A" kind="show" identifier="toAnswerView" id="Kim-Ym-Eb0"/>
                                 </connections>
@@ -116,16 +185,60 @@
             </objects>
             <point key="canvasLocation" x="1743.2" y="763.26836581709154"/>
         </scene>
-        <!--Ask Question View Controller-->
+        <!--Ask-->
         <scene sceneID="PBD-pn-peN">
             <objects>
                 <viewController id="a4p-J4-LDn" customClass="AskQuestionViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X4H-Hy-A3W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Ue-id-PIg">
+                                <rect key="frame" x="0.0" y="132" width="375" height="169"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aO2-aj-ZZk">
+                                        <rect key="frame" x="8" y="0.0" width="359" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="92t-Yr-rhQ">
+                                        <rect key="frame" x="0.0" y="38" width="375" height="131"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aO2-aj-ZZk" secondAttribute="trailing" constant="8" id="R33-gC-pok"/>
+                                    <constraint firstItem="aO2-aj-ZZk" firstAttribute="leading" secondItem="7Ue-id-PIg" secondAttribute="leading" constant="8" id="TDT-8T-YV2"/>
+                                    <constraint firstAttribute="trailing" secondItem="92t-Yr-rhQ" secondAttribute="trailing" id="ZMe-GA-hwh"/>
+                                    <constraint firstItem="92t-Yr-rhQ" firstAttribute="leading" secondItem="7Ue-id-PIg" secondAttribute="leading" id="mzv-BN-kD5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="THz-E8-a2p" firstAttribute="trailing" secondItem="7Ue-id-PIg" secondAttribute="trailing" id="4WN-hG-Lr6"/>
+                            <constraint firstItem="7Ue-id-PIg" firstAttribute="top" secondItem="THz-E8-a2p" secondAttribute="top" constant="16" id="AMz-Vv-tUk"/>
+                            <constraint firstItem="7Ue-id-PIg" firstAttribute="leading" secondItem="THz-E8-a2p" secondAttribute="leading" id="UUO-gw-wG3"/>
+                            <constraint firstItem="7Ue-id-PIg" firstAttribute="height" secondItem="THz-E8-a2p" secondAttribute="height" multiplier="1/3" id="e4O-ik-Q7H"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="THz-E8-a2p"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Ask" id="aIY-P2-UJ1">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="qfj-Mp-eoS">
+                            <connections>
+                                <action selector="tappedSubmit:" destination="a4p-J4-LDn" id="hTz-iG-1Fc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameField" destination="aO2-aj-ZZk" id="HZa-7k-QHl"/>
+                        <outlet property="questionView" destination="92t-Yr-rhQ" id="63H-S6-lYw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xze-WS-OC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,8 @@
 import Foundation
 
 class QuestionController {
+    static let shared = QuestionController()
+    
     func create(question: String, from asker: String) {
         let newQuestion = Question(question: question, asker: asker)
         questions.append(newQuestion)
