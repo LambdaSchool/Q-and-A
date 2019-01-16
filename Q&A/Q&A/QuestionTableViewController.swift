@@ -64,14 +64,29 @@ class QuestionTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "askQ" {
+            guard let askQuestionController = segue.destination as? AskQuestionViewController else { return }
+            
+            askQuestionController.questionController = questionController
+            
+        } else if segue.identifier == "answerQ" {
+            guard let answerController = segue.destination as? AnswerViewController, let cell = sender as? QuestionTableViewCell else { return }
+            
+           // let indexPath = tableView.indexPathForSelectedRow
+            
+            answerController.questionController = questionController
+            
+            answerController.question = cell.question
+            
+        }
+       
     }
-    */
-
+    
+    
 }

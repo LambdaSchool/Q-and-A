@@ -31,6 +31,31 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var answerTextView: UITextView!
     
     @IBAction func submitAnwerTapped(_ sender: UIBarButtonItem) {
+        guard let nameText = nameTextField.text, let answerText = answerTextView.text else {return}
+        
+        //do we use questionLabel or var question in the update function
+        
+        if !nameText.isEmpty && !answerText.isEmpty {
+            questionController?.update(question: question!, with: answerText, from: nameText)
+            
+            nameTextField.text = nil
+            answerTextView.text = nil
+            
+            _ = navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func updateViews() {
+        guard let question = question else { return }
+    
+        questionLabel.text = question.question
+        askerLabel.text = question.asker
+        
+        nameTextField.text = question.answerer
+        answerTextView.text = question.answer
+    
+   
+    
     }
     
     
