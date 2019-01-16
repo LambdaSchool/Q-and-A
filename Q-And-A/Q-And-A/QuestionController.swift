@@ -13,6 +13,7 @@ class QuestionController {
     var questions : [Question] = []
     
     func Create(question : String, asker : String, answer : String?, answerer : String?) {
+        self.question = question
         let newQuestion = Question(question: question, asker: asker, answer: answer, answerer: answerer)
         questions.append(newQuestion)
     }
