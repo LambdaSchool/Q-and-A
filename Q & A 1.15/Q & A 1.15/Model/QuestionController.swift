@@ -4,20 +4,25 @@ import Foundation
 
 class QuestionController {
     
-    var questions: [Question] = []
+    private(set) var questions: [Question] = []
 
     //var question = questions[IndexPath.row]
 
-    func createQuestion(question: Question) {
+    func createQuestion(question: String, asker: String) {
+        let question = Question(question: question, asker: asker)
         questions.append(question)
     }
 
-    func update(question: Question) {
-
+    func updateQuestion(question: Question, answer: String, answerer: String) {
+                guard let index = questions.index(of: question) else {return}
+        
+        questions[index].answer = answer
+        questions[index].answerer = answerer
     }
 
-    func delete(indexPath: IndexPath) {
-        questions.remove(at: indexPath.row)
+    func deleteQuestion(question: Question) {
+        guard let index = questions.index(of: question) else { return }
+        questions.remove(at: index)
   //      remove[IndexPath.row]
     }
     

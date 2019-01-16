@@ -20,7 +20,7 @@ class QuestionTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return questionContoller?.questions.count
+        return questionContoller.questions.count
     }
 
     
@@ -30,14 +30,11 @@ class QuestionTableViewController: UITableViewController {
             
         //cell.delegate = self
             
-        cell.questionsLabel.text = "da funk"
-            
-        }
-
-       // cell.textLabel.text = text
-
+        let question = questionController.questions[indexPath.row]
+        cell.question = question
         return cell
     }
+}
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
