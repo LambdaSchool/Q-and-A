@@ -89,7 +89,7 @@
                                     <outlet property="askedByLabel" destination="uUs-Vv-5Fw" id="pBE-1x-m0e"/>
                                     <outlet property="questionLabel" destination="dnc-Tr-HMj" id="fDT-Nz-7gD"/>
                                     <outlet property="viewAnswerTapped" destination="bNI-eu-NGW" id="56z-dy-mGa"/>
-                                    <segue destination="0w1-qn-Qn8" kind="show" id="mgN-7t-cH3"/>
+                                    <segue destination="0w1-qn-Qn8" kind="show" identifier="toAnswer" id="mgN-7t-cH3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -101,7 +101,7 @@
                     <navigationItem key="navigationItem" title="Q&amp;A" id="gFe-uD-RLa">
                         <barButtonItem key="rightBarButtonItem" title="Ask Question" id="7rb-gX-SKh">
                             <connections>
-                                <segue destination="kaj-U2-XWX" kind="show" id="Dt7-XF-S3B"/>
+                                <segue destination="kaj-U2-XWX" kind="show" identifier="toQuestion" id="Dt7-XF-S3B"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

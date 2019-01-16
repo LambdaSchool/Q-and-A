@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct Question {
+struct Question: Equatable {
     var question: String
     var asker: String
     var answer: String?

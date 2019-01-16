@@ -65,9 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				CA02B2A921EE745D00487737 /* AppDelegate.swift */,
-				CA02B2C221EE87C400487737 /* QuestionTableViewCell.swift */,
 				CA02B2BB21EE788D00487737 /* Question.swift */,
 				CA02B2BD21EE7D0B00487737 /* QuestionController.swift */,
+				CA02B2C821EEA66D00487737 /* View */,
 				CA02B2C121EE80BB00487737 /* View Controller */,
 				CA02B2AD21EE745D00487737 /* Main.storyboard */,
 				CA02B2B021EE745E00487737 /* Assets.xcassets */,
@@ -85,6 +85,14 @@
 				CA02B2BF21EE809800487737 /* QuestionsTableViewController.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		CA02B2C821EEA66D00487737 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA02B2C221EE87C400487737 /* QuestionTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
