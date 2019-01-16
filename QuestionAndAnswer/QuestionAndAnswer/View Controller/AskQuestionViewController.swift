@@ -36,9 +36,11 @@ class AskQuestionViewController: UIViewController {
         guard let name = questionName.text else { return }
         guard let question = questionContext.text else { return }
         
+        if name != "" && question != "" {
         questionController?.create(question: question, asker: name, answer: nil, answererer: nil)
+        }
         
-        performSegue(withIdentifier: "toQuestion", sender: self)
+        navigationController?.popViewController(animated: true)
         
     }
     
