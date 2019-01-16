@@ -10,7 +10,7 @@ import Foundation
 
 class QuestionController {
     
-    private(set) var questions : [Question] = []
+    var questions : [Question] = []
     
     func Create(question : String, asker : String, answer : String?, answerer : String?) {
         let newQuestion = Question(question: question, asker: asker, answer: answer, answerer: answerer)
