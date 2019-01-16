@@ -12,14 +12,15 @@ class QuestionController {
     
     var questions: [Question] = []
     
-    func create(withText text: String) {
-        let question = Question(question: text, asker: <#String#>)
+    func create(withText text: String, askerName: String) {
+        let question = Question(question: text, asker: askerName)
         questions.append(question)
     }
     
     func update(question: Question, with answer: String, from answerer: String) {
-        question.answer = answer
-        question.answerer = answerer
+        guard let index = questions.index(of: question) else { return }
+        questions[index].answer = answer
+        questions[index].answerer = answerer
     }
     
     func delete(question: Question) {
