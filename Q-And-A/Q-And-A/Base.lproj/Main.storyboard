@@ -82,6 +82,7 @@
                                 <connections>
                                     <outlet property="askerLabel" destination="rp4-fc-sxQ" id="SPk-NN-3ub"/>
                                     <outlet property="questionLabel" destination="NsH-lN-UmH" id="CQE-cS-n8o"/>
+                                    <segue destination="5Fc-I9-VXq" kind="show" identifier="cellSegue" id="DbH-1R-Z3E"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -141,7 +142,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Submit Question" id="GNS-Dh-qfO">
                             <connections>
                                 <action selector="submitButton:" destination="sEF-Ua-aA7" id="Htj-N4-KhY"/>
-                                <segue destination="5Fc-I9-VXq" kind="show" identifier="submitSegue" id="vLJ-Rt-RL0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4Q-Bq-scX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1701" y="-46"/>
+            <point key="canvasLocation" x="1759" y="-414"/>
         </scene>
         <!--Answer Question-->
         <scene sceneID="Lxe-Rl-fHE">
@@ -227,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMl-nj-rsx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2414" y="-46"/>
+            <point key="canvasLocation" x="1758" y="250"/>
         </scene>
         <!--Q&A-->
         <scene sceneID="Ktf-c4-Cos">
