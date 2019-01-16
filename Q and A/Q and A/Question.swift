@@ -9,8 +9,8 @@
 import Foundation
 
 struct Question{
-    let question : String
-    let asker : String
+    var question : String
+    var asker : String
     var answer : String? = nil
     var answerer : String? = nil
     
