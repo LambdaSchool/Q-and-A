@@ -75,13 +75,13 @@
 			isa = PBXGroup;
 			children = (
 				A2AE8FB821EEAA50004989A4 /* ViewControllers */,
-				A2C5B95921EE9154001F2DCD /* QuestionTableViewCell.swift */,
-				A2C5B93F21EE7449001F2DCD /* AppDelegate.swift */,
-				A2C5B94321EE7449001F2DCD /* Main.storyboard */,
-				A2C5B95121EE7BC7001F2DCD /* Question.swift */,
 				A2C5B95321EE7DFC001F2DCD /* QuestionController.swift */,
+				A2C5B95921EE9154001F2DCD /* QuestionTableViewCell.swift */,
+				A2C5B95121EE7BC7001F2DCD /* Question.swift */,
+				A2C5B94321EE7449001F2DCD /* Main.storyboard */,
 				A2C5B94621EE744A001F2DCD /* Assets.xcassets */,
 				A2C5B94821EE744A001F2DCD /* LaunchScreen.storyboard */,
+				A2C5B93F21EE7449001F2DCD /* AppDelegate.swift */,
 				A2C5B94B21EE744A001F2DCD /* Info.plist */,
 			);
 			path = "Q-And-A";

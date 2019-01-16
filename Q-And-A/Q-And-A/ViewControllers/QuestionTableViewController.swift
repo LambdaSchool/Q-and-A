@@ -9,6 +9,8 @@
 import UIKit
 
 class QuestionTableViewController: UITableViewController {
+    
+    let questionController = QuestionController()
 
     @IBAction func askQuestionButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "askSegue", sender: self)
@@ -21,23 +23,25 @@ class QuestionTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return questionController.questions.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "questioncell", for: indexPath)
+        guard let unwrappedCell = cell as? QuestionTableViewCell else { return cell }
 
-        // Configure the cell...
+        let question = questionController.questions[indexPath.row]
+        unwrappedCell.question = question
+        //unwrappedCell.delegate = self
 
-        return cell
+        return unwrappedCell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        
     }
     
 
