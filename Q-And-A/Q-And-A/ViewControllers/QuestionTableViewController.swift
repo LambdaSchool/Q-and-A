@@ -10,14 +10,22 @@ import UIKit
 
 class QuestionTableViewController: UITableViewController {
     
+    let reuseIdentifier = "questioncell"
+    
     let questionController = QuestionController()
 
     @IBAction func askQuestionButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "askSegue", sender: self)
+        
+    }
+    
+    func viewWillAppear() {
+        tableView.dataSource = self
+        tableView.delegate   = self
+        tableView.reloadData()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
        
     }
 
@@ -55,6 +63,15 @@ class QuestionTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+        if (segue.identifier == "askSegue"){
+            let nextViewController = segue.destination as! AskQuestionViewController
+            nextViewController.questionController = questionController
+        } else {
+            let nextViewController = segue.destination as!
+                AnswerViewController
+            nextViewController.questionController = questionController
+//            nextViewController.question = ???
+        }
         // Pass the selected object to the new view controller.
     }
 

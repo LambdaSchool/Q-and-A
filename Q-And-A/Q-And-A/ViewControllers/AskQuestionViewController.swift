@@ -9,10 +9,16 @@
 import UIKit
 
 class AskQuestionViewController: UIViewController {
+    
+    var questionController: QuestionController? = nil
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textView: UITextView!
     @IBAction func submitButton(_ sender: Any) {
+        guard let nameText = textField.text else { return }
+        guard let questionText = textView.text else { return }
+        questionController?.Create(question: questionText, asker: nameText, answer: nil, answerer: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
