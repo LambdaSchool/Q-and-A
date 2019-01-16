@@ -15,7 +15,7 @@ class AnswerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateViews()
         // Do any additional setup after loading the view.
     }
     
@@ -41,14 +41,28 @@ class AnswerViewController: UIViewController {
         
         guard let answer = answerProvided.text else { return }
         guard let name = nameAnswered.text else { return }
+        guard let question = question else { return }
         
         
         if answer != "" && name != "" {
             questionController?.update(specificQuestion: question, answer: answer, answerer: name)
         }
         
-        
         navigationController?.popViewController(animated: true)
+        
+    }
+    
+    func updateViews() {
+        
+        guard let question = question else { return }
+        questionAsked.text = question.question
+        personAsked.text = question.asker
+        title = question.question
+        
+        guard let answer = question.answer else { return }
+        guard let answerer = question.answerer else { return }
+        answerProvided.text = answer
+        nameAnswered.text = answerer
         
     }
     

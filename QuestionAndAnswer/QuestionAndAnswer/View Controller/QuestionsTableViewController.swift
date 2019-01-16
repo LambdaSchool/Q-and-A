@@ -12,10 +12,6 @@ class QuestionsTableViewController: UITableViewController {
     
     let questionController = QuestionController()
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -69,16 +65,15 @@ class QuestionsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         
         if segue.identifier == "toQuestion"{
-            guard let questionDetailVC = segue.destination as? AskQuestionViewController,
-                let cell = sender as? AskQuestionViewController else { return }
-            
-            questionDetailVC.questionName = cell.questionName
-            
-        } else if segue.identifier == "toAnswer"{
+            guard let questionDetailVC = segue.destination as? AskQuestionViewController else { return }
+            questionDetailVC.questionController = questionController
+        } else if segue.identifier == "toAnswer" {
             guard let questionDetailVC = segue.destination as? AnswerViewController,
-                let cell = sender as? AnswerViewController else { return }
+                let indexPath = tableView.indexPathForSelectedRow else { return }
             
-            questionDetailVC.answerProvided = cell.answerProvided
+            let question = questionController.questions[indexPath.row]
+            questionDetailVC.questionController = questionController
+            questionDetailVC.question = question
             
         }
         

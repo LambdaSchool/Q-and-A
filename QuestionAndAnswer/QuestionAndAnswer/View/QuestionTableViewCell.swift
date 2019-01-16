@@ -10,6 +10,12 @@ import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
 
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,11 +27,7 @@ class QuestionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    var question: Question? {
-        didSet {
-            updateViews()
-        }
-    }
+
     
     func updateViews() {
         
@@ -34,17 +36,23 @@ class QuestionTableViewCell: UITableViewCell {
         
     }
     
-    
-    
-    
-    
     //MARK: Outlets
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var askedByLabel: UILabel!
     @IBOutlet weak var viewAnswerTapped: UILabel!
     
-    
+    private func updateV() {
+        guard let question = question else { return }
+        questionLabel.text = question.question
+        askedByLabel.text = question.answer
+        
+        if question.answer == nil && question.answerer == nil {
+            viewAnswerTapped.text = "Can you answer this?"
+        } else {
+            viewAnswerTapped.text = question.answer
+        }
+    }
     
     
     

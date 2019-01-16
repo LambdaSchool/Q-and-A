@@ -10,8 +10,8 @@ import Foundation
 
 
 struct Question: Equatable {
-    var question: String
-    var asker: String
+    let question: String
+    let asker: String
     var answer: String?
     var answerer: String?
     
