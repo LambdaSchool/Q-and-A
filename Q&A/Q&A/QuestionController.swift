@@ -17,9 +17,8 @@ class QuestionController {
     
     func updateQuestion(question: Question, answer: String?, answerer: String?) {
         guard let index = questions.index(of: question) else { return }
-        var question = questions[index]
-        question.answer = answer
-        question.answerer = answerer
+        questions[index].answer = answer
+        questions[index].answerer = answerer
     }
     
     func deleteQuestion(question: Question) {

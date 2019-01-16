@@ -16,21 +16,21 @@ class AnswerViewController: UIViewController {
     }
     
     @IBAction func submitAnswerTapped(_ sender: Any) {
-        guard let answerer = answererTextField.text, !answerer.isEmpty,
-            let answer = answerTextView.text, !answerer.isEmpty,
+        guard let answererName = answererTextField.text, !answererName.isEmpty,
+            let answer = answerTextView.text, !answer.isEmpty,
             let question = question else { return }
         
-        questionController?.updateQuestion(question: question, answer: answer, answerer: answerer)
+        questionController?.updateQuestion(question: question, answer: answer, answerer: answererName)
         navigationController?.popViewController(animated: true)
     }
     
-    private func updateViews() {
+    func updateViews() {
+        questionLabel.text = question?.question
+        askerLabel?.text = question?.asker
+        
         if question?.answer != nil {
-            answererTextField.text = question?.answerer
-            answerTextView.text = question?.answer
-        } else {
-            answererTextField.text = ""
-            answerTextView.text = ""
+            answererTextField?.text = question?.answerer
+            answerTextView?.text = question?.answer
         }
     }
     
