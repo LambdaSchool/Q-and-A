@@ -28,10 +28,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sDm-mh-y7G">
-                                            <rect key="frame" x="24" y="19" width="327" height="82"/>
+                                            <rect key="frame" x="16" y="11" width="343" height="98"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bsr-ol-gKE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwy-VR-DxQ">
                                                             <rect key="frame" x="0.0" y="0.0" width="79.5" height="20.5"/>
@@ -40,7 +40,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6r-ek-GRF">
-                                                            <rect key="frame" x="87.5" y="0.0" width="239.5" height="20.5"/>
+                                                            <rect key="frame" x="87.5" y="0.0" width="255.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -48,16 +48,16 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7T7-VR-sOC">
-                                                    <rect key="frame" x="0.0" y="28.5" width="327" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="28.5" width="343" height="20.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asked By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bf-8H-Ijf">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Asked By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bf-8H-Ijf">
                                                             <rect key="frame" x="0.0" y="0.0" width="79.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQK-lF-ir4">
-                                                            <rect key="frame" x="87.5" y="0.0" width="239.5" height="20.5"/>
+                                                            <rect key="frame" x="87.5" y="0.0" width="255.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvo-HU-UIz">
-                                                    <rect key="frame" x="0.0" y="57" width="327" height="25"/>
+                                                    <rect key="frame" x="0.0" y="57" width="343" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -77,10 +77,10 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="sDm-mh-y7G" firstAttribute="leading" secondItem="ai4-rH-f44" secondAttribute="leadingMargin" constant="8" id="110-ye-ltB"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="sDm-mh-y7G" secondAttribute="trailing" constant="8" id="DTq-iz-Sib"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="sDm-mh-y7G" secondAttribute="bottom" constant="8" id="h1P-5b-Pdy"/>
-                                        <constraint firstItem="sDm-mh-y7G" firstAttribute="top" secondItem="ai4-rH-f44" secondAttribute="topMargin" constant="8" id="iR5-kf-PJS"/>
+                                        <constraint firstItem="sDm-mh-y7G" firstAttribute="leading" secondItem="ai4-rH-f44" secondAttribute="leadingMargin" id="110-ye-ltB"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="sDm-mh-y7G" secondAttribute="trailing" id="DTq-iz-Sib"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="sDm-mh-y7G" secondAttribute="bottom" id="h1P-5b-Pdy"/>
+                                        <constraint firstItem="sDm-mh-y7G" firstAttribute="top" secondItem="ai4-rH-f44" secondAttribute="topMargin" id="iR5-kf-PJS"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
