@@ -9,23 +9,23 @@
 import UIKit
 
 class QuestionsTableViewController: UITableViewController {
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return questionController.questions.count
     }
-
+    
     let reuseIdentifier = "questionCell"
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! QuestionTableViewCell
-
+        
         let question = questionController.questions[indexPath.row]
         cell.question = question
         return cell
@@ -42,13 +42,18 @@ class QuestionsTableViewController: UITableViewController {
     }
     
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "askSegue" {
+            guard let askQuestionVC = segue.destination as? AskQuestionViewController else { return }
+            askQuestionVC.questionController = questionController
+        } else if segue.identifier == "answerSegue" {
+            guard let answerQuestionVC = segue.destination as? AnswerViewController else { return }
+            answerQuestionVC.questionController = questionController
+        }
     }
- 
+    
     //MARK: - Properties
     
     let questionController = QuestionController()

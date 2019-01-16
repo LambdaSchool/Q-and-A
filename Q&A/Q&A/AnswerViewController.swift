@@ -25,7 +25,13 @@ class AnswerViewController: UIViewController {
     }
     
     private func updateViews() {
-        
+        if question?.answer != nil {
+            answererTextField.text = question?.answerer
+            answerTextView.text = question?.answer
+        } else {
+            answererTextField.text = ""
+            answerTextView.text = ""
+        }
     }
     
     //MARK: - Properties
