@@ -15,12 +15,11 @@ struct Question {
     var answer: String?
     var answerer: String?
     
-    init(asker: String, question: String, answer: String?, answerer: String?) {
+    init(asker: String, question: String, answer: String? = nil, answerer: String? = nil) {
         self.asker = asker
         self.question = question
         self.answer = answer
         self.answerer = answerer
-        
     }
-    
+
 }
