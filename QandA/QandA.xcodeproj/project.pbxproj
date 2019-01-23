@@ -11,7 +11,6 @@
 		277EB23D21F7690C00DA5519 /* QuestionModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277EB23C21F7690C00DA5519 /* QuestionModelController.swift */; };
 		277EB23F21F7695500DA5519 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277EB23E21F7695500DA5519 /* QuestionTableViewController.swift */; };
 		2795C33421F6C70A0072A2FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2795C33321F6C70A0072A2FF /* AppDelegate.swift */; };
-		2795C33621F6C70A0072A2FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2795C33521F6C70A0072A2FF /* ViewController.swift */; };
 		2795C33921F6C70A0072A2FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2795C33721F6C70A0072A2FF /* Main.storyboard */; };
 		2795C33B21F6C70A0072A2FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2795C33A21F6C70A0072A2FF /* Assets.xcassets */; };
 		2795C33E21F6C70A0072A2FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2795C33C21F6C70A0072A2FF /* LaunchScreen.storyboard */; };
@@ -23,7 +22,6 @@
 		277EB23E21F7695500DA5519 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		2795C33021F6C70A0072A2FF /* QandA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QandA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2795C33321F6C70A0072A2FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2795C33521F6C70A0072A2FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2795C33821F6C70A0072A2FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2795C33A21F6C70A0072A2FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2795C33D21F6C70A0072A2FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				2795C33321F6C70A0072A2FF /* AppDelegate.swift */,
-				2795C33521F6C70A0072A2FF /* ViewController.swift */,
 				2795C33721F6C70A0072A2FF /* Main.storyboard */,
 				277EB23A21F768FB00DA5519 /* QuestionModel.swift */,
 				277EB23C21F7690C00DA5519 /* QuestionModelController.swift */,
@@ -147,7 +144,6 @@
 				277EB23B21F768FB00DA5519 /* QuestionModel.swift in Sources */,
 				277EB23D21F7690C00DA5519 /* QuestionModelController.swift in Sources */,
 				277EB23F21F7695500DA5519 /* QuestionTableViewController.swift in Sources */,
-				2795C33621F6C70A0072A2FF /* ViewController.swift in Sources */,
 				2795C33421F6C70A0072A2FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

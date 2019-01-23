@@ -10,9 +10,6 @@ import UIKit
 
 class QuestionModelController {
 
-
-
-
 // need to add create, update, and delete functions
     
     func createQuestion(question: String, asker: String) {
