@@ -95,23 +95,67 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Q&amp;A" id="HHc-K7-2xG">
-                        <barButtonItem key="rightBarButtonItem" title="Ask" id="MeW-sG-gMX"/>
+                        <barButtonItem key="rightBarButtonItem" title="Ask" id="MeW-sG-gMX">
+                            <connections>
+                                <segue destination="RMs-CH-kzh" kind="show" identifier="toAskerSegue" id="yVe-FM-yPn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="Dcq-eC-uIb">
             <objects>
-                <viewController id="RMs-CH-kzh" sceneMemberID="viewController">
+                <viewController id="RMs-CH-kzh" customClass="AskerViewController" customModule="Q_and_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gse-rD-FUB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DJE-ON-pzT">
+                                <rect key="frame" x="0.0" y="132" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="askerTextField:" destination="RMs-CH-kzh" eventType="editingDidEnd" id="dce-x4-BhN"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="20z-Xh-nCz">
+                                <rect key="frame" x="0.0" y="170" width="375" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Guk-hL-JVh"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DvT-MJ-WEN" firstAttribute="trailing" secondItem="20z-Xh-nCz" secondAttribute="trailing" id="6hY-fX-d5U"/>
+                            <constraint firstItem="DvT-MJ-WEN" firstAttribute="trailing" secondItem="DJE-ON-pzT" secondAttribute="trailing" id="MsZ-V4-lFr"/>
+                            <constraint firstItem="20z-Xh-nCz" firstAttribute="top" secondItem="DJE-ON-pzT" secondAttribute="bottom" constant="8" id="XlC-Go-XQ9"/>
+                            <constraint firstItem="20z-Xh-nCz" firstAttribute="leading" secondItem="DvT-MJ-WEN" secondAttribute="leading" id="Xoj-Ml-30X"/>
+                            <constraint firstItem="DJE-ON-pzT" firstAttribute="leading" secondItem="DvT-MJ-WEN" secondAttribute="leading" id="tlw-hl-Ns0"/>
+                            <constraint firstItem="DJE-ON-pzT" firstAttribute="top" secondItem="DvT-MJ-WEN" secondAttribute="top" constant="16" id="wLK-FZ-CVH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DvT-MJ-WEN"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="OW2-lQ-uks">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="pZ2-a1-5C6">
+                            <connections>
+                                <action selector="submitQuestion:" destination="RMs-CH-kzh" id="ECy-LU-KTw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="DJE-ON-pzT" id="tX2-ZG-8We"/>
+                        <outlet property="textView" destination="20z-Xh-nCz" id="JUR-W2-9sT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1V-pP-aTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

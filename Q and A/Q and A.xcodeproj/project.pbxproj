@@ -15,6 +15,7 @@
 		9ECA019821F8AC4500743771 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECA019721F8AC4500743771 /* QuestionController.swift */; };
 		9ECA019A21F8B5AC00743771 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECA019921F8B5AC00743771 /* QuestionTableViewCell.swift */; };
 		9ECA019C21F8B8EF00743771 /* Q&AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECA019B21F8B8EF00743771 /* Q&AViewController.swift */; };
+		9ECA019E21F8BB3200743771 /* AskerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECA019D21F8BB3200743771 /* AskerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9ECA019721F8AC4500743771 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		9ECA019921F8B5AC00743771 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		9ECA019B21F8B8EF00743771 /* Q&AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Q&AViewController.swift"; sourceTree = "<group>"; };
+		9ECA019D21F8BB3200743771 /* AskerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				9ECA019721F8AC4500743771 /* QuestionController.swift */,
 				9ECA018321F8A9C500743771 /* AppDelegate.swift */,
 				9ECA018721F8A9C500743771 /* Main.storyboard */,
+				9ECA019D21F8BB3200743771 /* AskerViewController.swift */,
 				9ECA019921F8B5AC00743771 /* QuestionTableViewCell.swift */,
 				9ECA018A21F8A9EC00743771 /* Assets.xcassets */,
 				9ECA018C21F8A9EC00743771 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ECA019621F8AA6600743771 /* QuestionModel.swift in Sources */,
+				9ECA019E21F8BB3200743771 /* AskerViewController.swift in Sources */,
 				9ECA019A21F8B5AC00743771 /* QuestionTableViewCell.swift in Sources */,
 				9ECA018421F8A9C500743771 /* AppDelegate.swift in Sources */,
 				9ECA019C21F8B8EF00743771 /* Q&AViewController.swift in Sources */,

@@ -14,19 +14,19 @@ protocol QuestionTableViewCellDelegate: class {
 
 class QuestionTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    private func updateViews() {
+        guard let question = question else { return }
+        questionLabel.text = question.question
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var askedByLabel: UILabel!
-
+    weak var delegate: QuestionTableViewCellDelegate?
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
+    }
 }
