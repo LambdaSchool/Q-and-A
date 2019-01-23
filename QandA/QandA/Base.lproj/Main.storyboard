@@ -80,6 +80,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="answerLabel" destination="Emn-iB-o0f" id="uAt-gf-Ds9"/>
+                                    <outlet property="askerLabel" destination="18J-zq-fYe" id="qrt-HT-P8X"/>
+                                    <outlet property="questionLabel" destination="FBR-e6-Xf4" id="Hg0-Cl-hAL"/>
                                     <segue destination="pfU-xn-Wze" kind="show" identifier="answerSegue" id="x3e-B6-xB5"/>
                                 </connections>
                             </tableViewCell>
