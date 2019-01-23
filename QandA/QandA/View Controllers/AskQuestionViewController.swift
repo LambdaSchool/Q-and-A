@@ -25,17 +25,9 @@ class AskQuestionViewController: UIViewController {
             let asker = nameField.text, !asker.isEmpty else { return }
         questionController?.createQuestion(question: questionText, asker: asker)
         navigationController?.popViewController(animated: true)
-
-
-
-
-
     }
     
-    
-    
-    
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 

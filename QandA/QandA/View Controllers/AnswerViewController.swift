@@ -22,11 +22,11 @@ class AnswerViewController: UIViewController {
     
     
     @IBAction func submitAnswerButton(_ sender: Any) {
-        guard let answererText = answererTextField.text, !answererText.isEmpty,
+        guard let answererName = answererTextField.text, !answererName.isEmpty,
             let answer = answerTextView.text, !answer.isEmpty,
             let question = question else { return }
         
-        questionController?.updateQuestion(question: question, answer: answer, answerer: answererText)
+        questionController?.updateQuestion(question: question, answer: answer, answerer: answererName)
         navigationController?.popViewController(animated: true)
         
     }
@@ -34,10 +34,14 @@ class AnswerViewController: UIViewController {
     func updateViews() {
         questionLabel.text = question?.question
         askerLabel?.text = question?.asker
+        answererTextField?.text = question?.answerer
+        answerTextView?.text = question?.answer
         
         if question?.answer != nil {
             answererTextField?.text = question?.answerer
             answerTextView?.text = question?.answer
+            questionLabel?.text = question?.question
+            askerLabel?.text = question?.asker
         }
         
         
@@ -56,10 +60,6 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var answerTextView: UITextView!
     
     
-    
-    // create updateViews method
-    
-    
-    
+  
 
 }
