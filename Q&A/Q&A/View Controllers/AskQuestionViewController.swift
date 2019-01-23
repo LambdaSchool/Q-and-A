@@ -14,7 +14,7 @@ class AskQuestionViewController: UIViewController {
         guard let asker = nameField.text,
             let question = questionView.text else { return }
         if asker != "" && question != "" {
-            QuestionController.shared.create(question: question, from: asker)
+           questionController.create(question: question, asker: asker)
             navigationController?.popViewController(animated: true)
         }
     }
@@ -23,4 +23,6 @@ class AskQuestionViewController: UIViewController {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var questionView: UITextView!
+    
+    let questionController = QuestionController()
 }

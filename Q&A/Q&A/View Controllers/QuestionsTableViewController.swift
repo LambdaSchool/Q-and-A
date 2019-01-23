@@ -18,21 +18,27 @@ class QuestionsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return QuestionController.shared.questions.count
+        return questionController.questions.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath) as? QuestionTableViewCell else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath)
+        
+        guard let questionCell = cell as? QuestionTableViewCell else { return cell }
 
-        let question = QuestionController.shared.questions[indexPath.row].question
-        cell.questionLabel.text = question
-        return cell
+        let question = questionController.questions[indexPath.row].question
+        let asker = questionController.questions[indexPath.row].asker
+        
+        questionCell.questionLabel.text = question
+        questionCell.askerLabel.text = asker
+        
+        return questionCell
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-            QuestionController.shared.delete(at: indexPath.row)
+            questionController.delete(at: indexPath.row)
             
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
@@ -52,5 +58,7 @@ class QuestionsTableViewController: UITableViewController {
 
     }
     
-//    let questionController = QuestionController()
+    // MARK: - IBOutlets & Properties
+    
+    let questionController = QuestionController()
 }

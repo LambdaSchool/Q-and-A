@@ -9,9 +9,8 @@
 import Foundation
 
 class QuestionController {
-    static let shared = QuestionController()
     
-    func create(question: String, from asker: String) {
+    func create(question: String, asker: String) {
         let newQuestion = Question(question: question, asker: asker)
         questions.append(newQuestion)
     }
@@ -24,6 +23,8 @@ class QuestionController {
     func delete(at index: Int) {
         questions.remove(at: index)
     }
+    
+    // MARK: - Properties
     
     var questions: [Question] = []
 }

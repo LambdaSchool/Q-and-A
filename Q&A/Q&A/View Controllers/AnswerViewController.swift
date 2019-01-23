@@ -16,7 +16,7 @@ class AnswerViewController: UIViewController {
             let question = question else { return }
         
         if answerer != "" && answer != "" {
-            QuestionController.shared.update(question: question, with: answer, from: answerer)
+            questionController.update(question: question, with: answer, from: answerer)
             navigationController?.popViewController(animated: true)
         }
     }
@@ -42,4 +42,5 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var answerView: UITextView!
     
     var question: Question?
+    let questionController = QuestionController()
 }
