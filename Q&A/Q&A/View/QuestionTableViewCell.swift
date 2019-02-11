@@ -23,6 +23,10 @@ class QuestionTableViewCell: UITableViewCell {
         guard let question = question else { fatalError("Can't unwrap Question!") }
         questionLabel.text = question.question
         askedByLabel.text = question.asker
-        answerLabel.text = question.answer ?? "Tap to answer"
+        if question.answer == nil {
+            answerLabel.text = "Can you answer this?"
+        } else {
+            answerLabel.text = "Tap to view answer"
+        }
     }
 }

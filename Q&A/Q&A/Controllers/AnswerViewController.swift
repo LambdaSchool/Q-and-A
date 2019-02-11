@@ -15,11 +15,13 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var answerTextView: UITextView!
     
     var questionController: QuestionController?
-    var question: Question? {
-        didSet {
-            updateViews()
-        }
+    var question: Question?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateViews()
     }
+    
     
     @IBAction func submitAnswer(_ sender: UIBarButtonItem) {
         guard let name = nameTextField.text, !name.isEmpty,
@@ -31,7 +33,8 @@ class AnswerViewController: UIViewController {
     }
     
     private func updateViews() {
-        guard let question = question else { return }
+        guard isViewLoaded,
+            let question = question else { return }
         questionLabel.text = question.question
         askedByLabel.text = question.asker
         

@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="124" id="1BF-oT-x0p" customClass="QuestionTableViewCell" customModule="Q_A" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="124"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="94" id="1BF-oT-x0p" customClass="QuestionTableViewCell" customModule="Q_A" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1BF-oT-x0p" id="3Db-z9-OoN">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="123.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VqK-oY-NQg">
-                                            <rect key="frame" x="8" y="8" width="359" height="107.5"/>
+                                            <rect key="frame" x="8" y="8" width="359" height="77.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8e1-t6-yO3" userLabel="Question Stack View">
                                                     <rect key="frame" x="0.0" y="0.0" width="129.5" height="20.5"/>
@@ -64,7 +64,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51Z-Q7-Nhs">
-                                                    <rect key="frame" x="0.0" y="57" width="43" height="50.5"/>
+                                                    <rect key="frame" x="0.0" y="57" width="43" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -74,8 +74,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="VqK-oY-NQg" firstAttribute="top" secondItem="3Db-z9-OoN" secondAttribute="top" constant="8" id="34C-KO-eai"/>
-                                        <constraint firstAttribute="bottom" secondItem="VqK-oY-NQg" secondAttribute="bottom" constant="8" id="8wy-qi-EsB"/>
                                         <constraint firstAttribute="trailing" secondItem="VqK-oY-NQg" secondAttribute="trailing" constant="8" id="YMF-1e-R1f"/>
+                                        <constraint firstAttribute="bottom" secondItem="VqK-oY-NQg" secondAttribute="bottom" constant="8" id="hMF-2g-Bse"/>
                                         <constraint firstItem="VqK-oY-NQg" firstAttribute="leading" secondItem="3Db-z9-OoN" secondAttribute="leading" constant="8" id="lGy-zr-58g"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -83,6 +83,7 @@
                                     <outlet property="answerLabel" destination="51Z-Q7-Nhs" id="4vU-zq-YA7"/>
                                     <outlet property="askedByLabel" destination="LfM-Kc-2SF" id="mAE-l2-xdt"/>
                                     <outlet property="questionLabel" destination="Qzp-MS-B9c" id="8wQ-79-RqW"/>
+                                    <segue destination="K2M-79-lQe" kind="show" identifier="SubmitAnswer" id="c7W-nh-c26"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -103,7 +104,7 @@
             </objects>
             <point key="canvasLocation" x="1000.8" y="104.7976011994003"/>
         </scene>
-        <!--Title-->
+        <!--Ask Question-->
         <scene sceneID="igI-Wk-Uic">
             <objects>
                 <viewController id="EmS-Wm-qOo" customClass="AskQuestionViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,11 +138,10 @@
                         <viewLayoutGuide key="safeArea" id="gfL-IB-W9e"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="UWq-Q2-9HZ">
+                    <navigationItem key="navigationItem" title="Ask Question" id="UWq-Q2-9HZ">
                         <barButtonItem key="rightBarButtonItem" title="Submit Question" id="nkd-cq-RDz">
                             <connections>
                                 <action selector="submitQuestion:" destination="EmS-Wm-qOo" id="uUz-el-uMw"/>
-                                <segue destination="K2M-79-lQe" kind="show" identifier="SubmitAnswer" id="hrC-gc-Eeh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -155,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="1632.8" y="106.59670164917542"/>
         </scene>
-        <!--Title-->
+        <!--Answer-->
         <scene sceneID="arw-sM-zhl">
             <objects>
                 <viewController id="K2M-79-lQe" customClass="AnswerViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
@@ -164,7 +164,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="4ke-pG-4c7">
-                                <rect key="frame" x="20" y="84" width="335" height="279.5"/>
+                                <rect key="frame" x="20" y="84" width="335" height="301.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mux-ME-rsj">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
@@ -179,13 +179,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answerer's Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FCH-P6-npn">
-                                        <rect key="frame" x="0.0" y="63" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="63" width="335" height="52"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gbS-8O-95y">
-                                        <rect key="frame" x="0.0" y="104" width="335" height="175.5"/>
+                                        <rect key="frame" x="0.0" y="126" width="335" height="175.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -202,7 +202,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K6f-ET-K4F"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="cYr-Oh-1NI">
+                    <navigationItem key="navigationItem" title="Answer" id="cYr-Oh-1NI">
                         <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="1Gz-TU-Y6A">
                             <connections>
                                 <action selector="submitAnswer:" destination="K2M-79-lQe" id="5LJ-WX-5uM"/>
