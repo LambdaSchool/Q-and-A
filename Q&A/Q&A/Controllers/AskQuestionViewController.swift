@@ -13,24 +13,13 @@ class AskQuestionViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var questionTextView: UITextView!
     
+    var questionController: QuestionController?
+    
     @IBAction func submitQuestion(_ sender: UIBarButtonItem) {
+        guard let name = nameTextField.text,!name.isEmpty,
+            let question = questionTextView.text, !question.isEmpty else { return }
+        questionController?.create(question: question, askedBy: name)
+        navigationController?.popViewController(animated: true
+        )
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
