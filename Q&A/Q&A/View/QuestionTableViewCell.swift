@@ -13,15 +13,16 @@ class QuestionTableViewCell: UITableViewCell {
     @IBOutlet weak var askedByLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    private func updateViews() {
+        guard let question = question else { fatalError("Can't unwrap Question!") }
+        questionLabel.text = question.question
+        askedByLabel.text = question.asker
+        answerLabel.text = question.answer ?? "Tap to answer"
     }
-
 }
