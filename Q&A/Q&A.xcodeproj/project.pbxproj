@@ -8,24 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		8F9D26DB2210E57E009BE5AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D26DA2210E57E009BE5AF /* AppDelegate.swift */; };
-		8F9D26DD2210E57E009BE5AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D26DC2210E57E009BE5AF /* ViewController.swift */; };
 		8F9D26E02210E57E009BE5AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D26DE2210E57E009BE5AF /* Main.storyboard */; };
 		8F9D26E22210E57E009BE5AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D26E12210E57E009BE5AF /* Assets.xcassets */; };
 		8F9D26E52210E57E009BE5AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D26E32210E57E009BE5AF /* LaunchScreen.storyboard */; };
 		8F9D26ED2210E5BC009BE5AF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D26EC2210E5BC009BE5AF /* Question.swift */; };
 		8F9D26F02210E6EA009BE5AF /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D26EF2210E6EA009BE5AF /* QuestionController.swift */; };
+		8F9D26F32210F062009BE5AF /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D26F22210F062009BE5AF /* QuestionsTableViewController.swift */; };
+		8F9D26F62210F0AD009BE5AF /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D26F52210F0AD009BE5AF /* QuestionTableViewCell.swift */; };
+		8F9D26F92210F421009BE5AF /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D26F82210F421009BE5AF /* AskQuestionViewController.swift */; };
+		8F9D26FB2210F7B7009BE5AF /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D26FA2210F7B7009BE5AF /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8F9D26D72210E57E009BE5AF /* Q&A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Q&A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9D26DA2210E57E009BE5AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F9D26DC2210E57E009BE5AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8F9D26DF2210E57E009BE5AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F9D26E12210E57E009BE5AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F9D26E42210E57E009BE5AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F9D26E62210E57E009BE5AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F9D26EC2210E5BC009BE5AF /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		8F9D26EF2210E6EA009BE5AF /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		8F9D26F22210F062009BE5AF /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
+		8F9D26F52210F0AD009BE5AF /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		8F9D26F82210F421009BE5AF /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
+		8F9D26FA2210F7B7009BE5AF /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				8F9D26DA2210E57E009BE5AF /* AppDelegate.swift */,
-				8F9D26DC2210E57E009BE5AF /* ViewController.swift */,
 				8F9D26DE2210E57E009BE5AF /* Main.storyboard */,
+				8F9D26F72210F0B3009BE5AF /* View */,
+				8F9D26F42210F06C009BE5AF /* Controllers */,
 				8F9D26E12210E57E009BE5AF /* Assets.xcassets */,
 				8F9D26E32210E57E009BE5AF /* LaunchScreen.storyboard */,
 				8F9D26E62210E57E009BE5AF /* Info.plist */,
@@ -84,6 +91,24 @@
 				8F9D26EF2210E6EA009BE5AF /* QuestionController.swift */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		8F9D26F42210F06C009BE5AF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8F9D26F22210F062009BE5AF /* QuestionsTableViewController.swift */,
+				8F9D26F82210F421009BE5AF /* AskQuestionViewController.swift */,
+				8F9D26FA2210F7B7009BE5AF /* AnswerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8F9D26F72210F0B3009BE5AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F9D26F52210F0AD009BE5AF /* QuestionTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +183,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F9D26ED2210E5BC009BE5AF /* Question.swift in Sources */,
-				8F9D26DD2210E57E009BE5AF /* ViewController.swift in Sources */,
+				8F9D26FB2210F7B7009BE5AF /* AnswerViewController.swift in Sources */,
+				8F9D26F62210F0AD009BE5AF /* QuestionTableViewCell.swift in Sources */,
+				8F9D26F92210F421009BE5AF /* AskQuestionViewController.swift in Sources */,
 				8F9D26DB2210E57E009BE5AF /* AppDelegate.swift in Sources */,
 				8F9D26F02210E6EA009BE5AF /* QuestionController.swift in Sources */,
+				8F9D26F32210F062009BE5AF /* QuestionsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
