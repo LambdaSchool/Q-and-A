@@ -9,22 +9,38 @@
 import UIKit
 
 class AnswerViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var askedByLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var answerTextView: UITextView!
+    
+    var questionController: QuestionController?
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func submitAnswer(_ sender: UIBarButtonItem) {
+        guard let name = nameTextField.text, !name.isEmpty,
+            let answer = answerTextView.text, !answer.isEmpty,
+        let question = question else { return }
+        
+        questionController?.update(question: question, answer: answer, aswerer: name)
+        navigationController?.popViewController(animated: true)
     }
-    */
-
+    
+    private func updateViews() {
+        guard let question = question else { return }
+        questionLabel.text = question.question
+        askedByLabel.text = question.asker
+        
+        if let answerer = question.answerer {
+            nameTextField.text = answerer
+        }
+        
+        if let answer = question.answer {
+            answerTextView.text = answer
+        }
+    }
 }

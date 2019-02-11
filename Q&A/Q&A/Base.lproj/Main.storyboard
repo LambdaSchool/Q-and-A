@@ -203,8 +203,18 @@
                         <viewLayoutGuide key="safeArea" id="K6f-ET-K4F"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="cYr-Oh-1NI">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="1Gz-TU-Y6A"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="1Gz-TU-Y6A">
+                            <connections>
+                                <action selector="submitAnswer:" destination="K2M-79-lQe" id="5LJ-WX-5uM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextView" destination="gbS-8O-95y" id="xmX-Dh-fYc"/>
+                        <outlet property="askedByLabel" destination="xF6-sd-Z80" id="Ard-x0-gfd"/>
+                        <outlet property="nameTextField" destination="FCH-P6-npn" id="kap-3U-xBC"/>
+                        <outlet property="questionLabel" destination="Mux-ME-rsj" id="gvU-O8-Gys"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfy-Ev-nVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
