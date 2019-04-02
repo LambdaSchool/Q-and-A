@@ -11,6 +11,7 @@ import UIKit
 
 class AskViewController: UIViewController {
     
+    
     @IBOutlet weak var questionField: UITextField!
     @IBOutlet weak var askerField: UITextField!
     
@@ -27,6 +28,10 @@ class AskViewController: UIViewController {
         //Reset the Fields
         submission = ""
         person = ""
+        
+        //
+        
+        
         
     } // End of submit button
     

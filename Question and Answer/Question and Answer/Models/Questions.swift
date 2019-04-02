@@ -12,6 +12,7 @@ import UIKit
 class QuestionManager {
     
     var questions: [Question] = []
+    let triviaList = QuestionListController()
 
     //Create new Question
     func create(question: String, asker: String) {
@@ -19,6 +20,8 @@ class QuestionManager {
         let theQuestion = Question(question: question, asker: asker, answer: nil, answerer: nil)
         
         questions.append(theQuestion)
+        
+        triviaList.tableView.reloadData()
     }
 
     //Update Question
