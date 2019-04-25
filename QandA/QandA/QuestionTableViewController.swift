@@ -40,8 +40,13 @@ class QuestionTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        #warning("Incomplete method: tableView(:commit:forRowAt:)")
-        // TODO: - Implement this function
+        
+        if editingStyle == .delete {
+            let question = questionController.questions[indexPath.row]
+            questionController.delete(question: question)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
     }
 
     // MARK: - Navigation
