@@ -13,6 +13,21 @@ class QuestionTableViewCell: UITableViewCell {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var askedByLabel: UILabel!
     
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    private func updateViews() {
+        guard let cellQuestion = question else { return }
+        
+        questionLabel.text = cellQuestion.question
+        askedByLabel.text = cellQuestion.asker
+    }
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
