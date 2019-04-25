@@ -45,6 +45,16 @@ class QuestionTableViewController: UITableViewController {
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "AskQuestion" {
+			guard let dest = segue.destination as? QuestionCreationViewController else { return }
+			dest.questionController = questionController
+		} else if segue.identifier == "SubmitAnswer" {
+			guard let dest = segue.destination as? AnswerViewController else { return }
+			dest.questionController = questionController
+			guard let cell = sender as? QuestionTableViewCell else { print("failed sender \(sender)"); return }
+			
+			dest.question = cell.question
+		}
 		
 	}
 }

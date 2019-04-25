@@ -75,7 +75,7 @@
                                     <outlet property="askedByLabel" destination="kfn-72-FkC" id="o6b-rF-aRW"/>
                                     <outlet property="bottomLabel" destination="F5f-4f-gjb" id="mmX-Yo-Nib"/>
                                     <outlet property="questionLabel" destination="sgB-Fr-bzi" id="oTN-im-wK7"/>
-                                    <segue destination="duX-9w-aig" kind="show" identifier="SubmitAnswer" id="I91-xo-sla"/>
+                                    <segue destination="duX-9w-aig" kind="show" identifier="SubmitAnswer" id="HDN-ej-6jb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -110,7 +110,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Ask here." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aQ7-rJ-VgQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aQ7-rJ-VgQ">
                                 <rect key="frame" x="0.0" y="194" width="414" height="298.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -179,7 +179,6 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QDb-HZ-1AJ">
                                         <rect key="frame" x="0.0" y="98.5" width="414" height="349.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>

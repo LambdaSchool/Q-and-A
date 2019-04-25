@@ -11,7 +11,11 @@ import UIKit
 class AnswerViewController: UIViewController {
 	
 	var questionController: QuestionController?
-	var question: Question?
+	var question: Question? {
+		didSet {
+			updateViews()
+		}
+	}
 
 	@IBOutlet var questionLabel: UILabel!
 	@IBOutlet var askerLabel: UILabel!
@@ -24,6 +28,11 @@ class AnswerViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		updateViews()
+	}
 	
 	@IBAction func submitAnswerPressed(_ sender: UIBarButtonItem) {
 		guard let name = nameTextField.text,
