@@ -20,5 +20,7 @@ class QuestionTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var askedByLabel: UILabel!
+    
 }

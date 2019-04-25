@@ -15,6 +15,11 @@ class AskQuestionViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBOutlet weak var enterYourNameTextField: UITextField!
+    @IBOutlet weak var askQuestionTextView: UITextView!
+    
+    @IBAction func submitQuestionButtonPressed(_ sender: Any) {
+    }
     
 
     /*
