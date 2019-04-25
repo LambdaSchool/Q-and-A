@@ -17,6 +17,7 @@
 		EC750F2222724C6F00E80D08 /* QuestionsTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC750F2122724C6F00E80D08 /* QuestionsTableView.storyboard */; };
 		EC750F242272516A00E80D08 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC750F232272516A00E80D08 /* QuestionTableViewController.swift */; };
 		EC750F26227251A800E80D08 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC750F25227251A800E80D08 /* QuestionTableViewCell.swift */; };
+		EC750F2822725BCF00E80D08 /* SubmitQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC750F2722725BCF00E80D08 /* SubmitQuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EC750F2122724C6F00E80D08 /* QuestionsTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionsTableView.storyboard; sourceTree = "<group>"; };
 		EC750F232272516A00E80D08 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		EC750F25227251A800E80D08 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		EC750F2722725BCF00E80D08 /* SubmitQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitQuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				EC750F232272516A00E80D08 /* QuestionTableViewController.swift */,
 				EC750F25227251A800E80D08 /* QuestionTableViewCell.swift */,
 				EC750F2122724C6F00E80D08 /* QuestionsTableView.storyboard */,
+				EC750F2722725BCF00E80D08 /* SubmitQuestionViewController.swift */,
 				EC750F0D227237F800E80D08 /* ViewController.swift */,
 				EC750F0F227237F800E80D08 /* Main.storyboard */,
 				EC750F12227237F900E80D08 /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 			files = (
 				EC750F1E2272391C00E80D08 /* Question.swift in Sources */,
 				EC750F0E227237F800E80D08 /* ViewController.swift in Sources */,
+				EC750F2822725BCF00E80D08 /* SubmitQuestionViewController.swift in Sources */,
 				EC750F242272516A00E80D08 /* QuestionTableViewController.swift in Sources */,
 				EC750F26227251A800E80D08 /* QuestionTableViewCell.swift in Sources */,
 				EC750F0C227237F800E80D08 /* AppDelegate.swift in Sources */,

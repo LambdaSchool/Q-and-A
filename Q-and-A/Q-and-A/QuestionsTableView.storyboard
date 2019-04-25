@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -91,13 +92,68 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="tuF-za-fWP">
-                        <barButtonItem key="leftBarButtonItem" title="Ask Question" id="EHT-bt-hHw"/>
+                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="EHT-bt-hHw">
+                            <connections>
+                                <segue destination="G9L-rv-XiW" kind="show" identifier="AskQuestion" id="Pe8-lg-Ped"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWB-ww-xqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="968.11594202898561" y="156.69642857142856"/>
+        </scene>
+        <!--Submit Question View Controller-->
+        <scene sceneID="qtR-7h-TYX">
+            <objects>
+                <viewController id="G9L-rv-XiW" customClass="SubmitQuestionViewController" customModule="Q_and_A" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hJx-LW-BG1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Npc-6v-mtV">
+                                <rect key="frame" x="20" y="96" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vCj-Wn-SBf">
+                                <rect key="frame" x="20" y="134" width="374" height="295.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vCj-Wn-SBf" firstAttribute="leading" secondItem="eVE-Vu-ja7" secondAttribute="leading" constant="20" id="1CU-Tb-XB7"/>
+                            <constraint firstItem="Npc-6v-mtV" firstAttribute="leading" secondItem="eVE-Vu-ja7" secondAttribute="leading" constant="20" id="1Z5-Sg-dUV"/>
+                            <constraint firstItem="vCj-Wn-SBf" firstAttribute="top" secondItem="Npc-6v-mtV" secondAttribute="bottom" constant="8" id="7vT-EW-knU"/>
+                            <constraint firstItem="eVE-Vu-ja7" firstAttribute="trailing" secondItem="Npc-6v-mtV" secondAttribute="trailing" constant="20" id="B9a-Jr-m8c"/>
+                            <constraint firstItem="eVE-Vu-ja7" firstAttribute="trailing" secondItem="vCj-Wn-SBf" secondAttribute="trailing" constant="20" id="Lgl-3O-lyu"/>
+                            <constraint firstItem="Npc-6v-mtV" firstAttribute="top" secondItem="eVE-Vu-ja7" secondAttribute="top" constant="8" id="WzC-H4-JQV"/>
+                            <constraint firstItem="vCj-Wn-SBf" firstAttribute="height" secondItem="hJx-LW-BG1" secondAttribute="height" multiplier="0.33" id="cI2-yt-nZI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eVE-Vu-ja7"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="mKu-xr-yQc">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="H2J-JA-gg2">
+                            <connections>
+                                <action selector="submitQuestionPressed:" destination="G9L-rv-XiW" id="25O-f1-Gyb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="Npc-6v-mtV" id="FRg-2y-Ocs"/>
+                        <outlet property="questionTextView" destination="vCj-Wn-SBf" id="qRQ-jf-yt8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="itE-jp-puS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682.608695652174" y="156.69642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VJp-JG-KtN">
