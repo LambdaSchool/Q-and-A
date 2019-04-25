@@ -16,6 +16,7 @@
 		73483BBB227241F200EC882A /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73483BBA227241F200EC882A /* QuestionTableViewCell.swift */; };
 		73483BBD2272425C00EC882A /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73483BBC2272425C00EC882A /* QuestionTableViewController.swift */; };
 		73483BBF2272452900EC882A /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73483BBE2272452900EC882A /* AskQuestionViewController.swift */; };
+		73483BC1227247E200EC882A /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73483BC0227247E100EC882A /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		73483BBA227241F200EC882A /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		73483BBC2272425C00EC882A /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		73483BBE2272452900EC882A /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
+		73483BC0227247E100EC882A /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				73483BB6227239E300EC882A /* Question.swift */,
 				73483BB822723AC900EC882A /* QuestionController.swift */,
 				73483BA822722FB900EC882A /* Main.storyboard */,
+				73483BC0227247E100EC882A /* AnswerViewController.swift */,
 				73483BBE2272452900EC882A /* AskQuestionViewController.swift */,
 				73483BBA227241F200EC882A /* QuestionTableViewCell.swift */,
 				73483BBC2272425C00EC882A /* QuestionTableViewController.swift */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73483BB7227239E300EC882A /* Question.swift in Sources */,
+				73483BC1227247E200EC882A /* AnswerViewController.swift in Sources */,
 				73483BBB227241F200EC882A /* QuestionTableViewCell.swift in Sources */,
 				73483BBF2272452900EC882A /* AskQuestionViewController.swift in Sources */,
 				73483BBD2272425C00EC882A /* QuestionTableViewController.swift in Sources */,
