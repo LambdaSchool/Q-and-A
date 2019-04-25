@@ -15,15 +15,21 @@ class QuestionTableViewCell: UITableViewCell {
 	
 	@IBOutlet var bottomLabel: UILabel!
 	
+	var question: Question? {
+		didSet {
+			updateViews()
+		}
+	}
+	
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+	private func updateViews() {
+		guard let question = question else { return }
+		questionLabel.text = question.question
+		askedByLabel.text = question.asker
+	}
 
 }
