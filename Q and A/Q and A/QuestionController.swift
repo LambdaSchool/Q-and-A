@@ -11,10 +11,6 @@ import Foundation
 class QuestionController {
 	var questions: [Question] = []
 	
-	init() {
-		createQuestion(question: "How much?", asker: "Borat")
-	}
-	
 	func createQuestion(question: String, asker: String) {
 		let newQuestion = Question(question: question, asker: asker)
 		questions.append(newQuestion)
