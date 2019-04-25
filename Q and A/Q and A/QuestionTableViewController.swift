@@ -51,7 +51,7 @@ class QuestionTableViewController: UITableViewController {
 		} else if segue.identifier == "SubmitAnswer" {
 			guard let dest = segue.destination as? AnswerViewController else { return }
 			dest.questionController = questionController
-			guard let cell = sender as? QuestionTableViewCell else { print("failed sender \(sender)"); return }
+			guard let cell = sender as? QuestionTableViewCell else { return }
 			
 			dest.question = cell.question
 		}
