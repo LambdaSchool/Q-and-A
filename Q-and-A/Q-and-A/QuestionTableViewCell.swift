@@ -12,6 +12,7 @@ class QuestionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var askedByLabel: UILabel!
+    @IBOutlet weak var informationLabel: UILabel!
     
     var question: Question? {
         didSet {

@@ -14,6 +14,7 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var askerLabel: UILabel!
     @IBOutlet weak var answererNameTextField: UITextField!
     @IBOutlet weak var answerTextView: UITextView!
+    @IBOutlet weak var informationLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
