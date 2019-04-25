@@ -13,6 +13,10 @@
 		330CE17922724365008CE9D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330CE17822724365008CE9D2 /* Assets.xcassets */; };
 		330CE17C22724365008CE9D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330CE17A22724365008CE9D2 /* LaunchScreen.storyboard */; };
 		330CE18722724365008CE9D2 /* Q_and_ATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330CE18622724365008CE9D2 /* Q_and_ATests.swift */; };
+		330CE19322724543008CE9D2 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330CE19222724543008CE9D2 /* Question.swift */; };
+		330CE1952272477C008CE9D2 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330CE1942272477C008CE9D2 /* QuestionController.swift */; };
+		330CE19722724FDB008CE9D2 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330CE19622724FDB008CE9D2 /* QuestionTableViewController.swift */; };
+		330CE19922724FE8008CE9D2 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330CE19822724FE8008CE9D2 /* QuestionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		330CE18222724365008CE9D2 /* Q and ATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Q and ATests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		330CE18622724365008CE9D2 /* Q_and_ATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q_and_ATests.swift; sourceTree = "<group>"; };
 		330CE18822724365008CE9D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		330CE19222724543008CE9D2 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		330CE1942272477C008CE9D2 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		330CE19622724FDB008CE9D2 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
+		330CE19822724FE8008CE9D2 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +87,11 @@
 			children = (
 				330CE17122724362008CE9D2 /* AppDelegate.swift */,
 				330CE17322724362008CE9D2 /* ViewController.swift */,
+				330CE19222724543008CE9D2 /* Question.swift */,
+				330CE1942272477C008CE9D2 /* QuestionController.swift */,
 				330CE17522724362008CE9D2 /* Main.storyboard */,
+				330CE19622724FDB008CE9D2 /* QuestionTableViewController.swift */,
+				330CE19822724FE8008CE9D2 /* QuestionTableViewCell.swift */,
 				330CE17822724365008CE9D2 /* Assets.xcassets */,
 				330CE17A22724365008CE9D2 /* LaunchScreen.storyboard */,
 				330CE17D22724365008CE9D2 /* Info.plist */,
@@ -106,6 +118,7 @@
 				330CE16A22724362008CE9D2 /* Sources */,
 				330CE16B22724362008CE9D2 /* Frameworks */,
 				330CE16C22724362008CE9D2 /* Resources */,
+				330CE191227243F9008CE9D2 /* Run Script - build increment */,
 			);
 			buildRules = (
 			);
@@ -192,13 +205,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		330CE191227243F9008CE9D2 /* Run Script - build increment */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - build increment";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbN=$((bN += 1))\nbN=$(printf \"%d\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		330CE16A22724362008CE9D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330CE19322724543008CE9D2 /* Question.swift in Sources */,
 				330CE17422724362008CE9D2 /* ViewController.swift in Sources */,
+				330CE19722724FDB008CE9D2 /* QuestionTableViewController.swift in Sources */,
+				330CE19922724FE8008CE9D2 /* QuestionTableViewCell.swift in Sources */,
 				330CE17222724362008CE9D2 /* AppDelegate.swift in Sources */,
+				330CE1952272477C008CE9D2 /* QuestionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
