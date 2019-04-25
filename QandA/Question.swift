@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//creating the question object
 struct Question {
     var question: String
     var asker: String
