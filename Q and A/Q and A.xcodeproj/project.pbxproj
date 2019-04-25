@@ -17,6 +17,7 @@
 		330CE1952272477C008CE9D2 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330CE1942272477C008CE9D2 /* QuestionController.swift */; };
 		330CE19722724FDB008CE9D2 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330CE19622724FDB008CE9D2 /* QuestionTableViewController.swift */; };
 		330CE19922724FE8008CE9D2 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330CE19822724FE8008CE9D2 /* QuestionTableViewCell.swift */; };
+		330CE19B22725415008CE9D2 /* QuestionCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330CE19A22725415008CE9D2 /* QuestionCreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		330CE1942272477C008CE9D2 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		330CE19622724FDB008CE9D2 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		330CE19822724FE8008CE9D2 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		330CE19A22725415008CE9D2 /* QuestionCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				330CE19222724543008CE9D2 /* Question.swift */,
 				330CE1942272477C008CE9D2 /* QuestionController.swift */,
 				330CE17522724362008CE9D2 /* Main.storyboard */,
+				330CE19A22725415008CE9D2 /* QuestionCreationViewController.swift */,
 				330CE19622724FDB008CE9D2 /* QuestionTableViewController.swift */,
 				330CE19822724FE8008CE9D2 /* QuestionTableViewCell.swift */,
 				330CE17822724365008CE9D2 /* Assets.xcassets */,
@@ -233,6 +236,7 @@
 			files = (
 				330CE19322724543008CE9D2 /* Question.swift in Sources */,
 				330CE17422724362008CE9D2 /* ViewController.swift in Sources */,
+				330CE19B22725415008CE9D2 /* QuestionCreationViewController.swift in Sources */,
 				330CE19722724FDB008CE9D2 /* QuestionTableViewController.swift in Sources */,
 				330CE19922724FE8008CE9D2 /* QuestionTableViewCell.swift in Sources */,
 				330CE17222724362008CE9D2 /* AppDelegate.swift in Sources */,
