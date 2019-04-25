@@ -22,8 +22,7 @@ class QuestionViewController: UIViewController {
         guard let askerName = askerNameTextView.text, !askerName.isEmpty else { return }
         guard let questionText = textView.text, !questionText.isEmpty else { return }
 
-        question?.asker = askerName
-        question?.question = questionText
+        questionController?.create(asker: askerName, question: questionText)
 
         navigationController?.popViewController(animated: true)
 
@@ -33,6 +32,6 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var askerNameTextView: UITextField!
     @IBOutlet weak var textView: UITextView!
     var questionController: QuestionController?
-    var question: Question?
+   
 
 }
