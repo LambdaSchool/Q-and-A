@@ -13,6 +13,7 @@
 		EC750F13227237F900E80D08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC750F12227237F900E80D08 /* Assets.xcassets */; };
 		EC750F16227237F900E80D08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC750F14227237F900E80D08 /* LaunchScreen.storyboard */; };
 		EC750F1E2272391C00E80D08 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC750F1D2272391C00E80D08 /* Question.swift */; };
+		EC750F2022723BAB00E80D08 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC750F1F22723BAB00E80D08 /* QuestionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EC750F15227237F900E80D08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC750F17227237F900E80D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC750F1D2272391C00E80D08 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		EC750F1F22723BAB00E80D08 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				EC750F0B227237F800E80D08 /* AppDelegate.swift */,
 				EC750F1D2272391C00E80D08 /* Question.swift */,
+				EC750F1F22723BAB00E80D08 /* QuestionController.swift */,
 				EC750F0D227237F800E80D08 /* ViewController.swift */,
 				EC750F0F227237F800E80D08 /* Main.storyboard */,
 				EC750F12227237F900E80D08 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				EC750F1E2272391C00E80D08 /* Question.swift in Sources */,
 				EC750F0E227237F800E80D08 /* ViewController.swift in Sources */,
 				EC750F0C227237F800E80D08 /* AppDelegate.swift in Sources */,
+				EC750F2022723BAB00E80D08 /* QuestionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
