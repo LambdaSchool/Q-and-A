@@ -14,4 +14,25 @@ class QuestionTableViewCell: UITableViewCell {
     @IBOutlet weak var askerLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    private func updateViews() {
+        
+        guard let question = question else { return }
+        
+        questionLabel.text = question.question
+        askerLabel.text = question.asker
+        
+        if let answer =  question.answer {
+            answerLabel.text = answer
+        } else {
+            answerLabel.text = ""
+        }
+        
+    }
+    
 }

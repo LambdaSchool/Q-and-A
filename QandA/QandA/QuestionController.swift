@@ -12,6 +12,11 @@ class QuestionController {
     
     var questions: [Question] = []
     
+    
+    init() {
+        create(question: "Test question", asker: "tester")
+    }
+    
     func create(question: String, asker: String) {
         
         // Create a new question and append to the questions array

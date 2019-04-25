@@ -107,7 +107,6 @@
                     <navigationItem key="navigationItem" title="Q&amp;A" id="Vuv-R4-7CB">
                         <barButtonItem key="rightBarButtonItem" title="Ask Question" id="ngQ-Ia-Hud">
                             <connections>
-                                <action selector="askQuestionButtonPressed:" destination="ya8-SK-CFb" id="jKa-kJ-sNd"/>
                                 <segue destination="qup-TW-QQO" kind="show" identifier="AskQuestion" id="FjN-rv-Xin"/>
                             </connections>
                         </barButtonItem>
