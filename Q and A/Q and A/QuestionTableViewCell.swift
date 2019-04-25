@@ -30,7 +30,11 @@ class QuestionTableViewCell: UITableViewCell {
 		guard let question = question else { return }
 		questionLabel.text = question.question
 		askedByLabel.text = question.asker
-		bottomLabel.text = question.answer != nil ? "Tap to view answer." : "Can you answer this?"
+		if let answer = question.answer {
+			bottomLabel.text = answer
+		} else {
+			bottomLabel.text = "Can you answer this?"
+		}
 	}
 
 }
