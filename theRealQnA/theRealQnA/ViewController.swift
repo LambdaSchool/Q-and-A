@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Q and A
+//  theRealQnA
 //
-//  Created by Diante Lewis-Jolley on 1/23/19.
+//  Created by Diante Lewis-Jolley on 4/25/19.
 //  Copyright © 2019 Diante Lewis-Jolley. All rights reserved.
 //
 
