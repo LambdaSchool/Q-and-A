@@ -11,6 +11,7 @@ import UIKit
 
 class QuestionController {
     
+    //creating the question array
     var questions: [Question] = []
 
     func createQuestion() {
