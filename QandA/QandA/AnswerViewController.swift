@@ -15,13 +15,32 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var answererTextField: UITextField!
     @IBOutlet weak var answerTextView: UITextView!
     
+    var questionController: QuestionController?
+    var question: Question?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let question = question {
+            questionLabel.text = question.question
+            askerLabel.text = question.asker
+        }
+        
     }
     
     @IBAction func submitButtonPressed(_ sender: UIBarButtonItem) {
+        
+        guard let answer = answerTextView.text,
+        answer != "",
+        let answerer = answererTextField.text,
+        answerer != "",
+        let question = question
+        else { return }
+        
+        questionController?.update(question: question, answer: answer, answerer: answerer)
+        
+        navigationController?.popViewController(animated: true)
+        
     }
     
     /*

@@ -15,6 +15,8 @@ class QuestionController {
     
     init() {
         create(question: "Test question", asker: "tester")
+        create(question: "Question with Anser", asker: "PokerGod")
+        update(question: Question(question: "Question with Anser", asker: "PokerGod"), answer: "Test Answer", answerer: "PokerDevil")
     }
     
     func create(question: String, asker: String) {
