@@ -14,8 +14,8 @@ class QuestionController {
     //creating the question array
     var questions: [Question] = []
 
-    func createQuestion() {
-        let question = Question(question: "What the fuck?", asker: "Victor", answer: nil, answerer: nil)
+    func createQuestion(question: String, asker: String, answer: String?, answerer: String?) {
+        let question = Question(question: question, asker: asker, answer: nil, answerer: nil)
         questions.append(question)
     }
     
