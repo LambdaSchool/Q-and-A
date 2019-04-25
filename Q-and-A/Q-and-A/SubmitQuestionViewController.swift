@@ -14,6 +14,8 @@ class SubmitQuestionViewController: UIViewController {
     
     @IBOutlet weak var questionTextView: UITextView!
     
+    var questionController: QuestionController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,15 @@ class SubmitQuestionViewController: UIViewController {
     
 
     @IBAction func submitQuestionPressed(_ sender: Any) {
+        guard let nameString = nameTextField.text,
+        let questionString = questionTextView.text
+        else { return }
+        
+        questionController?.createQuestion(question: questionString, asker: nameString  )
+        
+        
+//        question?.asker = nameString
+        
     }
     /*
     // MARK: - Navigation
