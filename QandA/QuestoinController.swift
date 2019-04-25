@@ -20,7 +20,13 @@ class QuestionController {
     }
     
     func update(question: Question, answer: String, answerer: String) {
-        //update the question
+        var question = question
+        print(answer)
+        print(answerer)
+        print(question)
+        question.answer = answer
+        question.answerer = answerer
+        print(question)
     }
     
     func delete(question: Question) {
