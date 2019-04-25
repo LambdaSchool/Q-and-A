@@ -13,10 +13,19 @@ class QuestionCreationViewController: UIViewController {
 	@IBOutlet var nameTextField: UITextField!
 	@IBOutlet var questionTextView: UITextView!
 	
+	var questionController: QuestionController?
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
     }
 	@IBAction func submitQuestionButtonPressed(_ sender: UIBarButtonItem) {
+		guard let name = nameTextField.text,
+			let questionText = questionTextView.text,
+			!name.isEmpty,
+			!questionText.isEmpty
+			else { return }
+		
+		questionController?.createQuestion(question: questionText, asker: name)
+		navigationController?.popViewController(animated: true)
 	}
 }
