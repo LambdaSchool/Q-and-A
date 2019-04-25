@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" id="FNR-ze-ADJ" customClass="QuestionTableViewCell" customModule="QandA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="112" id="FNR-ze-ADJ" customClass="QuestionTableViewCell" customModule="QandA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FNR-ze-ADJ" id="cC0-Eu-YsA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="111.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YHj-Yr-9KG">
-                                            <rect key="frame" x="24" y="19" width="327" height="77.5"/>
+                                            <rect key="frame" x="24" y="19" width="327" height="74"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="NVt-d7-hV2">
                                                     <rect key="frame" x="0.0" y="0.0" width="130" height="20.5"/>
@@ -70,7 +70,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yg-LC-7Uf">
-                                                    <rect key="frame" x="0.0" y="57" width="43" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="57" width="43" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -114,7 +114,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPq-3b-cEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="692.75362318840587" y="-22.098214285714285"/>
+            <point key="canvasLocation" x="692" y="-22.938530734632685"/>
         </scene>
         <!--Ask Question View Controller-->
         <scene sceneID="h5V-uL-EFV">
@@ -191,14 +191,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgJ-Yj-kaq">
-                                <rect key="frame" x="16" y="100.5" width="42" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgJ-Yj-kaq">
+                                <rect key="frame" x="16" y="100.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6En-qe-Mzl">
-                                <rect key="frame" x="16" y="72" width="42" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6En-qe-Mzl">
+                                <rect key="frame" x="16" y="72" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -224,8 +224,10 @@
                             <constraint firstItem="jgJ-Yj-kaq" firstAttribute="top" secondItem="6En-qe-Mzl" secondAttribute="bottom" constant="8" id="CiM-ss-R8F"/>
                             <constraint firstItem="6En-qe-Mzl" firstAttribute="leading" secondItem="N7p-aT-5o8" secondAttribute="leadingMargin" id="ERj-us-GAd"/>
                             <constraint firstItem="Jp1-4a-fxt" firstAttribute="leading" secondItem="N7p-aT-5o8" secondAttribute="leadingMargin" id="GyQ-Z5-ySZ"/>
+                            <constraint firstItem="2Rf-Y9-sgN" firstAttribute="trailing" secondItem="6En-qe-Mzl" secondAttribute="trailing" constant="16" id="MD1-hm-UvC"/>
                             <constraint firstItem="6En-qe-Mzl" firstAttribute="top" secondItem="2Rf-Y9-sgN" secondAttribute="top" constant="8" id="Se9-wa-Zjg"/>
                             <constraint firstItem="jgJ-Yj-kaq" firstAttribute="leading" secondItem="N7p-aT-5o8" secondAttribute="leadingMargin" id="TS9-xP-M7h"/>
+                            <constraint firstItem="2Rf-Y9-sgN" firstAttribute="trailing" secondItem="jgJ-Yj-kaq" secondAttribute="trailing" constant="16" id="hCr-ak-Q9t"/>
                             <constraint firstItem="y4D-ja-w5n" firstAttribute="height" secondItem="N7p-aT-5o8" secondAttribute="height" multiplier="0.33" id="mwn-LP-qsr"/>
                             <constraint firstItem="y4D-ja-w5n" firstAttribute="top" secondItem="Jp1-4a-fxt" secondAttribute="bottom" constant="8" id="ogw-4R-Ye6"/>
                             <constraint firstItem="y4D-ja-w5n" firstAttribute="leading" secondItem="N7p-aT-5o8" secondAttribute="leadingMargin" id="yFw-gR-jIq"/>
