@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		374DBCF522723F4C0074E5DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DBCF422723F4C0074E5DB /* AppDelegate.swift */; };
-		374DBCF722723F4C0074E5DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DBCF622723F4C0074E5DB /* ViewController.swift */; };
 		374DBCFA22723F4C0074E5DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374DBCF822723F4C0074E5DB /* Main.storyboard */; };
 		374DBCFC22723F4D0074E5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374DBCFB22723F4D0074E5DB /* Assets.xcassets */; };
 		374DBCFF22723F4D0074E5DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374DBCFD22723F4D0074E5DB /* LaunchScreen.storyboard */; };
+		374DBD07227240870074E5DB /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DBD06227240870074E5DB /* Question.swift */; };
+		374DBD09227244D40074E5DB /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DBD08227244D40074E5DB /* QuestionController.swift */; };
+		374DBD0C22725D7E0074E5DB /* QuestionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DBD0B22725D7E0074E5DB /* QuestionListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		374DBCF122723F4C0074E5DB /* Q-and-A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Q-and-A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		374DBCF422723F4C0074E5DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		374DBCF622723F4C0074E5DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		374DBCF922723F4C0074E5DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		374DBCFB22723F4D0074E5DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		374DBCFE22723F4D0074E5DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		374DBD0022723F4D0074E5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		374DBD06227240870074E5DB /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		374DBD08227244D40074E5DB /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		374DBD0B22725D7E0074E5DB /* QuestionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +59,39 @@
 			isa = PBXGroup;
 			children = (
 				374DBCF422723F4C0074E5DB /* AppDelegate.swift */,
-				374DBCF622723F4C0074E5DB /* ViewController.swift */,
-				374DBCF822723F4C0074E5DB /* Main.storyboard */,
+				374DBD0A227256CB0074E5DB /* Model */,
+				374DBD0E22725DA70074E5DB /* Views */,
+				374DBD0D22725D940074E5DB /* Controllers */,
 				374DBCFB22723F4D0074E5DB /* Assets.xcassets */,
 				374DBCFD22723F4D0074E5DB /* LaunchScreen.storyboard */,
 				374DBD0022723F4D0074E5DB /* Info.plist */,
 			);
 			path = "Q-and-A";
+			sourceTree = "<group>";
+		};
+		374DBD0A227256CB0074E5DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				374DBD06227240870074E5DB /* Question.swift */,
+				374DBD08227244D40074E5DB /* QuestionController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		374DBD0D22725D940074E5DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				374DBD0B22725D7E0074E5DB /* QuestionListTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		374DBD0E22725DA70074E5DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				374DBCF822723F4C0074E5DB /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				374DBCF722723F4C0074E5DB /* ViewController.swift in Sources */,
+				374DBD07227240870074E5DB /* Question.swift in Sources */,
 				374DBCF522723F4C0074E5DB /* AppDelegate.swift in Sources */,
+				374DBD09227244D40074E5DB /* QuestionController.swift in Sources */,
+				374DBD0C22725D7E0074E5DB /* QuestionListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
