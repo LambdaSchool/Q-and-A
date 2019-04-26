@@ -20,16 +20,16 @@ class QuestionController {
     }
     
     func update(question: Question, answer: String, answerer: String) {
-        var question = question
-        print(answer)
-        print(answerer)
-        print(question)
-        question.answer = answer
-        question.answerer = answerer
-        print(question)
+//        var question = question
+        guard let index: Int = questions.firstIndex(of: question) else { return }
+        
+        questions[index].answer = answer
+        questions[index].answerer = answerer
     }
     
     func delete(question: Question) {
         //delete question from the qeustions array
+        guard let index: Int = questions.firstIndex(of: question) else { return }
+        questions.remove(at: index)
     }
 }
