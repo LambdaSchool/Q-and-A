@@ -16,24 +16,35 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var answerTextView: UITextView!
     
     var questionController: QuestionController?
-    var question: Question?
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let question = question {
-            questionLabel.text = question.question
-            askerLabel.text = question.asker
-        }
+        updateViews()
+    }
+    
+    // PM suggestion... Use updateViews() instead of doing the work in viewDidLoad()
+    private func updateViews() {
+        
+        // Unwrap question and make sure view had been loaded.
+        guard let question = question, isViewLoaded else { return }
+        
+        questionLabel.text = question.question
+        askerLabel.text = question.asker
         
     }
     
     @IBAction func submitButtonPressed(_ sender: UIBarButtonItem) {
         
         guard let answer = answerTextView.text,
-        answer != "",
+        !answer.isEmpty,
         let answerer = answererTextField.text,
-        answerer != "",
+        !answerer.isEmpty,
         let question = question
         else { return }
         

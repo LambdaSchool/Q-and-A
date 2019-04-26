@@ -22,9 +22,9 @@ class AskQuestionViewController: UIViewController {
     @IBAction func submitQuestionButtonPressed(_ sender: UIBarButtonItem) {
         
         guard let name = nameTextField.text,
-        name != "",
+        !name.isEmpty,
         let question = questionTextView.text,
-        question != ""
+        !question.isEmpty
         else { return }
         
         questionController?.create(question: question, asker: name)
