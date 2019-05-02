@@ -12,6 +12,7 @@
 		EF57DB79227B7BBE00C06224 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF57DB78227B7BBE00C06224 /* AskQuestionViewController.swift */; };
 		EF57DB7B227B86B500C06224 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF57DB7A227B86B500C06224 /* AnswerViewController.swift */; };
 		EF57DB7D227B86DD00C06224 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF57DB7C227B86DD00C06224 /* Question.swift */; };
+		EF57DB80227B895200C06224 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF57DB7F227B895200C06224 /* QuestionController.swift */; };
 		EFE81405227B750800061925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE81404227B750800061925 /* AppDelegate.swift */; };
 		EFE8140A227B750800061925 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE81408227B750800061925 /* Main.storyboard */; };
 		EFE8140C227B750900061925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE8140B227B750900061925 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		EF57DB78227B7BBE00C06224 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
 		EF57DB7A227B86B500C06224 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		EF57DB7C227B86DD00C06224 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		EF57DB7F227B895200C06224 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		EFE81401227B750800061925 /* Q&A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Q&A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE81404227B750800061925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFE81409227B750800061925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				EF57DB7C227B86DD00C06224 /* Question.swift */,
+				EF57DB7F227B895200C06224 /* QuestionController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF57DB80227B895200C06224 /* QuestionController.swift in Sources */,
 				EF57DB77227B77A000C06224 /* QuestionTableViewCell.swift in Sources */,
 				EFE81405227B750800061925 /* AppDelegate.swift in Sources */,
 				EF57DB7B227B86B500C06224 /* AnswerViewController.swift in Sources */,

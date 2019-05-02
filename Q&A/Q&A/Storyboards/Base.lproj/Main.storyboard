@@ -83,7 +83,7 @@
                                     <outlet property="askedByLabel" destination="zQy-DJ-jdu" id="RQj-BD-gu6"/>
                                     <outlet property="directionLabel" destination="IbY-ea-Y4M" id="kLK-Fk-kUx"/>
                                     <outlet property="questionLabel" destination="HPv-BJ-J5Y" id="zVD-xf-rkp"/>
-                                    <segue destination="hwm-D5-AS7" kind="show" id="7T9-Ud-SPd"/>
+                                    <segue destination="hwm-D5-AS7" kind="show" identifier="AnswerQuestion" id="7T9-Ud-SPd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
