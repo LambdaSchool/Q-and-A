@@ -32,13 +32,18 @@ class QuestionTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as? QuestionTableViewCell else { return UITableViewCell() }
         
+        cell.questionLabel.text = self.questionController.questions[indexPath.row].question
+        cell.askedByLabel.text = self.questionController.questions[indexPath.row].asker
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.questionController.questions.remove(at: indexPath.row)
+            let question = self.questionController.questions[indexPath.row]
+            self.questionController.deleteQuestion(question: question)
             self.questionTableView.deleteRows(at: [indexPath], with: .none)
+            self.questionTableView.reloadData()
         }
     }
 
@@ -47,7 +52,18 @@ class QuestionTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ToAskQuestion" {
+             guard let askQuestionViewController = segue.destination as? AskQuestionViewController else { return }
+            
+            askQuestionViewController.questionController = self.questionController
+        } else if segue.identifier == "ToAnswer" {
+            guard let indexPath = questionTableView.indexPathForSelectedRow,
+                let answerViewController = segue.destination as? AnswerViewController else { return }
+            
+            let question = self.questionController.questions[indexPath.row]
+            
+            answerViewController.questionController = self.questionController
+            answerViewController.question = question
+        }
     }
 }

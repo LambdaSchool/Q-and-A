@@ -12,16 +12,16 @@ class AskQuestionViewController: UIViewController {
 
     var questionController: QuestionController?
 
-    @IBOutlet weak var questionTextField: UITextField!
-    @IBOutlet weak var askerTextView: UITextView!
-    
+    @IBOutlet weak var askerTextField: UITextField!
+    @IBOutlet weak var questionTextView: UITextView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func submitQuestionButtonTapped(_ sender: Any) {
-        guard let question = self.questionTextField.text,
-            let asker = self.askerTextView.text else { return }
+        guard let question = self.questionTextView.text,
+            let asker = self.askerTextField.text else { return }
         
         if question != "" && asker != "" {
             self.questionController?.createQuestion(questionText: question, askerText: asker)

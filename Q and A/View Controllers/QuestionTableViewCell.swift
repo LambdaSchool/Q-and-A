@@ -25,5 +25,4 @@ class QuestionTableViewCell: UITableViewCell {
         self.questionLabel.text = question.question
         self.askedByLabel.text = question.asker
     }
-    
 }
