@@ -15,6 +15,19 @@ class QuestionController {
         let question = Question(question: text, asker: text)
         
         questions.append(question)
+        }
+    
+    func Update(question: Question, answer: String, answerer: String) {
         
+        guard questions.firstIndex(of: question) != nil else {return}
+        
+        questions.append(question)
+        
+    }
+    //Not done!!
+    func Delete(question: Question){
+        
+        guard questions.firstIndex(of: question) != nil else {return}
+        questions.remo
     }
 }
