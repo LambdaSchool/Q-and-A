@@ -19,21 +19,15 @@ class QuestionController {
     
     // UPDATE
     func updateQuestion(question: Question, answerText: String, answererText: String) {
-        for i in self.questions.indices {
-            if questions[i].question == question.question && questions[i].asker == question.asker {
-                questions[i].answer = answerText
-                questions[i].answerer = answererText
-            }
-        }
+        guard let index = questions.firstIndex(of: question) else { return }
+        
+        questions[index].answer = answerText
+        questions[index].answerer = answererText
     }
     
     // DELETE
     func deleteQuestion(question: Question) {
-        for i in self.questions.indices {
-            if questions[i].question == question.question && questions[i].asker == question.asker {
-                questions.remove(at: i)
-                break
-            }
-        }
+        guard let index = questions.firstIndex(of: question) else { return }
+        questions.remove(at: index)
     }
 }
