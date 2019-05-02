@@ -157,7 +157,7 @@
         <!--Title-->
         <scene sceneID="cIb-PJ-NUu">
             <objects>
-                <viewController id="hwm-D5-AS7" sceneMemberID="viewController">
+                <viewController id="hwm-D5-AS7" customClass="AnswerViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cjd-ab-yaS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,8 +217,18 @@
                         <viewLayoutGuide key="safeArea" id="2ak-lI-50U"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="lcy-Qc-ovJ">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="6o4-ma-l8b"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="6o4-ma-l8b">
+                            <connections>
+                                <action selector="submitAnswerButtonPressed:" destination="hwm-D5-AS7" id="gQB-MG-pwa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextView" destination="Vsh-sW-1LV" id="7ra-WC-MRK"/>
+                        <outlet property="answererTextField" destination="M3S-Df-TSB" id="S3d-ZS-o9f"/>
+                        <outlet property="askerLabel" destination="slf-gR-ZOx" id="WGq-SM-t4M"/>
+                        <outlet property="questionLabel" destination="4Si-oe-qYM" id="TUw-5v-TGU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaW-jX-3bU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
