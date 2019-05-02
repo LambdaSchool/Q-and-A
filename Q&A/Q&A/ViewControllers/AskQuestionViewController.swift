@@ -44,4 +44,5 @@ class AskQuestionViewController: UIViewController {
     }
     
     var questionController: QuestionController?
+    var question: Question?
 }
