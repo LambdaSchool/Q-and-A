@@ -26,7 +26,7 @@ class QuestionTableViewCell: UITableViewCell {
         if question.answer == nil {
             answerLabel.text = "Can you answer this?"
         } else {
-            answerLabel.text = "Tap to view answer"
+            answerLabel.text = question.answer
         }
     }
 }
