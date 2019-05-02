@@ -12,6 +12,18 @@ class QuestionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var askedByLabel: UILabel!
-    @IBOutlet weak var viewAnswerLabel: UILabel!
+    
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    private func updateViews() {
+        guard let question = self.question else { return }
+        
+        self.questionLabel.text = question.question
+        self.askedByLabel.text = question.asker
+    }
     
 }

@@ -63,8 +63,8 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baW-0p-egV">
-                                                    <rect key="frame" x="0.0" y="83" width="43" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to view answer." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baW-0p-egV">
+                                                    <rect key="frame" x="0.0" y="83" width="153" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -82,7 +82,6 @@
                                 <connections>
                                     <outlet property="askedByLabel" destination="9Sk-EJ-sOL" id="fvs-q3-kJS"/>
                                     <outlet property="questionLabel" destination="tYj-w4-3rm" id="oHj-vT-WB8"/>
-                                    <outlet property="viewAnswerLabel" destination="baW-0p-egV" id="bq4-ps-YsS"/>
                                     <segue destination="1JD-H6-LR1" kind="show" identifier="ToAnswer" id="zTG-yi-KZb"/>
                                 </connections>
                             </tableViewCell>
