@@ -195,8 +195,16 @@
                         <viewLayoutGuide key="safeArea" id="kE0-eL-cNa"/>
                     </view>
                     <navigationItem key="navigationItem" id="hyA-xz-gif">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="x3f-UK-OOa"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="x3f-UK-OOa">
+                            <connections>
+                                <action selector="submitQuestionButtonTapped:" destination="vgq-pi-usi" id="Zvb-Qh-XyT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="askerTextView" destination="W2F-fr-XNS" id="znB-EL-eBQ"/>
+                        <outlet property="questionTextField" destination="ZO9-F5-dK7" id="FPf-mN-3FQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIQ-72-qP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

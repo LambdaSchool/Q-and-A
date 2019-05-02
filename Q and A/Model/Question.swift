@@ -9,7 +9,7 @@
 import Foundation
 
 struct Question {
-    var question: String
+    let question: String
     var asker: String
     var answer: String?
     var answerer: String?

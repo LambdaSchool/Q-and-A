@@ -12,12 +12,13 @@ class QuestionController {
     var questions: [Question] = []
     
     // CREATE
-    func createQuestion() {
-        //
+    func createQuestion(questionText: String, askerText: String) {
+        let question = Question(question: questionText, asker: askerText)
+        questions.append(question)
     }
     
     // UPDATE
-    func updateQuestion() {
+    func updateQuestion(answerText: String, answererText: String) {
         //
     }
     
