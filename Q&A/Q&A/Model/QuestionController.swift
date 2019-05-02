@@ -10,9 +10,8 @@ import Foundation
 
 class QuestionController {
     
-    func deleteQuestion(for question: String, asker: String, answer: String, answerer: String) {
-        let deleteQuestion = Question(question: question, asker: asker, answer: answer, answerer: answerer)
-        questions.append(deleteQuestion)
+    func deleteQuestion(for question: Question) {
+        
     }
     
     func updateQuestion(for question: String, asker: String, answer: String, answerer: String) {

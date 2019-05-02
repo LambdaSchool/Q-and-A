@@ -31,6 +31,17 @@ class AskQuestionViewController: UIViewController {
     @IBOutlet weak var questionTextField: UITextView!
     
     @IBAction func submitQuestionButtonPressed(_ sender: Any) {
+        guard let question = nameTextField.text,
+            let name = nameTextField.text,
+        !question.isEmpty, !name.isEmpty else { return }
         
+        questionController?.createQuestion(for: question, asker: name)
+        
+        nameTextField.text = ""
+        questionTextField.text = ""
+        
+        navigationController?.popViewController(animated: true)
     }
+    
+    var questionController: QuestionController?
 }
