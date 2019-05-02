@@ -11,6 +11,7 @@ import Foundation
 class QuestionController {
     var questions: [Question] = []
     
+    
     func Create(aQuestion text: String){
         let question = Question(question: text, asker: text)
         
@@ -24,10 +25,11 @@ class QuestionController {
         questions.append(question)
         
     }
-    //Not done!!
+
     func Delete(question: Question){
         
         guard questions.firstIndex(of: question) != nil else {return}
-        questions.remo
+        
+        questions.remove(at: questions.count)
     }
 }
