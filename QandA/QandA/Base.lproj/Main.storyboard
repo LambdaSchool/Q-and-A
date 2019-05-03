@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -81,6 +82,11 @@
                                         <constraint firstItem="JWF-Yd-Ynr" firstAttribute="top" secondItem="1z8-64-ktB" secondAttribute="top" constant="8" id="gha-5e-S9Q"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="questionAuthorLabel" destination="sWW-oO-KKf" id="ZsE-jb-SPM"/>
+                                    <outlet property="questionLabel" destination="LgC-qK-rJU" id="uRQ-Hl-41Z"/>
+                                    <outlet property="questionLable" destination="LgC-qK-rJU" id="Gai-tC-buc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -96,33 +102,43 @@
             </objects>
             <point key="canvasLocation" x="-846.37681159420299" y="103.79464285714285"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="ACR-Uo-SKh">
+        <!--View Controller-->
+        <scene sceneID="87F-mY-dxV">
             <objects>
-                <tableViewController id="oHF-0b-TYy" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e3s-Ul-SkQ">
+                <viewController id="ifr-LZ-maf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZSa-uv-OFd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7fj-Xg-Wvj">
+                                <rect key="frame" x="16" y="52" width="382" height="333.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3RK-qV-cCq">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ScF-M7-BYI">
+                                        <rect key="frame" x="0.0" y="38" width="382" height="295.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ka2-nR-A2y">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ka2-nR-A2y" id="lSX-pc-scf">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="oHF-0b-TYy" id="NZh-a1-uPx"/>
-                            <outlet property="delegate" destination="oHF-0b-TYy" id="VBo-4T-5FT"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KFl-Xa-yqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="ScF-M7-BYI" firstAttribute="height" secondItem="ZSa-uv-OFd" secondAttribute="height" multiplier="0.33" id="bjL-Iu-SES"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VOd-Vt-xxb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8KQ-5r-eLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1252.1739130434783" y="109.82142857142857"/>
+            <point key="canvasLocation" x="-23.188405797101453" y="106.47321428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EXk-dL-P43">
