@@ -95,50 +95,75 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Q And A" largeTitleDisplayMode="always" id="wcG-tW-NaW">
-                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="stf-rV-gbs"/>
+                        <barButtonItem key="rightBarButtonItem" title="Ask Question" id="stf-rV-gbs">
+                            <connections>
+                                <segue destination="ifr-LZ-maf" kind="show" identifier="AskQuestionSegue" id="EFj-yS-1g4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0V-Fh-1R7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-846.37681159420299" y="103.79464285714285"/>
+            <point key="canvasLocation" x="-917" y="104"/>
         </scene>
-        <!--View Controller-->
+        <!--Ask Question-->
         <scene sceneID="87F-mY-dxV">
             <objects>
-                <viewController id="ifr-LZ-maf" sceneMemberID="viewController">
+                <viewController id="ifr-LZ-maf" customClass="AskQuestionViewController" customModule="QandA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZSa-uv-OFd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7fj-Xg-Wvj">
-                                <rect key="frame" x="16" y="52" width="382" height="333.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3RK-qV-cCq">
+                                <rect key="frame" x="16" y="52" width="382" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3RK-qV-cCq">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ScF-M7-BYI">
-                                        <rect key="frame" x="0.0" y="38" width="382" height="295.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                            </stackView>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wek-B9-EZA">
+                                <rect key="frame" x="0.0" y="104" width="414" height="30"/>
+                                <color key="backgroundColor" red="0.97931915521621704" green="0.9800599217414856" blue="0.97943383455276489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rEH-GQ-vPC">
+                                <rect key="frame" x="0.0" y="142" width="414" height="295.5"/>
+                                <color key="backgroundColor" red="0.97963594543147203" green="0.97963594543147203" blue="0.97963594543147203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ScF-M7-BYI" firstAttribute="height" secondItem="ZSa-uv-OFd" secondAttribute="height" multiplier="0.33" id="bjL-Iu-SES"/>
+                            <constraint firstItem="VOd-Vt-xxb" firstAttribute="trailing" secondItem="Wek-B9-EZA" secondAttribute="trailing" id="CTo-cT-1VV"/>
+                            <constraint firstItem="Wek-B9-EZA" firstAttribute="leading" secondItem="VOd-Vt-xxb" secondAttribute="leading" id="GiI-Cx-hu3"/>
+                            <constraint firstItem="VOd-Vt-xxb" firstAttribute="trailing" secondItem="rEH-GQ-vPC" secondAttribute="trailing" id="QF6-zW-rOW"/>
+                            <constraint firstItem="Wek-B9-EZA" firstAttribute="centerX" secondItem="ZSa-uv-OFd" secondAttribute="centerX" id="WrS-zL-p4n"/>
+                            <constraint firstItem="Wek-B9-EZA" firstAttribute="top" secondItem="VOd-Vt-xxb" secondAttribute="top" constant="16" id="bSp-SG-4Ia"/>
+                            <constraint firstItem="rEH-GQ-vPC" firstAttribute="top" secondItem="Wek-B9-EZA" secondAttribute="bottom" constant="8" id="blb-EC-c1L"/>
+                            <constraint firstItem="rEH-GQ-vPC" firstAttribute="centerX" secondItem="ZSa-uv-OFd" secondAttribute="centerX" id="fhf-my-AVU"/>
+                            <constraint firstItem="rEH-GQ-vPC" firstAttribute="leading" secondItem="VOd-Vt-xxb" secondAttribute="leading" id="iA3-BY-55k"/>
+                            <constraint firstItem="rEH-GQ-vPC" firstAttribute="height" secondItem="ZSa-uv-OFd" secondAttribute="height" multiplier="0.33" id="ylw-0j-QUI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VOd-Vt-xxb"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Ask Question" largeTitleDisplayMode="always" id="YM3-0j-ZMv">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Question" id="uhf-d2-ds7">
+                            <connections>
+                                <action selector="SubmitButtonTapped:" destination="ifr-LZ-maf" id="47k-PZ-IRS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="NameTextField" destination="Wek-B9-EZA" id="fpx-Ww-HVU"/>
+                        <outlet property="QuestionTextView" destination="rEH-GQ-vPC" id="12h-fW-Xrq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8KQ-5r-eLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="106.47321428571428"/>
+            <point key="canvasLocation" x="-155" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EXk-dL-P43">

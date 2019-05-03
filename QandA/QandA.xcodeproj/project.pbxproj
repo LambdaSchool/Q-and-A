@@ -16,6 +16,7 @@
 		F62FBFA5227B502A00AFCA34 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62FBFA4227B502A00AFCA34 /* QuestionController.swift */; };
 		F674C923227BC7A600B186B1 /* QuestionsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C922227BC7A500B186B1 /* QuestionsListTableViewController.swift */; };
 		F674C925227BC7ED00B186B1 /* QuestionsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C924227BC7ED00B186B1 /* QuestionsListTableViewCell.swift */; };
+		F6BB0F78227C912F005B65AF /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BB0F77227C912F005B65AF /* AskQuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F62FBFA4227B502A00AFCA34 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		F674C922227BC7A500B186B1 /* QuestionsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsListTableViewController.swift; sourceTree = "<group>"; };
 		F674C924227BC7ED00B186B1 /* QuestionsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsListTableViewCell.swift; sourceTree = "<group>"; };
+		F6BB0F77227C912F005B65AF /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				F62FBF90227B459000AFCA34 /* AppDelegate.swift */,
 				F62FBF92227B459000AFCA34 /* ViewController.swift */,
 				F62FBF94227B459000AFCA34 /* Main.storyboard */,
+				F6BB0F77227C912F005B65AF /* AskQuestionViewController.swift */,
 				F674C924227BC7ED00B186B1 /* QuestionsListTableViewCell.swift */,
 				F674C922227BC7A500B186B1 /* QuestionsListTableViewController.swift */,
 				F62FBF97227B459100AFCA34 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 				F674C923227BC7A600B186B1 /* QuestionsListTableViewController.swift in Sources */,
 				F62FBF93227B459000AFCA34 /* ViewController.swift in Sources */,
 				F62FBF91227B459000AFCA34 /* AppDelegate.swift in Sources */,
+				F6BB0F78227C912F005B65AF /* AskQuestionViewController.swift in Sources */,
 				F674C925227BC7ED00B186B1 /* QuestionsListTableViewCell.swift in Sources */,
 				F62FBFA5227B502A00AFCA34 /* QuestionController.swift in Sources */,
 			);
