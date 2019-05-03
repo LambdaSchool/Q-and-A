@@ -86,6 +86,7 @@
                                     <outlet property="questionAuthorLabel" destination="sWW-oO-KKf" id="ZsE-jb-SPM"/>
                                     <outlet property="questionLabel" destination="LgC-qK-rJU" id="uRQ-Hl-41Z"/>
                                     <outlet property="questionLable" destination="LgC-qK-rJU" id="Gai-tC-buc"/>
+                                    <segue destination="qqm-0X-Gg8" kind="show" identifier="AnswerQuestionSegue" id="6mb-9s-dVo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -105,6 +106,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0V-Fh-1R7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-917" y="104"/>
+        </scene>
+        <!--Question-->
+        <scene sceneID="bae-NP-Mk9">
+            <objects>
+                <viewController id="qqm-0X-Gg8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BbQ-dN-t9a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qxT-St-wTb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="448"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tp-Iy-ffL">
+                                        <rect key="frame" x="0.0" y="0.0" width="43.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thl-WZ-9L6">
+                                        <rect key="frame" x="0.0" y="36.5" width="69" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Bj-pM-DNJ">
+                                        <rect key="frame" x="0.0" y="73" width="414" height="30"/>
+                                        <color key="backgroundColor" red="0.97931915521621704" green="0.9800599217414856" blue="0.97943383455276489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KxU-HQ-0q2">
+                                        <rect key="frame" x="0.0" y="119" width="414" height="329"/>
+                                        <color key="backgroundColor" red="0.97931915521621704" green="0.9800599217414856" blue="0.97943383455276489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KxU-HQ-0q2" secondAttribute="trailing" id="5lN-97-UBr"/>
+                                    <constraint firstItem="KxU-HQ-0q2" firstAttribute="leading" secondItem="qxT-St-wTb" secondAttribute="leading" id="EbD-TD-Izg"/>
+                                    <constraint firstItem="8Bj-pM-DNJ" firstAttribute="centerX" secondItem="qxT-St-wTb" secondAttribute="centerX" id="bK8-su-cY1"/>
+                                    <constraint firstItem="KxU-HQ-0q2" firstAttribute="centerX" secondItem="qxT-St-wTb" secondAttribute="centerX" id="gOf-DB-oUf"/>
+                                    <constraint firstItem="Thl-WZ-9L6" firstAttribute="top" secondItem="5tp-Iy-ffL" secondAttribute="bottom" constant="16" id="reB-HE-FXT"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qxT-St-wTb" firstAttribute="top" secondItem="fDF-3M-veQ" secondAttribute="top" id="AlX-zU-VT5"/>
+                            <constraint firstItem="fDF-3M-veQ" firstAttribute="trailing" secondItem="qxT-St-wTb" secondAttribute="trailing" id="Gq6-Pb-EoK"/>
+                            <constraint firstItem="qxT-St-wTb" firstAttribute="centerX" secondItem="BbQ-dN-t9a" secondAttribute="centerX" id="H88-KM-b73"/>
+                            <constraint firstItem="qxT-St-wTb" firstAttribute="leading" secondItem="fDF-3M-veQ" secondAttribute="leading" id="PfF-70-aHs"/>
+                            <constraint firstItem="qxT-St-wTb" firstAttribute="top" secondItem="fDF-3M-veQ" secondAttribute="top" id="aFW-5f-17d"/>
+                            <constraint firstItem="qxT-St-wTb" firstAttribute="height" secondItem="BbQ-dN-t9a" secondAttribute="height" multiplier="0.5" id="rU0-FS-4fN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fDF-3M-veQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Question" id="GWG-tW-HYJ">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="cxT-1y-PGb"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nWh-1j-gyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2.8985507246376816" y="532.36607142857144"/>
         </scene>
         <!--Ask Question-->
         <scene sceneID="87F-mY-dxV">
@@ -163,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8KQ-5r-eLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-155" y="104"/>
+            <point key="canvasLocation" x="-1" y="-121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EXk-dL-P43">
