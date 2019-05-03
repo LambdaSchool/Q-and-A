@@ -9,6 +9,21 @@
 import UIKit
 
 class QuestionsListTableViewCell: UITableViewCell {
+    
+    var question: Question? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    private func updateViews(){
+        
+        guard question != nil else {return}
+        
+        question?.asker = questionAuthorLabel.text!
+        question?.question = questionLabel.text!
+       
+    }
 
     @IBOutlet weak var questionLabel: UILabel!
     
