@@ -9,6 +9,8 @@
 import UIKit
 
 class AskQuestionViewController: UIViewController {
+    
+    var questionController: QuestionController?
 
     
     @IBOutlet weak var NameTextField: UITextField!
@@ -22,6 +24,13 @@ class AskQuestionViewController: UIViewController {
     }
     
     @IBAction func SubmitButtonTapped(_ sender: Any) {
+        
+        guard NameTextField.text != nil else {return}
+        guard QuestionTextView.text != nil else {return}
+        
+        
+        questionController!.Create(aQuestion: QuestionTextView.text, aName: NameTextField.text!)
+        
     }
     
   

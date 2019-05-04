@@ -12,8 +12,8 @@ class QuestionController {
     var questions: [Question] = []
     
     
-    func Create(aQuestion text: String){
-        let question = Question(question: text, asker: text)
+    func Create(aQuestion question: String, aName asker: String){
+        let question = Question(question: question, asker: asker)
         
         questions.append(question)
         }
