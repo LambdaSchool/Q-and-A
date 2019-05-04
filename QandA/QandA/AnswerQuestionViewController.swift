@@ -32,7 +32,7 @@ class AnswerQuestionViewController: UIViewController {
         guard NameTextField.text != nil else {return}
         guard AnswerTextField.text != nil else {return}
         
-        questionController?.Update(question: <#Question#>, answer: AnswerTextField.text!, answerer: NameTextField.text!)
+        questionController?.Update(question: question!, answer: AnswerTextField.text!, answerer: NameTextField.text!)
         
         navigationController?.popViewController(animated: true)
         
