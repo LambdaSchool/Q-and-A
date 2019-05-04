@@ -29,7 +29,9 @@ class AskQuestionViewController: UIViewController {
         guard QuestionTextView.text != nil else {return}
         
         
-        questionController!.Create(aQuestion: QuestionTextView.text, aName: NameTextField.text!)
+        questionController?.Create(aQuestion: QuestionTextView.text, aName: NameTextField.text! )
+        
+        navigationController?.popViewController(animated: true)
         
     }
     

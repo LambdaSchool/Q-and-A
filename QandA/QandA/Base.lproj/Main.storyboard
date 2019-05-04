@@ -105,12 +105,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0V-Fh-1R7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-764" y="104"/>
+            <point key="canvasLocation" x="-888" y="104"/>
         </scene>
-        <!--Question-->
+        <!--Answer-->
         <scene sceneID="bae-NP-Mk9">
             <objects>
-                <viewController id="qqm-0X-Gg8" sceneMemberID="viewController">
+                <viewController id="qqm-0X-Gg8" customClass="AnswerQuestionViewController" customModule="QandA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BbQ-dN-t9a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,13 +164,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fDF-3M-veQ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Question" id="GWG-tW-HYJ">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="cxT-1y-PGb"/>
+                    <navigationItem key="navigationItem" title="Answer" id="GWG-tW-HYJ">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="cxT-1y-PGb">
+                            <connections>
+                                <action selector="SubmitAnswerButtonTapped:" destination="qqm-0X-Gg8" id="03b-q3-Afu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="AnswerTextField" destination="KxU-HQ-0q2" id="LBe-wb-b2Y"/>
+                        <outlet property="AskerLabel" destination="5tp-Iy-ffL" id="lJk-Xz-X73"/>
+                        <outlet property="NameTextField" destination="8Bj-pM-DNJ" id="S2L-xy-Xgj"/>
+                        <outlet property="QuestionLabel" destination="Thl-WZ-9L6" id="vMs-Fa-YKh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWh-1j-gyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2.8985507246376816" y="532.36607142857144"/>
+            <point key="canvasLocation" x="3" y="445"/>
         </scene>
         <!--Ask Question-->
         <scene sceneID="87F-mY-dxV">
@@ -229,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8KQ-5r-eLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="-121"/>
+            <point key="canvasLocation" x="3" y="-213"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EXk-dL-P43">

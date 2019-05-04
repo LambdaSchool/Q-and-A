@@ -48,7 +48,7 @@ class QuestionsListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        reloadInputViews()
+        //reloadInputViews()
     }
     
     // MARK: - Navigation
