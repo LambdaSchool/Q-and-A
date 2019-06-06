@@ -16,6 +16,7 @@
 		A253CC2922A9BDAC005E3A54 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A253CC2822A9BDAC005E3A54 /* QuestionTableViewController.swift */; };
 		A253CC2B22A9BDCE005E3A54 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A253CC2A22A9BDCE005E3A54 /* QuestionTableViewCell.swift */; };
 		A253CC2D22A9C0A4005E3A54 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A253CC2C22A9C0A4005E3A54 /* AskQuestionViewController.swift */; };
+		A2F9E75122A9C77E00DBE104 /* AnswerQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9E75022A9C77E00DBE104 /* AnswerQuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A253CC2822A9BDAC005E3A54 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		A253CC2A22A9BDCE005E3A54 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		A253CC2C22A9C0A4005E3A54 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
+		A2F9E75022A9C77E00DBE104 /* AnswerQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerQuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				A253CC2422A9A5ED005E3A54 /* Question.swift */,
 				A253CC2622A9A7F4005E3A54 /* QuestionController.swift */,
 				A253CC1622A9A49C005E3A54 /* Main.storyboard */,
+				A2F9E75022A9C77E00DBE104 /* AnswerQuestionViewController.swift */,
 				A253CC2C22A9C0A4005E3A54 /* AskQuestionViewController.swift */,
 				A253CC2A22A9BDCE005E3A54 /* QuestionTableViewCell.swift */,
 				A253CC2822A9BDAC005E3A54 /* QuestionTableViewController.swift */,
@@ -152,6 +155,7 @@
 				A253CC2D22A9C0A4005E3A54 /* AskQuestionViewController.swift in Sources */,
 				A253CC2922A9BDAC005E3A54 /* QuestionTableViewController.swift in Sources */,
 				A253CC1322A9A49C005E3A54 /* AppDelegate.swift in Sources */,
+				A2F9E75122A9C77E00DBE104 /* AnswerQuestionViewController.swift in Sources */,
 				A253CC2722A9A7F4005E3A54 /* QuestionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

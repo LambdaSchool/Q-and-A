@@ -82,6 +82,7 @@
                                 <connections>
                                     <outlet property="askedByLabel" destination="dNB-Xe-TRj" id="29o-4H-wJg"/>
                                     <outlet property="questionTextLabel" destination="RRw-Jt-4P7" id="a06-cO-969"/>
+                                    <segue destination="vfk-VY-F31" kind="show" identifier="ShowAnswerSegue" id="I4i-Hz-qt8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -101,6 +102,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpW-MT-KaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1044.9275362318842" y="136.60714285714286"/>
+        </scene>
+        <!--Answer Question-->
+        <scene sceneID="Yyn-fS-v0R">
+            <objects>
+                <viewController id="vfk-VY-F31" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BOP-de-5ka">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QIu-w6-fOr">
+                                <rect key="frame" x="18" y="140" width="378" height="347"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGe-LH-9ix">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSh-Dw-uEY">
+                                        <rect key="frame" x="0.0" y="32" width="48" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kh6-PO-TUC">
+                                        <rect key="frame" x="0.0" y="64" width="378" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ewz-iC-oeG">
+                                        <rect key="frame" x="0.0" y="102" width="378" height="245"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Kh6-PO-TUC" secondAttribute="trailing" id="YQx-fD-9pw"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bqe-Ti-K5R" firstAttribute="bottom" secondItem="QIu-w6-fOr" secondAttribute="bottom" constant="375" id="7yD-uT-SBo"/>
+                            <constraint firstItem="QIu-w6-fOr" firstAttribute="centerX" secondItem="BOP-de-5ka" secondAttribute="centerX" id="pcq-Gv-L7P"/>
+                            <constraint firstItem="QIu-w6-fOr" firstAttribute="top" secondItem="Bqe-Ti-K5R" secondAttribute="top" id="rDN-Np-BpY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bqe-Ti-K5R"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Answer Question" id="do2-d0-Wms">
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="Y3R-gl-uUn"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nb6-5f-7Uy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2010" y="481"/>
         </scene>
         <!--Question-->
         <scene sceneID="ECU-TI-gdt">
