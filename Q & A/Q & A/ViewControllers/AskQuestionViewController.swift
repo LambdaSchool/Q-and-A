@@ -9,6 +9,7 @@
 import UIKit
 
 var questionController: QuestionController?
+var question: Question?
 
 class AskQuestionViewController: UIViewController {
     

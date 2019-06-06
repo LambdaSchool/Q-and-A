@@ -11,7 +11,10 @@ import UIKit
 class QuestionTableViewController: UITableViewController {
    
     let questionController = QuestionController()
-    
+    var askQuestionButtonTapped = false
+    @IBAction func askQuestionButton(_ sender: Any) {
+        askQuestionButtonTapped = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,9 +50,20 @@ class QuestionTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "AskQuestionSegue" {
+            let askQuestionVC = segue.destination as! AskQuestionViewController
+            let askVCQuestionController = questionController
+            
+        }
+//     //   let selectedIndexPath = tableView.indexPathForSelectedRow!
+       // let selectedQuestion = questionController.questions[selectedIndexPath.row]
+       // let askQuestionVC = segue.destination as! AskQuestionViewController
     }
     
 
 }
+
+
+//let groceryDetailVC = segue.destination as! GroceryDetailViewController
+//groceryDetailVC.groceryItem = selectedGroceryItem
