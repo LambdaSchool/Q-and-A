@@ -157,7 +157,7 @@
         <!--AnswerViewController-->
         <scene sceneID="xZv-Bq-r4t">
             <objects>
-                <viewController title="AnswerViewController" id="Y2N-8e-Zvn" sceneMemberID="viewController">
+                <viewController title="AnswerViewController" id="Y2N-8e-Zvn" customClass="AnswersViewController" customModule="Q___A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wF2-Bs-l6S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,8 +206,19 @@
                         <viewLayoutGuide key="safeArea" id="oFU-sP-E4f"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="tPi-PN-LTP">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="SrD-CH-X23"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="SrD-CH-X23">
+                            <connections>
+                                <action selector="submitAnswerButton:" destination="Y2N-8e-Zvn" id="Ob7-RR-JmE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextView" destination="0Jc-UF-eAQ" id="wZZ-86-WN2"/>
+                        <outlet property="answererTextField" destination="VeT-kI-gxz" id="RgB-cS-eYa"/>
+                        <outlet property="personAskingLabel" destination="vln-eg-Vhr" id="vOZ-Iu-ePb"/>
+                        <outlet property="questionAskedLabel" destination="yYM-jx-Iae" id="g5N-CW-7cE"/>
+                        <outlet property="submitAnswerButton" destination="SrD-CH-X23" id="ciR-UA-4Nc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7i5-vH-ecn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

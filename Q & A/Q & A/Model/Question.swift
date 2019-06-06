@@ -10,9 +10,9 @@ import Foundation
 
 struct Question {
     var question: String
-    let asker: String
+    var asker: String
     var answer: String?
-    let answerer: String?
+    var answerer: String?
     
     init(question: String, asker: String, answer: String? = nil, answerer: String? = nil) {
         self.question = question

@@ -9,7 +9,37 @@
 import UIKit
 
 class AnswersViewController: UIViewController {
-
+    
+        //MARK: - Outlets and Properties
+    
+    var questionController: QuestionController?
+    
+    var question1: Question?
+    
+    @IBOutlet weak var questionAskedLabel: UILabel!
+    @IBOutlet weak var personAskingLabel: UILabel!
+    @IBOutlet weak var answererTextField: UITextField!
+    @IBOutlet weak var answerTextView: UITextView!
+    
+    //MARK: - Actions and Methods
+    
+    @IBAction func submitAnswerButton(_ sender: UIBarButtonItem) {
+        if answerTextView.text != "",
+            answererTextField.text != "" {
+            guard let answererName = answererTextField.text,
+                let answer = answerTextView.text,
+                let question1 = question1 else { return }
+            questionController?.update(question: question1, answer: answer, answerer: answererName)
+            _ = navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func upddateViews() {
+        guard let question1 = question1 else { return }
+        questionAskedLabel.text = question1.question
+        personAskingLabel.text = question1.asker
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
