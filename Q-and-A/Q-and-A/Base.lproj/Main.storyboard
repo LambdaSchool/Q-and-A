@@ -106,7 +106,7 @@
         <!--Answer Question-->
         <scene sceneID="Yyn-fS-v0R">
             <objects>
-                <viewController id="vfk-VY-F31" sceneMemberID="viewController">
+                <viewController id="vfk-VY-F31" customClass="AnswerQuestionViewController" customModule="Q_and_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BOP-de-5ka">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
