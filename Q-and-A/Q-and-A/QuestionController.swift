@@ -9,28 +9,20 @@
 import Foundation
 
 class QuestionController {
+    
+    // MARK: - Properties
     var questions: [Question] = []
     
+    // MARK: - Methods and Functions
     func create(_ newQuestion: Question) {
         self.questions.append(newQuestion)
     }
     
-    func Update(_ question: Question,_ updateAnswer: String,_ updateAnswerer: String) {
-        var updatedQuestion: Question?
-        
+    func update(question: Question, with updateAnswer: String, from updateAnswerer: String) {
         for index in 0..<questions.count {
             if questions[index].question == question.question {
-                
-                // Assigning new values to the question chosen for update
-                updatedQuestion?.answer = updateAnswer
-                updatedQuestion?.answerer = updateAnswerer
-                
-                // Unwrapping the updatedQuestion so it can be stored back in the array
-                guard let unwrappedUpdatedQuestion = updatedQuestion else { return }
-                
-                // Removing the old question and then replacing it with the new updated question at its exact spot in the array before update
-                questions.remove(at: index)
-                questions.insert(unwrappedUpdatedQuestion, at: index)
+                questions[index].answer = updateAnswer
+                questions[index].answerer = updateAnswerer
             }
         }
     }
