@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="1926" y="106"/>
         </scene>
-        <!--Title-->
+        <!--AskQuestionViewController-->
         <scene sceneID="Yaa-oS-BW6">
             <objects>
-                <viewController id="Ugy-IM-baZ" customClass="AskQuestionViewController" customModule="Q___A" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AskQuestionViewController" id="Ugy-IM-baZ" customClass="AskQuestionViewController" customModule="Q___A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pEs-Rz-36U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,18 +146,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="textField" destination="tix-WQ-VgB" id="I2a-Af-KyH"/>
-                        <outlet property="textView" destination="Arb-Ya-jwJ" id="rfk-j1-j9I"/>
+                        <outlet property="nameTextField" destination="tix-WQ-VgB" id="I2a-Af-KyH"/>
+                        <outlet property="questionTextView" destination="Arb-Ya-jwJ" id="rfk-j1-j9I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJR-sq-RUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2843" y="447"/>
         </scene>
-        <!--Title-->
+        <!--AnswerViewController-->
         <scene sceneID="xZv-Bq-r4t">
             <objects>
-                <viewController id="Y2N-8e-Zvn" sceneMemberID="viewController">
+                <viewController title="AnswerViewController" id="Y2N-8e-Zvn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wF2-Bs-l6S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
