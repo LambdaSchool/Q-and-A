@@ -25,9 +25,11 @@ class AskQuestionViewController: UIViewController {
     @IBAction func submitQuestionTapped(_ sender: Any) {
         if let unwrappedName = nameTextField.text,
             let unwrappedQuestion = questionTextField.text {
-            questionController?.create(Question(question: unwrappedQuestion, asker: unwrappedName))
-            
-            navigationController?.popViewController(animated: true)
+            if unwrappedName != "" && unwrappedQuestion != "" {
+                questionController?.create(Question(question: unwrappedQuestion, asker: unwrappedName))
+                
+                navigationController?.popViewController(animated: true)
+            }
         }
     }
     
