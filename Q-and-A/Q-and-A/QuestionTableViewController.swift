@@ -11,6 +11,7 @@ import UIKit
 class QuestionTableViewController: UITableViewController {
     
     var questionController = QuestionController()
+    var cellTapped: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,8 @@ class QuestionTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as? QuestionTableViewCell else { return UITableViewCell() }
         cell.questionTextLabel.text = questionController.questions[indexPath.row].question
         cell.askedByLabel.text = questionController.questions[indexPath.row].asker
+        
+        cellTapped = indexPath.row
 
         return cell
     }
@@ -61,8 +64,16 @@ class QuestionTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "AskQuestionSegue" {
+            guard let questionDestinationVC = segue.destination as? AskQuestionViewController else { return }
+            questionDestinationVC.questionController = questionController
+        }
+        
+        if segue.identifier == "ShowAnswerSegue" {
+            guard let answerDestinationVC = segue.destination as? AnswerQuestionViewController else { return }
+            answerDestinationVC.questionController = questionController
+            answerDestinationVC.question = questionController.questions[cellTapped]
+        }
     }
     
 
